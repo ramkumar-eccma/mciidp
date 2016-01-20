@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'ksa-demo'
-set :repo_url, 'git@github.com:ramkumar-eccma/ksa-demo.git'
+set :repo_url, 'git@github.com:ramkumar-eccma/mciidp.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
