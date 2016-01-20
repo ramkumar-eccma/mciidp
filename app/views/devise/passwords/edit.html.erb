@@ -1,0 +1,94 @@
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+    <div>
+        <div>
+          <%= image_tag "l3.jpg"%>
+        </div>
+        <br>
+       <h3>
+          <%- if I18n.locale== :ar %>
+            <span class="">
+              <% @ar_welcome = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '1','sessions','new.html.erb','ar')%>
+              <% @ar_welcome.each do |ar_welcome|%>
+              <%= ar_welcome.language_property %>
+               <% end %>
+            </span>
+        <% else %>
+            <span class="">
+              <% @en_welcome = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '1','sessions','new.html.erb','en')%>
+              <% @en_welcome.each do |en_welcome|%>
+              <%= en_welcome.language_property %>
+               <% end %>
+            </span>
+        <% end -%>            
+        </h3>
+
+    <h4>
+      <%- if I18n.locale== :ar %>
+            <span class="">
+              <% @ar_welcome = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '10','passwords','new.html.erb','ar')%>
+              <% @ar_welcome.each do |ar_welcome|%>
+              <%= ar_welcome.language_property %>
+               <% end %>
+            </span>
+        <% else %>
+            <span class="">
+              <% @en_welcome = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '10','passwords','new.html.erb','en')%>
+              <% @en_welcome.each do |en_welcome|%>
+              <%= en_welcome.language_property %>
+               <% end %>
+            </span>
+        <% end -%>  
+    </h4>
+
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.hidden_field :reset_password_token %>
+
+      <div class="form-group">
+        <%- if I18n.locale== :ar %>
+            <%= f.password_field :password, autofocus: true, autocomplete: "off" ,class:'form-control', placeholder:'New password',required:"required" %>
+        <% else %>
+            <%= f.password_field :password, autofocus: true, autocomplete: "off" ,class:'form-control', placeholder:'New password',required:"required" %>
+        <% end -%>
+      
+
+      <div class="form-group">
+        <%- if I18n.locale== :ar %>
+            <%= f.password_field :password_confirmation, autocomplete: "off" ,class:'form-control', placeholder:'تأكيد كلمة المرور الجديدة',required:"required" %>
+        <% else %>
+            <%= f.password_field :password_confirmation, autocomplete: "off" ,class:'form-control', placeholder:'Confirm new password',required:"required" %>
+        <% end -%>
+      </div>
+      <div class="actions">
+        <%- if I18n.locale== :ar %>
+            <%= f.submit "تغيير كلمة المرور الخاصة بي" ,class:"btn btn-primary block full-width m-b"%>
+        <% else %>
+            <%= f.submit "Change my password" ,class:"btn btn-primary block full-width m-b"%>
+        <% end -%>
+      </div>
+    <% end %>
+    <%- if controller_name != 'sessions' %>
+      <%- if I18n.locale== :ar %>
+            <%= link_to "تسجيل الدخول", new_session_path(resource_name) %>
+        <% else %>
+            <%= link_to "Log in", new_session_path(resource_name) %>
+        <% end -%><br />
+    <% end -%>
+
+    <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+      <%- if I18n.locale== :ar %>
+            <%= link_to "سجل", new_registration_path(resource_name) %>
+        <% else %>
+            <%= link_to "Sign up", new_registration_path(resource_name) %>
+        <% end -%><br />
+    <% end -%>
+    <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%- if I18n.locale== :ar %>
+            <%= link_to "هل نسيت كلمة المرور؟", new_password_path(resource_name) %>
+        <% else %>
+            <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+        <% end -%><br />
+    <% end -%>  
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

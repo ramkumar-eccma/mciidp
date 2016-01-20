@@ -1,0 +1,151 @@
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+    	<img alt="image" class="img-responsive" src="<%= image_url 'headerlogo.jpg' %> " height="50px" />
+    	<!--  <div class="col-lg-6">
+        <img alt="image" src="<%= image_url 'l3.jpg' %>" style="margin-left:-15px;" />
+        </div>
+        <div class="col-lg-2">
+    	<img alt="image" src="<%= image_url 'l2.jpg' %>" style="align:center;"/>
+        </div>
+    	<div class="col-lg-4">
+    		<img alt="image" src="<%= image_url 'l1.jpg' %>" style="margin-top:15px;margin-left:220px;" />
+    	</div>  -->
+    	
+        <div class="clearfix"></div>
+        <ol class="breadcrumb">
+            <li>
+              <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_home = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '14','ar')%>
+                  <% @ar_breadcrum_home.each do |ar_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= ar_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_home = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '14','en')%>
+                  <% @en_breadcrum_home.each do |en_breadcrum_home|%>
+                 <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= en_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% end -%>
+              
+            </li>
+             <li class="active">
+                <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_factsearch = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '15','ar')%>
+                  <% @ar_breadcrum_factsearch.each do |ar_breadcrum_factsearch|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= ar_breadcrum_factsearch.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_factsearch = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '15','en')%>
+                  <% @en_breadcrum_factsearch.each do |en_breadcrum_factsearch|%>
+                 <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= en_breadcrum_factsearch.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% end -%>
+            </li>
+        </ol>
+    	
+	</div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="ibox float-e-margins">
+				<div class="ibox-title">
+				<% if @type=="all"%>
+				    <h5>CMM Search Results</h5>
+				 <% else %>
+				 	<% if @type =="INV" %>
+				 		<h5>INVALID NSN Search Results</h5>
+				 	<% end %>
+				 	<% if @type =="LINV" %>
+				 		<h5>LOCAL NSN Search Results</h5>
+				 	<% end %>
+				 	<% if @type =="FRV" %>
+				 		<h5>OFFICIAL NSN - FRA Search Results</h5>
+				 	<% end %>
+				 	<% if @type =="FRNV" %>
+				 		<h5>NON-OFFICIAL NSN - FRA Search Results</h5>
+				 	<% end %>
+				 	<% if @type =="GMV" %>
+				 		<h5>OFFICIAL NSN - DEU Search Results</h5>
+				 	<% end %>
+				 	<% if @type =="GMNV" %>
+				 		<h5>NON-OFFICIAL NSN - DEU Search Results</h5>
+				 	<% end %>
+				 	<% if @type =="UKV" %>
+				 		<h5>OFFICIAL NSN - GBR Search Results</h5>
+				 	<% end %>
+				 	<% if @type =="UKNV" %>
+				 		<h5>NON-OFFICIAL NSN - GBR Search Results</h5>
+				 	<% end %>
+				 	<% if @type =="" %>
+				 		<h5>OTHER COUNTRY NSN Search Results</h5>
+				 	<% end %>
+				 <% end %>
+				    <div class="ibox-tools">
+				        <a class="collapse-link">
+				            <i class="fa fa-chevron-up"></i>
+				        </a>
+				        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				       		<i class="fa fa-wrench"></i>
+				        </a>
+				        <ul class="dropdown-menu dropdown-user">
+				            <!-- <li>
+				                <a href="#">Config option 1</a>
+				            </li>
+				            <li>
+				                <a href="#">Config option 2</a>
+				            </li> -->
+				        </ul>
+				        <a class="close-link">
+				            <i class="fa fa-times"></i>
+				        </a>
+				    </div>
+				</div>
+			<div class="ibox-content">
+			<div class="col-lg-6 pull-right">
+				<%= form_tag(source_path, :method => "get", class: "navbar-form") do %>
+				    		<div class="form-group pull-right">
+				     		 <%= text_field_tag :search, params[:search], class: "span4 form-control", placeholder: "Search" %>
+				     		<input type="text" class="hide" name="TYPE" value="<%= @type %>">
+				     
+				      <%= submit_tag "Search", :class=>"btn btn btn-primary", :style=>"margin:0;",:name=>nil %>	
+				    </div>
+				  <% end %>
+			</div>
+			</br></br></br></br>
+			<div style="width:100%; overflow-x:auto;">
+				<%= grid(@cmm, :html => {:class => 'table table-striped table-bordered table-hover dataTables-example'}) do |g|
+					# String
+						
+                	g.column :name => 'NSN', :attribute => 'NSN' do  |g|
+		         	 link_to g.NSN,{:controller => :source_data,:action => :edit, :NSN => g.NSN, :PART => g.PART_NUMBER, :CAGE => g.CAGEC} ,:target => "_blank" 
+		         	end
+  					g.column :name => 'CAGE CODE', :attribute => 'CAGEC'
+  					g.column :name => 'PART NUMBER', :attribute => 'PART_NUMBER'
+  					
+  					g.column :name => 'NAME', :attribute => 'NAME'
+					
+		         	 g.column  do  |g|
+
+		         	link_to"" ,{:controller => :source_data,:action => :viewsource, :NSN =>  g.NSN },:target => "_blank" ,:class=> "fa fa-eye", title: 'View source data', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'
+		         	 end
+
+			end %>		
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

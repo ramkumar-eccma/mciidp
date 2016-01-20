@@ -1,0 +1,515 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+        <img alt="image" class="img-responsive" src="<%= image_url 'headerlogo.jpg' %> " height="50px" />
+        <!--  <div class="col-lg-6">
+        <img alt="image" src="<%= image_url 'l3.jpg' %>" style="margin-left:-15px;" />
+        </div>
+        <div class="col-lg-2">
+        <img alt="image" src="<%= image_url 'l2.jpg' %>" style="align:center;"/>
+        </div>
+        <div class="col-lg-4">
+            <img alt="image" src="<%= image_url 'l1.jpg' %>" style="margin-top:15px;margin-left:220px;" />
+        </div>  -->
+        
+        <div class="clearfix"></div>
+         <ol class="breadcrumb" style="background:#F3F3F4; padding:10px;">
+            <li>
+              <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_home = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '14','ar')%>
+                  <% @ar_breadcrum_home.each do |ar_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= ar_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_home = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '14','en')%>
+                  <% @en_breadcrum_home.each do |en_breadcrum_home|%>
+                 <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= en_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% end -%>
+              
+            </li>
+             <li class="active">
+                <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_factsearch = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '27','ar')%>
+                  <% @ar_breadcrum_factsearch.each do |ar_breadcrum_factsearch|%>
+                    <a href="<%= url_for(:back) %>"><%= ar_breadcrum_factsearch.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_factsearch = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '27','en')%>
+                  <% @en_breadcrum_factsearch.each do |en_breadcrum_factsearch|%>
+                 <a href="<%= url_for(:back) %>"><%= en_breadcrum_factsearch.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% end -%>
+            </li>
+             <li class="active">
+                <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_view = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '17','ar')%>
+                  <% @ar_breadcrum_view.each do |ar_breadcrum_view|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= ar_breadcrum_view.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_view = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '17','en')%>
+                  <% @en_breadcrum_view.each do |en_breadcrum_view|%>
+                 <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= en_breadcrum_view.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% end -%>
+            </li>
+        </ol>
+        
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <div class="col-lg-8">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <%- if I18n.locale== :ar %>
+                    <span class="">
+                      <% @ar_nsndetails = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '18','ar')%>
+                      <% @ar_nsndetails.each do |ar_nsndetails|%>
+                      <%= ar_nsndetails.language_property %>
+                       <% end %>
+                    </span>
+                  <% else %>
+                    <span class="">
+                      <% @en_nsndetails = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '18','en')%>
+                      <% @en_nsndetails.each do |en_nsndetails|%>
+                      <%= en_nsndetails.language_property %>
+                       <% end %>
+                    </span>
+                <% end -%>
+            </div>
+            <div class="panel-body">
+                <div class="ibox-content">
+                <% @a_seg.each do |t|  %>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>NSN</th>
+                        <th>FIIG_4065</th>
+                        <th>INC_4080</th>
+                        <th>SHRT_NM_2301</th>
+                        <th>IMAGE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><%= t.NSN %></td>
+                        <td><%= t.FIIG_4065 %></td>
+                        <td><% if t.INC_4080 == '77777' ||  t.INC_4080 == '69181'  %>
+                            <%= t.INC_4080 %>
+                            <% else %>
+                            <%= link_to t.INC_4080 , {:controller => :source_data,:action => :dictionary_detail, :term => t.Term_ID, :esci => t.Concept_ID, :def => t.definition_ID}, :target => "_blank" %>
+                            <% end %>
+                        </td>
+                        <td><%= t.SHRT_NM_2301 %></td>
+                        <td><img src="C:\Users\Public\Pictures\Sample Pictures\Tulips.jpg" alt="image"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+         <div class="panel panel-success">
+            <div class="panel-heading">
+                <%- if I18n.locale== :ar %>
+                    <span class="">
+                      <% @ar_details = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '19','ar')%>
+                      <% @ar_details.each do |ar_details|%>
+                      <%= ar_details.language_property %>
+                       <% end %>
+                    </span>
+                  <% else %>
+                    <span class="">
+                      <% @en_details = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '19','en')%>
+                      <% @en_details.each do |en_details|%>
+                      <%= en_details.language_property %>
+                       <% end %>
+                    </span>
+                <% end -%>
+            </div>
+            <div class="panel-body">
+                <div class="ibox-content">
+               <table class="table table-bordered">
+                    <tr>
+                        <td><b>Short Description</b></td>
+                        <td><%= t.short_desc %> </td>
+                    </tr>
+                    <tr>
+                        <td><b>Long Description</b></td>
+                        <td><%= t.long_desc %></td>
+                    </tr>
+                </table>
+                <% end %>
+            </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <%- if I18n.locale== :ar %>
+                    <span class="">
+                      <% @ar_pop_val = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '20','ar')%>
+                      <% @ar_pop_val.each do |ar_pop_val|%>
+                      <%= ar_pop_val.language_property %>
+                       <% end %>
+                    </span>
+                  <% else %>
+                    <span class="">
+                      <% @en_pop_val = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '20','en')%>
+                      <% @en_pop_val.each do |en_pop_val|%>
+                      <%= en_pop_val.language_property %>
+                       <% end %>
+                    </span>
+                <% end -%>
+            </div>
+            <div class="panel-body">
+                <div class="ibox-content">
+                   <table class="table table-bordered">
+                        <thead> 
+                            <tr> 
+                                <th>Property</th>
+                                <th>Property Values</th>
+                                <th>MRC</th>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                        <% @nsnmrcxs.each do |f| %>
+                            <tr> 
+                            
+                            <% if f.DMRC =="NULL" %>
+                                <td><%= f.DMRC %></td> 
+                            <% else %>
+                                <td><%= link_to f.DMRC , {:controller => :source_data,:action => :dictionary_detail, :term => f.Term_ID, :esci => f.Concept_ID, :def => f.definition_ID}, :target => "_blank" %></td>
+                            <% end %>
+                                
+                                <td><%= f.RMRC %></td>
+                                <td><%= f.MRC %></td>
+                            </tr>
+                        <% end %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="ibox collapsed border-bottom" style="border:1px solid #0C78B8;">
+            <div class="ibox-title" style="background:#0C78B8;">
+                <h5 style="color:#f3f3f4 !important;"><%- if I18n.locale== :ar %>
+                    <span class="">
+                      <% @ar_classif = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '22','ar')%>
+                      <% @ar_classif.each do |ar_classif|%>
+                      <%= ar_classif.language_property %>
+                       <% end %>
+                    </span>
+                  <% else %>
+                    <span class="">
+                      <% @en_classif = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '22','en')%>
+                      <% @en_classif.each do |en_classif|%>
+                      <%= en_classif.language_property %>
+                       <% end %>
+                    </span>
+                <% end -%></h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up" style="color:#f3f3f4 !important;"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <% @a_seg.each do |t| %>
+                   <table class="table table-bordered" width="100%" style="table-layout: fixed; word-wrap: break-word;"> 
+                        <tr> 
+                            <td width="40%"><strong>TYPE </strong></td>
+                            <td width="60%"><%= t.TYPE %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>FSC </strong></td>
+                            <td><%= t.FSC %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>NIIN </strong></td>
+                            <td><%= t.NIIN %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>FSG_3994 </strong></td>
+                            <td><%= t.FSG_3994 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>FSC_WI_FSG_3996 </strong></td>
+                            <td><%= t.FSC_WI_FSG_3996 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>NCB_CD_4130 </strong></td>
+                            <td><%= t.NCB_CD_4130 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>I_I_NBR_4131 </strong></td>
+                            <td><%= t.I_I_NBR_4131 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>NAIN_5020 </strong></td>
+                            <td><%= t.NAIN_5020 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>CRITL_CD_FIIG_3843 </strong></td>
+                            <td><%= t.CRITL_CD_FIIG_3843 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>TYP_II_4820 </strong></td>
+                            <td><%= t.TYP_II_4820 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>RPDMRC_4765 </strong></td>
+                            <td><%= t.RPDMRC_4765 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>DEMIL_CD_0167 </strong></td>
+                            <td><%= t.DEMIL_CD_0167 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>DT_NIIN_ASGMT_2180 </strong></td>
+                            <td><%= t.DT_NIIN_ASGMT_2180 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>HMIC_0865 </strong></td>
+                            <td><%= t.HMIC_0865 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>ESD_EMI_CD_2043 </strong></td>
+                            <td><%= t.ESD_EMI_CD_2043 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>PMIC_0802 </strong></td>
+                            <td><%= t.PMIC_0802 %> </td>
+                        </tr>
+                        <tr> 
+                            <td><strong>ADPEC_0801 </strong></td>
+                            <td><%= t.ADPEC_0801 %> </td>
+                        </tr>
+                    </table>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row"> 
+  <div class="col-lg-8">
+    <div class="panel panel-danger">
+            <div class="panel-heading">
+                 <%- if I18n.locale== :ar %>
+                    <span class="">
+                      <% @ar_more = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '21','ar')%>
+                      <% @ar_more.each do |ar_more|%>
+                      <%= ar_more.language_property %>
+                       <% end %>
+                    </span>
+                  <% else %>
+                    <span class="">
+                      <% @en_more = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '21','en')%>
+                      <% @en_more.each do |en_more|%>
+                      <%= en_more.language_property %>
+                       <% end %>
+                    </span>
+                <% end -%>
+                <div class="pull-right">
+                  <span class="btn btn-xs animation_select hide" id="more-data" style="cursor: pointer;background:#ED5565;">More Details</span>
+                </div>
+              </div>
+            <div class="panel-body">
+                <div class="ibox-content">
+                  <table class="table table-bordered">
+                    <thead> 
+                      <tr>
+                        <th>Vendor Name</th>
+                        <th>Part Number</th>
+                        <th>More</th>
+                      </tr>
+                    </thead>
+                    <% @c_seg.each do |v| %> 
+                      <tbody>
+                        <tr>
+                        <td> <%= link_to v.CAGE_NAME , {:controller => :source_data,:action => :dictionary_detail, :term => v.CAGE_CD_9250, :esci => v.CAGE_CD_9250, :def => v.CAGE_CD_9250}, :target => "_blank" %></td>
+                          <td><%= v.REF_NBR_3570 %></td>
+                           <td>
+                             <%= link_to "",{:controller => :source_data,:action => :edit, :NSN => @vid, :PART => @part, :CAGE => @cage ,:vendor => v.id },:class=> "fa fa-eye",title: 'View More Informations', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'%>
+
+                            </td>
+                          
+                        </tr>      
+                      </tbody>  
+                    <% end %>
+                </table>
+                </div>
+            </div>
+        </div>
+  </div> 
+  <div class="col-lg-4 <%= @classname %>" id="more-details">
+        <div class="ibox border-bottom" style="border:1px solid rgba(237, 85, 101, 0.81);">
+            <div class="ibox-title" style="background:rgba(237, 85, 101, 0.81);">
+                <h5 style="color:#f3f3f4 !important;"><%- if I18n.locale== :ar %>
+                    <span class="">
+                      <% @ar_classif = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '37','ar')%>
+                      <% @ar_classif.each do |ar_classif|%>
+                      <%= ar_classif.language_property %>
+                       <% end %>
+                    </span>
+                  <% else %>
+                    <span class="">
+                      <% @en_classif = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '37','en')%>
+                      <% @en_classif.each do |en_classif|%>
+                      <%= en_classif.language_property %>
+                       <% end %>
+                    </span>
+                <% end -%></h5>
+                <div class="ibox-tools">
+                  <a class="close-link">
+                      <i class="fa fa-times" style="color:#f3f3f4 !important;"></i>
+                  </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <% @a_seg.each do |t| %>
+                   <table class="table table-bordered" width="100%" style="table-layout: fixed; word-wrap: break-word;"> 
+                    <% @more_info.each do |v| %> 
+                        <tr>
+                            <th>TYPE</th>
+                            <td><%= v.TYPE %> </td>
+                        </tr>
+                        <tr> 
+                            <th>FSC</th>
+                            <td><%= v.FSC %> </td>
+                        </tr>
+                       
+                        <tr> 
+                             <th>RNFC_2920</th>
+                             <td><%= v.RNFC_2920 %> </td>
+                        </tr>
+                        <tr> 
+                            <th>RNCC_2910</th>
+                            <td><%= v.RNCC_2910 %> </td>
+                        </tr>
+                        <tr> 
+                             <th>RNVC_4780</th>
+                             <td><%= v.RNVC_4780 %> </td>
+                        </tr>
+                        <tr>
+                            <th>DAC_2640</th>
+                            <td><%= v.DAC_2640 %> </td>
+                        </tr>    
+                        <tr>
+                            <th>RNAAC_2900</th>
+                            <td><%= v.RNAAC_2900 %> </td>
+                        </tr>
+                        <tr>
+                            <th>RNSC_2923</th>
+                            <td><%= v.RNSC_2923 %> </td>
+                        </tr>
+                        <tr>
+                            <th>RNJC_2750</th>
+                            <td><%= v.RNJC_2750 %> </td>
+                        </tr>
+                        <tr class="hide">
+                            <th>CAGE_CD_9250</th>
+                            <td><%= v.CAGE_CD_9250 %> </td>
+                        </tr>      
+                        <tr>
+                            <th>REF_NBR_3570</th>
+                            <td><%= v.REF_NBR_3570 %> </td>
+                        </tr>
+                        <tr>
+                            <th>NAME</th> 
+                            <td><%= v.NAME %> </td>
+                        </tr>
+                        <tr>
+                            <th>SADC_4672</th>
+                            <td><%= v.SADC_4672 %> </td>
+                        </tr>
+                        <tr>
+                            <th>HCC_2579</th>
+                            <td><%= v.HCC_2579 %> </td>
+                        </tr>
+                        <tr>
+                            <th>MSDS_ID_9076</th>
+                            <td><%= v.MSDS_ID_9076 %> </td>
+                        </tr>
+                    <% end %>
+                    </table>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+// $(function() {
+
+//     var updateOutput = function (e) {
+//         var list = e.length ? e : $(e.target),
+//                 output = list.data('output');
+//         if (window.JSON) {
+//             output.val(window.JSON.stringify(list.nestable('serialize')));//, null, 2));
+//         } else {
+//             output.val('JSON browser support required for this demo.');
+//         }
+//     };
+//     // activate Nestable for list 1
+//     $('#nestable').nestable({
+//         group: 1
+//     }).on('change', updateOutput);
+
+//     // activate Nestable for list 2
+//     $('#nestable2').nestable({
+//         group: 1
+//     }).on('change', updateOutput);
+
+//     // output initial serialised data
+//     updateOutput($('#nestable').data('output', $('#nestable-output')));
+//     updateOutput($('#nestable2').data('output', $('#nestable2-output')));
+
+//     $('#nestable-menu').on('click', function (e) {
+//         var target = $(e.target),
+//                 action = target.data('action');
+//         if (action === 'expand-all') {
+//             $('.dd').nestable('expandAll');
+//         }
+//         if (action === 'collapse-all') {
+//             $('.dd').nestable('collapseAll');
+//         }
+//     });
+
+// });
+$(document).ready(function() {
+    $("#more-details").hide();
+        $("#more-data").click(function() {
+            $("#more-details").show();
+    });
+});
+
+</script>
+
+<% end %>
+    

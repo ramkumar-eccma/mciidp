@@ -1,0 +1,436 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+        <img alt="image" class="img-responsive" src="<%= image_url 'headerlogo.jpg' %> " height="50px" />
+        <!--  <div class="col-lg-6">
+        <img alt="image" src="<%= image_url 'l3.jpg' %>" style="margin-left:-15px;" />
+        </div>
+        <div class="col-lg-2">
+        <img alt="image" src="<%= image_url 'l2.jpg' %>" style="align:center;"/>
+        </div>
+        <div class="col-lg-4">
+            <img alt="image" src="<%= image_url 'l1.jpg' %>" style="margin-top:15px;margin-left:220px;" />
+        </div>  -->
+        
+        <div class="clearfix"></div>
+        <ol class="breadcrumb"  style="background:#F3F3F4; padding:10px;">
+            <li class="active">
+                <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>">Home / <strong>Dashboard</strong></a>
+            </li>
+        </ol>
+        
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+         <div class="col-lg-6">
+            <div class="ibox float-e-margins" style="border:1px solid #23C6C8;">
+                <div class="ibox-title text-primary" style="background:#23C6C8;">
+                    <h5 style="color:#f3f3f4 !important;">Factory Database</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link" style="color:#f3f3f4 !important;">
+                            <i class="fa fa-chevron-up" ></i>
+                        </a>               
+                        <a class="close-link hide" style="color:#f3f3f4 !important;">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content text-center h-200">
+                    <span id="db_factory"></span>
+                    <div class="row" style="padding-top:10px;">
+                         <div class="col-md-6">
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'langs', :action => 'show',:TYPE => 'all'%>" target="_blank">&nbsp;&nbsp;Total(<%= @db_factory.inspect  %>)</a></div><br>
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'langs', :action => 'show',:TYPE => 'OPERATIONAL' %>" target="_blank">&nbsp;&nbsp;Operational (<%= @db_newoper.inspect  %>)</a></div><br>
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#990099;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'langs', :action => 'show',:TYPE => 'NEW LICENSE' %>"  target="_blank">&nbsp;&nbsp;New License (<%= @db_newlic.inspect %>)</a></div><br>
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#FF1493;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'langs', :action => 'show',:TYPE => 'Merged' %>"  target="_blank">&nbsp;&nbsp;Merged (<%= @db_merged.inspect %>)</a></div><br>
+                        </div>  
+                         <div class="col-md-6">
+                             <div class="pull-left" style="width:15px;height:15px;;background-color:#49C5E8;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'langs', :action => 'show',:TYPE => 'UNDER CONSTRUCTION' %>" target="_blank">&nbsp;&nbsp;Under Construction (<%= @db_under.inspect %>)</a></div><br>
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'langs', :action => 'show',:TYPE => 'CANCELLED'%>" target="_blank">&nbsp;&nbsp;Cancelled (<%= @db_cancel.inspect %>)</a></div><br>
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'langs', :action => 'show',:TYPE => 'Cancel Suggestion'%>" target="_blank">&nbsp;&nbsp;Cancel Suggestion (<%= @db_cansug.inspect %>)</a></div><br>
+                         
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#DEB887;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'langs', :action => 'show',:TYPE => 'STOPPED' %>" target="_blank">&nbsp;&nbsp;Stopped (<%= @db_stop.inspect  %>)</a></div><br>
+                            
+                        </div>                                  
+                    </div>              
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins" style="border:1px solid #21B6A8;">
+                <div class="ibox-title" style="background:#21B6A8;">
+                    <h5 style="color:#f3f3f4 !important;">MADE IN KSA Database</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link" style="color:#f3f3f4 !important;">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>            
+                        <a class="close-link hide" style="color:#f3f3f4 !important;">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content text-center h-200">
+                    <span id="db_ksa"></span>
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-6">
+                           <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
+                            <div class="pull-left">&nbsp;&nbsp;Total (<%= @db_classtotal.inspect %>)</div>
+                        </div>  
+                        <div class="col-md-6">
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
+                            <div class="pull-left"> &nbsp;&nbsp;<a href="<%= url_for :controller => 'madein_ksa',:action => 'show' %>" target="_blank">&nbsp;&nbsp;Items Available (<%= @db_classification.inspect %>)</a></div>
+                        </div>  
+                         <div class="col-md-6">
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#8B4513;"></div>
+                            <div class="pull-left">&nbsp;&nbsp;ValiDatad Records (0)</div>
+                        </div>                  
+                    </div>       
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+       <div class="col-lg-6">
+            <div class="tabs-container custom-tab" style="border:1px solid #21B6A8;">
+                <ul class="nav nav-tabs" style="background:#21B6A8;" >
+                    <li><a data-toggle="tab" href="#tab-1" style="color:#f3f3f4 !important;"> NSN</a></li>
+                    <li class=""><a data-toggle="tab" href="#tab-2" style="color:#f3f3f4 !important;">CAGE CODE</a></li>
+                    <li class=""><a data-toggle="tab" href="#tab-3" style="color:#f3f3f4 !important;">HIERARCHICAL VIEW</a></li>
+                    <li class="pull-right"><a data-toggle="tab" href="#tab-2" style="color:#f3f3f4 !important;"><i class="fa fa-chevron-up"></i></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane active">
+                        <div class="panel-body">
+                            <h3 style="font-size:17px;font-weight:normal;">CMM Database (NSN)</h3>
+                            <span id="db_cmm" class="db_cmm" style="margin-left:100px !important;"></span>
+                            <div class="row" style="padding-top:10px;">
+                                <div class="col-md-6">
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank">&nbsp;&nbsp;Total NSN (<%= @db_cmm.inspect  %>)</a></div><br>
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#00FFFF;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'INV' %>" target="_blank">&nbsp;&nbsp;Invalid NSN (<%= @db_inv.inspect %>)</a></div><br>
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'LINV' %>" target="_blank">&nbsp;&nbsp;Local NSN (<%= @db_locinv.inspect %>)</a></div><br>
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'USV' %>"  target="_blank">&nbsp;&nbsp;Available NSN-USA (<%= @db_match.inspect %>)</a></div><br>
+                                     <div class="pull-left" style="width:15px;height:15px;;background-color:#FF1493;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'USNV' %>"  target="_blank">&nbsp;&nbsp;Unavailable NSN-USA (<%= @db_nonoff.inspect %>)</a></div><br>
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'GMV' %>"  target="_blank">&nbsp;&nbsp;Available NSN-DEU (<%= @db_matchgmv.inspect %>)</a></div><br>
+                                    <!-- <div class="pull-left"> &nbsp;<a href=" %>" target="_blank">-Other Countries (<%= @db_other.inspect %>)</a></div><br>-->
+                                </div>  
+                                <div class="col-md-6">
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#FF7F50;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FRV' %>"  target="_blank">&nbsp;&nbsp;Available NSN-FRA (<%= @db_matchfrv.inspect %>)</a></div><br>
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#0199C6;"></div>
+                                    <div class="pull-left">&nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'UKV' %>"  target="_blank">&nbsp;&nbsp;Available NSN-GBR (<%= @db_matchukv.inspect %>)</a></div><br>
+                                     <div class="pull-left" style="width:15px;height:15px;;background-color:#990199;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'GMNV' %>" target="_blank">&nbsp;&nbsp;Unavailable NSN-DEU (<%= @db_nonoffgmv.inspect %>)</a></div><br>
+                                    
+                                     <div class="pull-left" style="width:15px;height:15px;;background-color:#DB7093;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FRNV' %>"  target="_blank">&nbsp;&nbsp;Unavailable NSN-FRA (<%= @db_nonoffrnv.inspect %>)</a></div><br>
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#DEB887;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'UKNV' %>"  target="_blank">&nbsp;&nbsp;Unavailable NSN-GBR (<%= @db_nonoffuk.inspect %>)</a></div><br>
+                                     <div class="pull-left" style="width:15px;height:15px;;background-color:#8B4513;"></div>
+                                    <div class="pull-left"> &nbsp;<a <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => '' %>"  target="_blank">&nbsp;&nbsp;Other Countries NSN (<%= @db_other.inspect %>)</a></div>
+                                </div>          
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane">
+                        <div class="panel-body">
+                            <h3 style="font-size:17px;font-weight:normal;">CMM Database (CAGE)</h3>
+                           <span id="dbref_cmm" class="dbref_cmm" style="margin-left:100px !important;"></span>
+                            <div class="row" style="padding-top:10px;">
+                                <div class="col-md-6">
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'all' %>" target="_blank">&nbsp;&nbsp;Total NSN (<%= @dbref_cmm.inspect  %>)</a></div><br>
+                                    <!--div class="pull-left" style="width:15px;height:15px;;background-color:#00FFFF;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'INV' %>" target="_blank">&nbsp;&nbsp;Invalid NSN (<%= @dbref_inv.inspect %>)</a></div><br>
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
+                                    <div class="pull-left">&nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'LINV' %>" target="_blank">&nbsp;&nbsp;Local NSN (<%= @dbref_locinv.inspect %>)</a></div><br-->
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
+                                    <div class="pull-left">&nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'USV' %>" target="_blank">&nbsp;&nbsp;Available NSN - USA (<%= @dbref_match.inspect %>)</a></div><br>
+                                     <!--div class="pull-left" style="width:15px;height:15px;;background-color:#FF1493;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'USNV' %>" target="_blank">&nbsp;&nbsp;Unavailable NSN - USA (<%= @dbref_nonoff.inspect %>)</a></div><br-->
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'GMV' %>" target="_blank">&nbsp;&nbsp;Available NSN - DEU (<%= @dbref_matchgmv.inspect %>)</a></div><br>
+                                    <!-- <div class="pull-left"> &nbsp;<a href=" %>" target="_blank">-Other Countries (<%= @dbref_other.inspect %>)</a></div><br> -->
+                                </div>  
+                                <div class="col-md-6">
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#FF7F50;"></div>
+                                    <div class="pull-left">&nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'FRV' %>" target="_blank">&nbsp;&nbsp;Available NSN - FRA (<%= @dbref_matchfrv.inspect %>)</a></div><br>
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#0199C6;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'UKV' %>" target="_blank">&nbsp;&nbsp;Available NSN - GBR (<%= @dbref_matchukv.inspect %>)</a></div><br>
+                                     <!--div class="pull-left" style="width:15px;height:15px;;background-color:#990199;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'GMNV' %>" target="_blank">&nbsp;&nbsp;Unavailable NSN - DEU (<%= @dbref_nonoffgmv.inspect %>)</a></div><br>
+                                    
+                                     <div class="pull-left" style="width:15px;height:15px;;background-color:#DB7093;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'FRNV' %>" target="_blank">&nbsp;&nbsp;Unavailable NSN - FRA (<%= @dbref_nonoffrnv.inspect %>)</a></div><br>
+                                    <div class="pull-left" style="width:15px;height:15px;;background-color:#DEB887;"></div>
+                                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'UKNV' %>" target="_blank">&nbsp;&nbsp;Unavailable NSN - GBR (<%= @dbref_nonoffuk.inspect %>)</a></div><br>
+                                     <div class="pull-left" style="width:15px;height:15px;;background-color:#8B4513;"></div>
+                                    <div class="pull-left">&nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => '' %>" target="_blank">&nbsp;&nbsp;Other Countries NSN (<%= @dbref_other.inspect %>)</a></div-->                        
+                                </div>          
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane">
+                        <div class="panel-body">
+                        <h3 style="font-size:17px;font-weight:normal;">CMM Database (DIstinct NSN)</h3><br><br>
+                         <img alt="image" class="img-responsive"  src="<%= image_url 'tree1.png' %> " data-toggle="modal" data-target=".bs-example-modal-lg"/> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="col-lg-6">
+             <div class="ibox float-e-margins" style="border:1px solid #177F75;">
+                <div class="ibox-title" style="background:#177F75;">
+                    <h5 style="color:#f3f3f4 !important;">EXEMPTION Database</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link" style="color:#f3f3f4 !important;">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content text-center h-200">
+                    <span id="db_excemption"></span>
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-6">
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
+                            <div class="pull-left"> &nbsp;&nbsp;Total (<%= @db_extotal.inspect %>)</div>
+                        </div>  
+                        <div class="col-md-6 ">
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
+                            <div class="pull-left"> &nbsp;&nbsp;Items Available (<%= @db_exclass.inspect %>)</div>
+                        </div>                    
+                    </div>   
+                </div>
+            </div>
+        </div>   
+    </div><br>
+</div>
+ <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content" style="border:2px solid #E66D96;">
+                            <div class="modal-header" style="background:#E66D96;">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"  style="color:#f3f3f4 !important;"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="gridSystemModalLabel" style="color:#f3f3f4 !important;">CMM Database Hierarchical View </h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="tree-view"></div>
+                                    </div>
+                                </div>  
+                            </div>  
+                        </div>
+                      </div>
+                    </div>
+                    <ul id="tree-data" style="display:none">
+                        <li id="root">
+                            <span id="source">
+                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank" style="font-size:12px !important;">Source Data</a></h5>
+                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                <p><%= @db_cmm %></p>                                        
+                            </span>
+                            <ul>
+                                <li>
+                                    <span id="sourced" style="background:red;">
+                                       <h5 ><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank" style="font-size:12px !important;">Valid</a></h5>
+                                        <div style="border-top:2px solid #e7eaec;color: #E66D96;background-color: #E66D96;height:1px;margin:8px 0;"></div>
+                                        <p><%= @db_valid %></p>
+                                    </span>
+                                    <ul>
+                                        <li>
+                                            <span id="valid">
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'USV' %>"  target="_blank" style="font-size:12px !important;">USA</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                <p><%= @db_usa %></p>
+                                            </span>
+                                            <ul>
+                                                <li>
+                                                    <span id="us">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'USV' %>"  target="_blank" style="font-size:12px !important;">Avail</a></h5> 
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_match %></p>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span id="us-unavilable">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'USNV' %>"  target="_blank"  style="font-size:12px !important;">Unavail</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_nonoff %></p>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span id="unitedkingdom">
+                                                <h5><a href="" style="font-size:12px !important;">GBR</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                <p><%= @db_gbr %></p>
+                                            </span>
+                                            <ul>
+                                                <li>
+                                                   <span id="uk"> 
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'UKV' %>"  target="_blank" style="font-size:12px !important;">Avail</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_matchukv %></p>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span id="uk-unavilable">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'UKNV' %>"  target="_blank" style="font-size:12px !important;">Unavail</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_nonoffuk %></p>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span id="german-root">
+                                                <h5><a href="" style="font-size:12px !important;">Germany</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                <p><%= @db_deu %></p>
+                                            </span>
+                                            <ul>
+                                                <li>
+                                                    <span id="german">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'GMV' %>"  target="_blank" style="font-size:12px !important;">Avail</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_matchgmv %></p>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span id="german-unavilable">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'GMNV' %>"  target="_blank" style="font-size:12px !important;">Unavail</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_nonoffgmv %></p>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span id="france-root">
+                                                <h5><a href="" style="font-size:12px !important;">France</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                <p><%= @db_fra %></p>
+                                            </span>
+                                            <ul>
+                                                <li>
+                                                    <span id="france">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FRV' %>"  target="_blank" style="font-size:12px !important;">Avail</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_matchfrv %></p>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span id="france-unavilable">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FRNV' %>"  target="_blank" style="font-size:12px !important;">Unavail</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_nonoffrnv %></p>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span id="othercountries">
+                                                <h5><a href="" style="font-size:12px !important;">Others</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                <p><%= @db_other %></p>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span id="invalidformat">
+                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank" style="font-size:12px !important;">Invalid</a></h5>
+                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                         <p><%= @db_invalid %></p>
+                                    </span>
+                                     <ul>
+                                        <li>
+                                            <span id="invalidformat">
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank" style="font-size:12px !important;">XXXX SAL XXXXXX</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                 <p><%= @db_locinv %></p>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span id="invalidformat">
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank" style="font-size:12px !important;">Invalid Chars</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                 <p><%= @db_inv %></p>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>  
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+$("#tree-data").jOrgChart({
+  chartElement: $("#tree-view")
+});
+$(function() {
+    $(".db_cmm").sparkline(['<%= @db_inv.inspect %>','<%= @db_locinv.inspect %>','<%= @db_match.inspect %>','<%= @db_nonoff.inspect %>','<%= @db_matchgmv.inspect %>','<%= @db_matchfrv.inspect %>','<%= @db_matchukv.inspect %>','<%= @db_nonoffgmv.inspect %>','<%= @db_nonoffrnv.inspect %>','<%= @db_nonoffuk.inspect %>','<%= @db_other.inspect %>'], {
+        type: 'pie',
+        height: '250px',
+        sliceColors: ['#00FFFF','#3366cc','#dc3912','#FF1493','#66aa00','#FF7F50','#0099c6','#990099','#DB7093','#DEB887','#8B4513'],
+        //sliceColors: ['#1ab394','#B5B8CF'],
+        highlight: "#1ab394",
+        scaleBackdropColor: "rgba(255,255,255,0.75)",
+    });  
+     $(".dbref_cmm").sparkline(['<%= @dbref_inv.inspect %>','<%= @dbref_locinv.inspect %>','<%= @dbref_match.inspect %>','<%= @dbref_nonoff.inspect %>','<%= @dbref_matchgmv.inspect %>','<%= @dbref_matchfrv.inspect %>','<%= @dbref_matchukv.inspect %>','<%= @dbref_nonoffgmv.inspect %>','<%= @dbref_nonoffrnv.inspect %>','<%= @dbref_nonoffuk.inspect %>','<%= @dbref_other.inspect %>'], {
+        type: 'pie',
+        height: '250px',
+        sliceColors: ['#00FFFF','#3366cc','#dc3912','#FF1493','#66aa00','#FF7F50','#0099c6','#990099','#DB7093','#DEB887','#8B4513'],
+        //sliceColors: ['#1ab394','#B5B8CF'],
+        highlight: "#1ab394",
+        scaleBackdropColor: "rgba(255,255,255,0.75)",
+    });
+    $("#db_factory").sparkline(['<%= @db_cancel.inspect %>','<%= @db_cansug.inspect %>','<%= @db_merged.inspect %>','<%= @db_newoper.inspect %>','<%= @db_stop.inspect %>','<%= @db_under.inspect %>','<%= @db_newlic.inspect %>'], {
+        type: 'pie',
+         height: '250px',
+         sliceColors: ['#3366cc','#DC3912','#FF1493','#66aa00','#DEB887','#49C5E8','#990099','#DB7093','#DEB887','#8B4513'],
+        //sliceColors: ['#1ab394','#B5B8CF'],
+       highlight: "#1ab394",
+        scaleBackdropColor: "rgba(255,255,255,0.75)",
+
+     });
+
+    $("#db_ksa").sparkline(['<%= @db_classbalance.inspect %>', '<%= @db_classification.inspect %>'], {
+       type: 'pie',
+       height: '250px',
+        sliceColors: ['#3366cc','#dc3912','#ff9900','#109618','#66aa00','#dd4477','#0099c6','#990099'],
+    //     //sliceColors: ['#1ab394','#B5B8CF'],
+         highlight: "#1ab394",
+         scaleBackdropColor: "rgba(255,255,255,0.75)",
+     }); 
+
+     $("#db_excemption").sparkline(['<%= @db_exbalance.inspect %>', '<%= @db_exclass.inspect %>'], {
+        type: 'pie',
+       height: '250px',
+       sliceColors: ['#3366cc','#dc3912','#ff9900','#109618','#66aa00','#dd4477','#0099c6','#990099'],
+    //     //sliceColors: ['#1ab394','#B5B8CF'],
+        highlight: "#1ab394",
+        scaleBackdropColor: "rgba(255,255,255,0.75)",
+    });   
+});
+
+</script>
+
+<% end %>

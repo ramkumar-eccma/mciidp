@@ -1,0 +1,18 @@
+<div class="footer">
+    <div class="pull-right col-md-4">
+       <span class="pull-right"> <strong>Email me:</strong>
+    	<%= mail_to "info@eccma.org" do %>
+	  	 	<span>info@eccma.org</span>
+		<% end %></span>
+    </div>
+     <div class="col-md-4">
+        <%- if I18n.locale== :ar %>
+            <%= link_to_unless I18n.locale == :en, "English",params.merge({:locale => :en}) %> | العربية
+          <% else %>  
+            English | <%= link_to_unless I18n.locale == :de, "العربية",params.merge({:locale => :ar}) %>
+          <% end -%>
+    </div>
+    <div class="col-md-4">
+        <strong>Copyright</strong> <%= link_to "Eccma", "http://www.eccma.org/", target: '_blank' %> &copy; <%= Time.now.year %>
+    </div>
+</div>

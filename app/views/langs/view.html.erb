@@ -1,0 +1,639 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+        <img alt="image" class="img-responsive" src="<%= image_url 'headerlogo.jpg' %> " height="50px" />
+        <!--  <div class="col-lg-6">
+        <img alt="image" src="<%= image_url 'l3.jpg' %>" style="margin-left:-15px;" />
+        </div>
+        <div class="col-lg-2">
+        <img alt="image" src="<%= image_url 'l2.jpg' %>" style="align:center;"/>
+        </div>
+        <div class="col-lg-4">
+            <img alt="image" src="<%= image_url 'l1.jpg' %>" style="margin-top:15px;margin-left:220px;" />
+        </div>  -->
+     
+        <div class="clearfix"></div>
+         <ol class="breadcrumb" style="background:#F3F3F4; padding:10px;">
+            <li>
+              <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_home = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '14','ar')%>
+                  <% @ar_breadcrum_home.each do |ar_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= ar_breadcrum_home.language_property %></a>
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_home = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '14','en')%>
+                  <% @en_breadcrum_home.each do |en_breadcrum_home|%>
+                 <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= en_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% end -%>
+              
+            </li>
+             <li class="active">
+                <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_factsearch = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '15','ar')%>
+                  <% @ar_breadcrum_factsearch.each do |ar_breadcrum_factsearch|%>
+                    <a href="<%= url_for :controller => 'langs', :action => 'show' %>"><%= ar_breadcrum_factsearch.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_factsearch = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '15','en')%>
+                  <% @en_breadcrum_factsearch.each do |en_breadcrum_factsearch|%>
+                 <a href="<%= url_for :controller => 'langs', :action => 'show' %>"><%= en_breadcrum_factsearch.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% end -%>
+            </li>
+             <li class="active">
+                <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_view = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '17','ar')%>
+                  <% @ar_breadcrum_view.each do |ar_breadcrum_view|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= ar_breadcrum_view.language_property %></a>
+                   <% end %>
+                   /
+                   <% @name.each do |t|  %>
+                   <%= t.Value %>
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_view = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '17','en')%>
+                  <% @en_breadcrum_view.each do |en_breadcrum_view|%>
+                 <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= en_breadcrum_view.language_property %></a>
+
+                   <% end %>
+                   /
+                   <% @name.each do |t|  %>
+                   <strong><%= t.Value %></strong> 
+                   <% end %>
+                </span>
+              <% end -%>
+            </li>
+        </ol>
+        
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+      <div class="col-lg-12">
+        <div class="">
+            <!-- <div class="ibox-title">
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="fullscreen-link">
+                        <i class="fa fa-expand"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div> -->
+            <div class="">
+              <div class="row"> 
+                <div class="col-lg-12">
+                  <div class="panel panel-info">
+                        <div class="panel-heading">
+                             <%- if I18n.locale== :ar %>
+                                  <span class="">
+                                    <% @ar_factory = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '28','ar')%>
+                                    <% @ar_factory.each do |ar_factory|%>
+                                    <%= ar_factory.language_property %>
+                                     <% end %>
+                                  </span>
+                                <% else %>
+                                  <span class="">
+                                    <% @en_factory = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '28','en')%>
+                                    <% @en_factory.each do |en_factory|%>
+                                    <%= en_factory.language_property %>
+                                     <% end %>
+                                  </span>
+                              <% end -%>
+                          </div>
+                      <div class="panel-body">
+                         <div class="row">
+                            <div class="col-lg-6"> 
+                                <table class="table borderless">
+                                    <div class="row">
+                                      <% @fname.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-4">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-8">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                        <% @fown_org.each do |a|%>  
+                                        <tr class="hide"> 
+                                            <div class="col-lg-4">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-8">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                    </div> 
+                                </table> 
+                            </div>
+                             <div class="col-lg-6"> 
+                                <table class="table borderless">
+                                    <div class="row">
+                                      <% @fweb.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-4">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-8">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                    </div> 
+                                </table> 
+                            </div>
+                         </div>
+                    </div>
+                  </div>
+                   </div>
+                  <div class="col-lg-8">
+                   <div class="panel panel-warning">
+                        <div class="panel-heading">
+                          <%- if I18n.locale== :ar %>
+                              <span class="">
+                                <% @ar_factoryadd = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '29','ar')%>
+                                <% @ar_factoryadd.each do |ar_factoryadd|%>
+                                <%= ar_factoryadd.language_property %>
+                                 <% end %>
+                              </span>
+                            <% else %>
+                              <span class="">
+                                <% @en_factoryadd = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '29','en')%>
+                                <% @en_factoryadd.each do |en_factoryadd|%>
+                                <%= en_factoryadd.language_property %>
+                                 <% end %>
+                              </span>
+                          <% end -%>
+                        </div>
+                      <div class="panel-body">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                  <table class="table borderless">
+                                    <div class="row">
+                                      <% @fpaddress.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-6">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                      <% @fdistrict.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-6">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                      <% @fpob.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-6">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                      <% @fpob_pc.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-6">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                   
+                                      <% @flicense.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-6">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                      <% @fblockno.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-6">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                     
+                                    </div>
+                                  </table>
+                              </div>
+                               <div class="col-lg-6">
+                                  <table class="table borderless">
+                                    <div class="row">
+                                      <% @fcity.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-6">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                      <% @fpostal_Code.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-6">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                      <% @fpob_city.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-6">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                      <% @fstate.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-6">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                     
+                                      <% @fgps.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-6">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                      <% @fnoemp.each do |a|%>  
+                                        <tr> 
+                                            <div class="col-lg-6">
+                                              <td><b><%= a.property%></b></td>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                            </div>
+                                        </tr>
+                                      <% end %>
+                                    </div>
+                                  </table>
+                              </div>
+                           </div>       
+                      </div>
+                    </div>
+                     <input type="hidden" id="mfgcount" value="<%= @fmfgcount %>">
+                        <div class="panel panel-danger" id="mfg_div">
+                      <div class="panel-heading">
+                        <%- if I18n.locale== :ar %>
+                              <span class="">
+                                <% @ar_manufect = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '30','ar')%>
+                                <% @ar_manufect.each do |ar_manufect|%>
+                                <%= ar_manufect.language_property %>
+                                 <% end %>
+                              </span>
+                            <% else %>
+                              <span class="">
+                                <% @en_manufect = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '30','en')%>
+                                <% @en_manufect.each do |en_manufect|%>
+                                <%= en_manufect.language_property %>
+                                 <% end %>
+                              </span>
+                          <% end -%>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-lg-3">
+                          <table class="table borderless">
+                              <tr>
+                                <td> 
+                                    <% @fmfg_isic.each do |a|%> 
+                                      <div class="col-lg-4 pull-right">
+                                        <tr><b><%= a.property%></b>&nbsp;<input type="text" class="form-control" value="<%= a.Value %>" /></tr>
+                                        <br></br>
+                                      </div>
+                                   <% end %>
+                                 </td>
+                              </tr>  
+                          </table>
+                        </div>
+                        <div class="col-lg-3">
+                          <table class="table borderless">
+                            <tr>                               <td>
+                                <% @fmfg_capacity.each do |a|%>  
+                                   <div class="col-lg-4 pull-right">
+                                        <tr><b><%= a.property%></b>&nbsp;<input type="text" class="form-control" value="<%= a.Value %>"></tr>
+                                        </br></br>
+                                      </div>
+                                <% end %>
+                                </td>
+                              </tr>
+                          </table>
+                        </div>
+                        <div class="col-lg-3">
+                          <table class="table borderless">
+                            <tr>                               <td>
+                                <% @fmfg_uom.each do |a|%>  
+                                   <div class="col-lg-4 pull-right">
+                                        <tr><b><%= a.property%></b>&nbsp;<input type="text" class="form-control" value="<%= a.Value %>"></tr>
+                                        </br></br>
+                                      </div>
+                                <% end %>
+                                </td>
+                              </tr>
+                          </table>
+                        </div>
+                         <div class="col-lg-3">
+                          <table class="table borderless">
+                            <tr>                               <td>
+                                <% @fmfg_period.each do |a|%>  
+                                   <div class="col-lg-4 pull-right">
+                                        <tr><b><%= a.property%></b>&nbsp;<input type="text" class="form-control" value="<%= a.Value %>"></tr>
+                                        </br>
+                                      </div>
+                                <% end %>
+                                </td>
+                              </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                <div class="ibox collapsed border-bottom" style="border:1px solid #0C78B8;">
+                    <div class="ibox-title" style="background:#0C78B8;">
+                        <h5 style="color:#f3f3f4 !important;"><%- if I18n.locale== :ar %>
+                              <span class="">
+                                <% @ar_rp = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '31','ar')%>
+                                <% @ar_rp.each do |ar_rp|%>
+                                <%= ar_rp.language_property %>
+                                 <% end %>
+                              </span>
+                            <% else %>
+                              <span class="">
+                                <% @en_rp = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '31','en')%>
+                                <% @en_rp.each do |en_rp|%>
+                                <%= en_rp.language_property %>
+                                 <% end %>
+                              </span>
+                          <% end -%></h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up" style="color:#f3f3f4 !important;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                      <table class="table borderless">
+                        <div class="row">
+                          <% @frelation.each do |a|%>  
+                            <tr> 
+                                <div class="col-lg-4">
+                                  <td><b><%= a.property%></b></td>
+                                </div>
+                                <div class="col-lg-8">
+                                  <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                </div>
+                            </tr>
+                          <% end %>
+                          <% @frelation_title.each do |a|%>  
+                            <tr> 
+                                <div class="col-lg-4">
+                                  <td><b><%= a.property%></b></td>
+                                </div>
+                                <div class="col-lg-8">
+                                  <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                </div>
+                            </tr>
+                          <% end %>
+                          <% @frelation_email.each do |a|%>  
+                            <tr> 
+                                <div class="col-lg-4">
+                                  <td><b><%= a.property%></b></td>
+                                </div>
+                                <div class="col-lg-8">
+                                  <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                </div>
+                            </tr>
+                          <% end %>
+                        </div>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                 <div class="ibox collapsed border-bottom" style="border:1px solid #1DB494;">
+                    <div class="ibox-title" style="background:#1DB494;">
+                        <h5 style="color:#f3f3f4 !important;"><%- if I18n.locale== :ar %>
+                              <span class="">
+                                <% @ar_tp = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '32','ar')%>
+                                <% @ar_tp.each do |ar_tp|%>
+                                <%= ar_tp.language_property %>
+                                 <% end %>
+                              </span>
+                            <% else %>
+                              <span class="">
+                                <% @en_tp = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '32','en')%>
+                                <% @en_tp.each do |en_tp|%>
+                                <%= en_tp.language_property %>
+                                 <% end %>
+                              </span>
+                          <% end -%></h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up" style="color:#f3f3f4 !important;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                    <table class="table borderless">
+                        <div class="row">
+                          <% @ftp_name.each do |a|%>  
+                            <tr> 
+                                <div class="col-lg-4">
+                                  <td><b><%= a.property%></b></td>
+                                </div>
+                                <div class="col-lg-8">
+                                  <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                </div>
+                            </tr>
+                          <% end %>
+                          <% @ftp_title.each do |a|%>  
+                            <tr> 
+                                <div class="col-lg-4">
+                                  <td><b><%= a.property%></b></td>
+                                </div>
+                                <div class="col-lg-8">
+                                  <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                </div>
+                            </tr>
+                          <% end %>
+                          <% @ftp_email.each do |a|%>  
+                            <tr> 
+                                <div class="col-lg-4">
+                                  <td><b><%= a.property%></b></td>
+                                </div>
+                                <div class="col-lg-8">
+                                  <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                </div>
+                            </tr>
+                          <% end %>
+                        </div>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                <div class="ibox collapsed border-bottom" style="border:1px solid #23C6C8;">
+                    <div class="ibox-title" style="background:#23C6C8;">
+                        <h5 style="color:#f3f3f4 !important;"><%- if I18n.locale== :ar %>
+                              <span class="">
+                                <% @ar_construction = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '33','ar')%>
+                                <% @ar_construction.each do |ar_construction|%>
+                                <%= ar_construction.language_property %>
+                                 <% end %>
+                              </span>
+                            <% else %>
+                              <span class="">
+                                <% @en_construction = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '33','en')%>
+                                <% @en_construction.each do |en_construction|%>
+                                <%= en_construction.language_property %>
+                                 <% end %>
+                              </span>
+                          <% end -%></h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up" style="color:#f3f3f4 !important;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                    <table class="table borderless">
+                        <div class="col-lg-12">
+                          <% @fcs_type.each do |a|%>  
+                            <tr> 
+                                <div class="col-lg-4">
+                                  <td><b><%= a.property%></b></td>
+                                </div>
+                                <div class="col-lg-8">
+                                  <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                </div>
+                            </tr>
+                          <% end %>
+                          <% @fland_type.each do |a|%>  
+                            <tr> 
+                                <div class="col-lg-4">
+                                  <td><b><%= a.property%></b></td>
+                                </div>
+                                <div class="col-lg-8">
+                                  <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                </div>
+                            </tr>
+                          <% end %>
+                          <% @fsite_land.each do |a|%>  
+                            <tr> 
+                                <div class="col-lg-4">
+                                  <td><b><%= a.property%></b></td>
+                                </div>
+                                <div class="col-lg-8">
+                                  <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                </div>
+                            </tr>
+                          <% end %>
+                          <% @find_city.each do |a|%>  
+                            <tr> 
+                                <div class="col-lg-4">
+                                  <td><b><%= a.property%></b></td>
+                                </div>
+                                <div class="col-lg-8">
+                                  <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                </div>
+                            </tr>
+                          <% end %>
+                          <% @find_land.each do |a|%>  
+                            <tr> 
+                                <div class="col-lg-4">
+                                  <td><b><%= a.property%></b></td>
+                                </div>
+                                <div class="col-lg-8">
+                                  <td><input type="text" class="form-control" value="<%= a.Value %>"></td>
+                                </div>
+                            </tr>
+                          <% end %>
+                        </div>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>   
+</div>
+</div>
+
+<% content_for :javascript do %>
+<script type="text/javascript">
+ $(document).ready(function(){
+  var mfgcount = document.getElementById('mfgcount').value;
+    
+    //alert(mfgcount); 
+    if(mfgcount == '0') {
+       mfg_div.style['display'] = 'none';
+     } else {
+       mfg_div.style['display'] = 'block';
+     }
+  });
+
+</script>
+
+<% end %>

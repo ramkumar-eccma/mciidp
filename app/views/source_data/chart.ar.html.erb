@@ -1,0 +1,266 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+        <img alt="image" class="img-responsive" src="<%= image_url 'headerlogo.jpg' %> " height="50px" />
+        <!--  <div class="col-lg-6">
+        <img alt="image" src="<%= image_url 'l3.jpg' %>" style="margin-left:-15px;" />
+        </div>
+        <div class="col-lg-2">
+        <img alt="image" src="<%= image_url 'l2.jpg' %>" style="align:center;"/>
+        </div>
+        <div class="col-lg-4">
+            <img alt="image" src="<%= image_url 'l1.jpg' %>" style="margin-top:15px;margin-left:220px;" />
+        </div>  -->
+        
+        <div class="clearfix"></div>
+        <ol class="breadcrumb" style="background:#F3F3F4; padding:10px;">
+            <li class="active">
+                <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><strong>لوحة أجهزة القياس</strong></a>
+            </li>
+        </ol>
+        
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+ <div class="col-lg-6">
+        <div class="ibox float-e-margins" style="border:1px solid #23C6C8;">
+            <div class="ibox-title text-primary" style="background:#23C6C8;">
+                <h5 style="color:#f3f3f4 !important;">Factory Database</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link" style="color:#f3f3f4 !important;">
+                        <i class="fa fa-chevron-up" ></i>
+                    </a>               
+                    <a class="close-link hide" style="color:#f3f3f4 !important;">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content text-center h-200">
+                <span id="db_factory"></span>
+                <div class="row" style="padding-top:10px;">
+                     <div class="col-md-6">
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'langs', :action => 'show',:TYPE => 'all'%>" target="_blank">&nbsp;&nbsp;الإجمالي الكلي(<%= @db_factory.inspect  %>)</a></div><br>
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'langs', :action => 'show',:TYPE => 'OPERATIONAL' %>" target="_blank">&nbsp;&nbsp;التشغيل (<%= @db_newoper.inspect  %>)</a></div><br>
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#990099;"></div>
+                    <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'langs', :action => 'show',:TYPE => 'NEW LICENSE' %>"  target="_blank">&nbsp;&nbsp;الترخيص الجديد (<%= @db_newlic.inspect %>)</a></div><br>
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#FF1493;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'langs', :action => 'show',:TYPE => 'Merged' %>"  target="_blank">&nbsp;&nbsp;اندمجت (<%= @db_merged.inspect %>)</a></div><br>
+                    </div>  
+                     <div class="col-md-6">
+                         <div class="pull-left" style="width:15px;height:15px;;background-color:#49C5E8;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'langs', :action => 'show',:TYPE => 'UNDER CONSTRUCTION' %>" target="_blank">&nbsp;&nbsp;تحت الإنشاء ‬ (<%= @db_under.inspect %>)</a></div><br>
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'langs', :action => 'show',:TYPE => 'CANCELLED'%>" target="_blank">&nbsp;&nbsp;  تم الالغاء (<%= @db_cancel.inspect %>)</a></div><br>
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'langs', :action => 'show',:TYPE => 'Cancel Suggestion'%>" target="_blank">&nbsp;&nbsp;إلغاء الإقتراحات(<%= @db_cansug.inspect %>)</a></div><br>
+                     
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#DEB887;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'langs', :action => 'show',:TYPE => 'STOPPED' %>" target="_blank">&nbsp;&nbsp;توقفت (<%= @db_stop.inspect  %>)</a></div><br>
+                        
+                    </div>                                  
+                </div>              
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="ibox float-e-margins" style="border:1px solid #21B6A8;">
+            <div class="ibox-title" style="background:#21B6A8;">
+                <h5 style="color:#f3f3f4 !important;">صنع في قاعدة بيانات KSA</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link" style="color:#f3f3f4 !important;">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content text-center h-200">
+                <span id="db_ksa"></span>
+                <div class="row" style="padding-top:10px;">
+                    <div class="col-md-6">
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
+                        <div class="pull-left">&nbsp;&nbsp;(<%= @db_classtotal.inspect %>) الإجمالي الكلي</div>
+                    </div>  
+                    <div class="col-md-6">
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
+                        <div class="pull-left">&nbsp;&nbsp;(<%= @db_classification.inspect %>) عدد الأخبار</div>
+                    </div>  
+                     <div class="col-md-6">
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#8B4513;"></div>
+                         <div class="pull-left">&nbsp;&nbsp;(0) عناصر التحقق من صحة</div>
+                    </div>                  
+                </div>       
+            </div>
+        </div>
+    </div> 
+    </div>
+<div class="row">
+   <div class="col-lg-6">
+        <div class="tabs-container custom-tab" style="border:1px solid #21B6A8;">
+            <ul class="nav nav-tabs" style="background:#21B6A8;">
+                <li class="active"><a data-toggle="tab" href="#tab-1"style="color:#f3f3f4 !important;"> NSN</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-2" style="color:#f3f3f4 !important;">CAGE CODE</a></li>
+                 <li class="pull-left"><a data-toggle="tab" href="#tab-2" style="color:#f3f3f4 !important;"><i class="fa fa-chevron-up"></i></a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane active">
+                    <div class="panel-body">
+                    <h3 style="font-size:17px;font-weight:normal;"> (NSN)قاعدة بيانات CMM</h3>
+                     <span id="db_cmm" class="db_cmm" style="margin-left:100px !important;"></span>
+                      <div class="row" style="padding-top:10px;">
+
+                    <div class="col-md-6">
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank">&nbsp;&nbsp;(<%= @db_cmm.inspect  %>) مجموع NSN</a></div><br>
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#00FFFF;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'INV' %>" target="_blank">&nbsp;&nbsp;(<%= @db_inv.inspect %>) NSN غير صالح</a></div><br>
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'LINV' %>" target="_blank">&nbsp;&nbsp;(<%= @db_locinv.inspect %>) NSN المحلي</a></div><br>
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'USV' %>"  target="_blank">&nbsp;&nbsp;(<%= @db_match.inspect %>) الرسمية NSN - USA</a></div><br>
+                         <div class="pull-left" style="width:15px;height:15px;;background-color:#FF1493;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'USNV' %>"  target="_blank">&nbsp;&nbsp;(<%= @db_nonoff.inspect %>) غير الرسمية NSN - USA</a></div><br>
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'GMV' %>"  target="_blank">&nbsp;&nbsp;(<%= @db_matchgmv.inspect %>) الرسمي NSN - DEU</a></div><br>
+                        <!-- <div class="pull-left"> &nbsp;<a href=" %>" target="_blank">-Other Countries (<%= @db_other.inspect %>)</a></div><br>
+ -->
+                    </div>  
+                    <div class="col-md-6">
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#FF7F50;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FRV' %>"  target="_blank">&nbsp;&nbsp;(<%= @db_matchfrv.inspect %>) الرسمي NSN- FRA</a></div><br>
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#0199C6;"></div>
+                        <div class="pull-left"> &nbsp;<a <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'UKV' %>"  target="_blank">&nbsp;&nbsp;(<%= @db_matchukv.inspect %>) الرسمي NSN - GBR</a></div><br>
+                         <div class="pull-left" style="width:15px;height:15px;;background-color:#990199;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%=  %>" target="_blank">&nbsp;&nbsp;(<%= @db_nonoffgmv.inspect %>) غير الرسمية NSN - DEU</a></div><br>
+                        
+                         <div class="pull-left" style="width:15px;height:15px;;background-color:#DB7093;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FRNV' %>"  target="_blank">&nbsp;&nbsp;(<%= @db_nonoffrnv.inspect %>) غير الرسمي NSN - FRA</a></div><br>
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#DEB887;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'UKNV' %>"  target="_blank">&nbsp;&nbsp;(<%= @db_nonoffuk.inspect %>) غير الرسمي NSN - GBR</a></div><br>
+                         <div class="pull-left" style="width:15px;height:15px;;background-color:#8B4513;"></div>
+                        <div class="pull-left"> &nbsp;<a <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => '' %>"  target="_blank">&nbsp;&nbsp;(<%= @db_other.inspect %>) غيرها من البلدان NSN</a></div>
+                        
+                    </div>          
+                    </div>
+                    </div>
+                </div>
+                 <div id="tab-2" class="tab-pane">
+                   <div class="panel-body">
+                     <h3 style="font-size:17px;font-weight:normal;">(CAGE)قاعدة بيانات CMM</h3>
+                       <span id="dbref_cmm" class="dbref_cmm" style="margin-left:100px !important;"></span>
+                      <div class="row" style="padding-top:10px;">
+                        <div class="col-md-6">
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'all' %>" target="_blank">الإجمالي الكلي CAGE(<%= @dbref_cmm.inspect  %>)</a></div><br>
+                        </div>  
+                        <div class="col-md-6">
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#FF7F50;"></div>
+                            <div class="pull-left">&nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'FRV' %>" target="_blank">مسؤول CAGE-FRA(<%= @dbref_matchfrv.inspect %>)</a></div><br>
+                            
+                        </div> 
+                        <div class="col-md-6">
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#0199C6;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'UKV' %>" target="_blank">مسؤول CAGE-GBR(<%= @dbref_matchukv.inspect %>)</a></div><br>
+                        </div>
+                        <div class="col-md-6">
+                             <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
+                        <div class="pull-left">&nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'USV' %>" target="_blank">مسؤول CAGE-USA(<%= @dbref_match.inspect %>)</a></div><br>
+                        </div>  
+                        <div class="col-md-6">
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
+                        <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'sourceref',:TYPE => 'GMV' %>" target="_blank">مسؤول CAGE-DEU(<%= @dbref_matchgmv.inspect %>)</a></div><br>
+                            
+                        </div>          
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="ibox float-e-margins" style="border:1px solid #177F75;">
+            <div class="ibox-title"style="background:#177F75;">
+                <h5 style="color:#f3f3f4 !important;">قاعدة بيانات الإعفاء</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link" style="color:#f3f3f4 !important;">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content text-center h-200">
+                <span id="db_excemption"></span>
+                <div class="row" style="padding-top:10px;">
+                    <div class="col-md-6">
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
+                        <div class="pull-left"> &nbsp;&nbsp;(<%= @db_extotal.inspect %>) الإجمالي الكلي</div>
+                    </div>  
+                    <div class="col-md-6 ">
+                        <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
+                        <div class="pull-left"> &nbsp;&nbsp;(<%= @db_exclass.inspect %>) عدد من عناصر</div>
+                    </div>                    
+                </div>   
+            </div>
+        </div>
+    </div> 
+</div>
+</div>
+
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+$(function() {
+    $(".db_cmm").sparkline(['<%= @db_inv.inspect %>','<%= @db_locinv.inspect %>','<%= @db_match.inspect %>','<%= @db_nonoff.inspect %>','<%= @db_matchgmv.inspect %>','<%= @db_matchfrv.inspect %>','<%= @db_matchukv.inspect %>','<%= @db_nonoffgmv.inspect %>','<%= @db_nonoffrnv.inspect %>','<%= @db_nonoffuk.inspect %>','<%= @db_other.inspect %>'], {
+        type: 'pie',
+        height: '250px',
+        sliceColors: ['#00FFFF','#3366cc','#dc3912','#FF1493','#66aa00','#FF7F50','#0099c6','#990099','#DB7093','#DEB887','#8B4513'],
+        //sliceColors: ['#1ab394','#B5B8CF'],
+        highlight: "#1ab394",
+        scaleBackdropColor: "rgba(255,255,255,0.75)",
+    }); 
+
+     $(".dbref_cmm").sparkline(['<%= @dbref_inv.inspect %>','<%= @dbref_locinv.inspect %>','<%= @dbref_match.inspect %>','<%= @dbref_nonoff.inspect %>','<%= @dbref_matchgmv.inspect %>','<%= @dbref_matchfrv.inspect %>','<%= @dbref_matchukv.inspect %>','<%= @dbref_nonoffgmv.inspect %>','<%= @dbref_nonoffrnv.inspect %>','<%= @dbref_nonoffuk.inspect %>','<%= @dbref_other.inspect %>'], {
+        type: 'pie',
+        height: '250px',
+        sliceColors: ['#00FFFF','#3366cc','#dc3912','#FF1493','#66aa00','#FF7F50','#0099c6','#990099','#DB7093','#DEB887','#8B4513'],
+        //sliceColors: ['#1ab394','#B5B8CF'],
+        highlight: "#1ab394",
+        scaleBackdropColor: "rgba(255,255,255,0.75)",
+    }); 
+    $("#db_factory").sparkline(['<%= @db_cancel.inspect %>','<%= @db_cansug.inspect %>','<%= @db_merged.inspect %>','<%= @db_newoper.inspect %>','<%= @db_stop.inspect %>','<%= @db_under.inspect %>','<%= @db_newlic.inspect %>'], {
+        type: 'pie',
+         height: '250px',
+         sliceColors: ['#3366cc','#DC3912','#FF1493','#66aa00','#DEB887','#49C5E8','#990099','#DB7093','#DEB887','#8B4513'],
+        //sliceColors: ['#1ab394','#B5B8CF'],
+       highlight: "#1ab394",
+        scaleBackdropColor: "rgba(255,255,255,0.75)",
+
+     });
+
+    $("#db_ksa").sparkline(['<%= @db_classbalance.inspect %>', '<%= @db_classification.inspect %>'], {
+       type: 'pie',
+       height: '250px',
+        sliceColors: ['#3366cc','#dc3912','#ff9900','#109618','#66aa00','#dd4477','#0099c6','#990099'],
+    //     //sliceColors: ['#1ab394','#B5B8CF'],
+         highlight: "#1ab394",
+         scaleBackdropColor: "rgba(255,255,255,0.75)",
+     }); 
+
+     $("#db_excemption").sparkline(['<%= @db_exbalance.inspect %>', '<%= @db_exclass.inspect %>'], {
+        type: 'pie',
+       height: '250px',
+       sliceColors: ['#3366cc','#dc3912','#ff9900','#109618','#66aa00','#dd4477','#0099c6','#990099'],
+    //     //sliceColors: ['#1ab394','#B5B8CF'],
+        highlight: "#1ab394",
+        scaleBackdropColor: "rgba(255,255,255,0.75)",
+    });   
+});
+
+</script>
+
+<% end %>

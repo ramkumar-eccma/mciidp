@@ -1,0 +1,292 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+        <img alt="image" class="img-responsive" src="<%= image_url 'headerlogo.jpg' %> " height="50px" />
+        <!--  <div class="col-lg-6">
+        <img alt="image" src="<%= image_url 'l3.jpg' %>" style="margin-left:-15px;" />
+        </div>
+        <div class="col-lg-2">
+        <img alt="image" src="<%= image_url 'l2.jpg' %>" style="align:center;"/>
+        </div>
+        <div class="col-lg-4">
+            <img alt="image" src="<%= image_url 'l1.jpg' %>" style="margin-top:15px;margin-left:220px;" />
+        </div>  -->
+        
+        <div class="clearfix"></div>
+        <ol class="breadcrumb" style="background:#F3F3F4; padding:10px;">
+            <li>
+              <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_home = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '14','ar')%>
+                  <% @ar_breadcrum_home.each do |ar_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= ar_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_home = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '14','en')%>
+                  <% @en_breadcrum_home.each do |en_breadcrum_home|%>
+                 <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= en_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% end -%>
+              
+            </li>
+             <li class="active">
+                <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_factsearch = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '27','ar')%>
+                  <% @ar_breadcrum_factsearch.each do |ar_breadcrum_factsearch|%>
+                    <a href="<%= url_for(:back) %>"><%= ar_breadcrum_factsearch.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_factsearch = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '27','en')%>
+                  <% @en_breadcrum_factsearch.each do |en_breadcrum_factsearch|%>
+                 <a href="<%= url_for(:back) %>"><%= en_breadcrum_factsearch.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% end -%>
+            </li>
+            <li class="active">
+                <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_vs = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '34','ar')%>
+                  <% @ar_breadcrum_vs.each do |ar_breadcrum_vs|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= ar_breadcrum_vs.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_vs = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '34','en')%>
+                  <% @en_breadcrum_vs.each do |en_breadcrum_vs|%>
+                 <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= en_breadcrum_vs.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% end -%>
+            </li>
+        </ol>
+        
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <%- if I18n.locale== :ar %>
+                    <span class="">
+                      <% @ar_more = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '35','ar')%>
+                      <% @ar_more.each do |ar_more|%>
+                      <%= ar_more.language_property %>
+                       <% end %>
+                    </span>
+                  <% else %>
+                    <span class="">
+                      <% @en_more = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '35','en')%>
+                      <% @en_more.each do |en_more|%>
+                      <%= en_more.language_property %>
+                       <% end %>
+                    </span>
+                <% end -%>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <table class="table table-bordered">
+                             <% @viewnsn.each do |v| %> 
+                                <tr> 
+                                    <th>FSC</th>
+                                    <td><%= v.FSC %> </td>
+                                </tr>
+                                    <th>NIIN</th>
+                                    <td><%= v.NIIN %> </td>
+                                <tr>
+                                    <% if v.FLAG == 'USV'%>
+
+                                    <th><%= link_to 'NSN' , {:controller => :source_data,:action => :edit, :NSN => v.NSN, :PART =>v.PART_NUMBER, :CAGE => v.CAGEC } %></th>
+                                    <td> <%= link_to v.NSN , {:controller => :source_data,:action => :edit, :NSN => v.NSN, :PART => v.PART_NUMBER, :CAGE => v.CAGEC} %></td>
+                                    <% else %>
+                                        <th>NSN</th>
+                                        <td> <%= v.NSN  %></td>
+                                    <% end %>
+
+                                </tr>
+                                <tr>
+                                    <th>SDC</th>
+                                    <td><%= v.SDC %> </td>
+                                </tr>
+                                <tr> 
+                                     <th>UI</th>
+                                     <td><%= v.UI %> </td>
+                                </tr>
+                                <tr> 
+                                    <th>SHORT_NOMENCLATURE</th>
+                                    <td><%= v.SHORT_NOMENCLATURE %> </td>
+                                </tr>
+                                <tr> 
+                                     <th>PART_NUMBER</th>
+                                     <td><%= v.PART_NUMBER %> </td>
+                                </tr>
+                                <tr>
+                                    <th>CAGEC</th>
+                                    <td><%= v.CAGEC %> </td>
+                                </tr>    
+                                <tr>
+                                    <th>EI_FSC</th>
+                                    <td><%= v.EI_FSC %> </td>
+                                </tr>
+                                <tr>
+                                    <th>NIIN2</th>
+                                    <td><%= v.NIIN2 %> </td>
+                                </tr>
+                                <tr>
+                                    <th>MANUFACTURER_MAKE_MODEL</th>
+                                    <td><%= v.MANUFACTURER_MAKE_MODEL %> </td>
+                                </tr>
+                                <tr>
+                                    <th>REQ_QTY</th>
+                                    <td><%= v.REQ_QTY %> </td>
+                                </tr>      
+                                <tr>
+                                    <th>NAME</th>
+                                    <td><%= v.NAME %> </td>
+                                </tr>
+                                <tr>
+                                    <th>END_ITEM_APPLICATION</th> 
+                                    <td><%= v.END_ITEM_APPLICATION %> </td>
+                                </tr>
+                                <tr>
+                                    <th>DIC</th>
+                                    <td><%= v.DIC %> </td>
+                                </tr>
+                              <% end %>
+                        </table>
+                    </div>
+                    <div class="col-lg-6">
+                        <table class="table table-bordered">
+                             <% @viewnsn.each do |v| %> 
+                                <tr>
+                                    <th>DOC</th>
+                                    <td><%= v.DOC %> </td>
+                                </tr>
+                                <tr>
+                                    <th>QTY</th>
+                                    <td><%= v.QTY %> </td>
+                                </tr>
+                                <tr>
+                                    <th>PRICE</th>
+                                    <td><%= v.PRICE %> </td>
+                                </tr>
+                                <tr>
+                                    <th>FORCE_NAME</th>
+                                    <td><%= v.FORCE_NAME %> </td>
+                                </tr>
+                                <tr>
+                                    <th>STOCK_NUMBER</th>
+                                    <td><%= v.STOCK_NUMBER %> </td>
+                                </tr>
+                                <tr>
+                                    <th>SOS</th> 
+                                    <td><%= v.SOS %> </td>  
+                                </tr>
+                                <tr>
+                                    <th>NUMBER_OF_PARTS_IN_SUPPLY</th>
+                                    <td><%= v.NUMBER_OF_PARTS_IN_SUPPLY %> </td>
+                                </tr>
+                                <tr>
+                                    <th>MTC</th>
+                                    <td><%= v.MTC %> </td>
+                                </tr>
+                                    <th>FILE_NAME</th>
+                                    <td><%= v.FILE_NAME %> </td>
+                                </tr>
+                                <tr> 
+                                    <th>NIIN_ECCMA</th>
+                                    <td><%= v.NIIN_ECCMA %> </td>
+                                </tr>   
+                                <tr> 
+                                    <th>FSC_ECCMA</th>
+                                    <td><%= v.FSC_ECCMA %> </td>
+                                </tr>
+                                <tr> 
+                                    <th>COUNTRY_ECCMA</th>
+                                    <td><%= v.COUNTRY_ECCMA %> </td>
+                                </tr>
+                                <tr> 
+                                    <th>SHRT_NM_2301_ECCMA</th>
+                                    <td><%= v.SHRT_NM_2301_ECCMA %> </td>
+                                </tr>   
+                                <tr> 
+                                    <th>INC_4080_ECCMA</th>
+                                    <td><%= v.INC_4080_ECCMA %> </td>
+                                </tr>  
+                                 <tr> 
+                                    <th>NAME_ECCMA</th>
+                                    <td><%= v.Name_Eccma %> </td>
+                                </tr>
+                                
+                              <% end %>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</div>
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+$(function() {
+
+    var updateOutput = function (e) {
+        var list = e.length ? e : $(e.target),
+                output = list.data('output');
+        if (window.JSON) {
+            output.val(window.JSON.stringify(list.nestable('serialize')));//, null, 2));
+        } else {
+            output.val('JSON browser support required for this demo.');
+        }
+    };
+    // activate Nestable for list 1
+    $('#nestable').nestable({
+        group: 1
+    }).on('change', updateOutput);
+
+    // activate Nestable for list 2
+    $('#nestable2').nestable({
+        group: 1
+    }).on('change', updateOutput);
+
+    // output initial serialised data
+    updateOutput($('#nestable').data('output', $('#nestable-output')));
+    updateOutput($('#nestable2').data('output', $('#nestable2-output')));
+
+    $('#nestable-menu').on('click', function (e) {
+        var target = $(e.target),
+                action = target.data('action');
+        if (action === 'expand-all') {
+            $('.dd').nestable('expandAll');
+        }
+        if (action === 'collapse-all') {
+            $('.dd').nestable('collapseAll');
+        }
+    });
+
+});
+
+</script>
+
+<% end %>
+    
