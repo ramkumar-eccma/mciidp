@@ -14609,3 +14609,643 @@ Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-01-20 17:38:26 +0530
 
 
 Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-01-20 17:38:26 +0530
+
+
+Started GET "/en/source_data/chart" for 127.0.0.1 at 2016-01-23 10:43:29 +0530
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.2ms)
+
+
+Started GET "/en/source_data/chart" for 127.0.0.1 at 2016-01-23 10:45:05 +0530
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.3ms)
+
+
+Started GET "/en/source_data/chart" for 127.0.0.1 at 2016-01-23 10:45:06 +0530
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.0ms)
+
+
+Started GET "/en/source_data/chart" for 127.0.0.1 at 2016-01-23 10:45:07 +0530
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.2ms)
+
+
+Started GET "/en/source_data/chart" for 127.0.0.1 at 2016-01-23 10:45:14 +0530
+Processing by SourceDataController#chart as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(`source_data`.`id`) FROM `source_data`
+  [1m[36m (3.7ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'INV')[0m
+  [1m[35m (63.0ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'LINV')
+  [1m[36m (22.2ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'USV')[0m
+  [1m[35m (1.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'USNV')
+  [1m[36m (6.7ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FLAG = '')[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'GMV')
+  [1m[36m (1.9ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'FRV')[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'UKV')
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'GMNV')[0m
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'FRNV')
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'UKNV')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(`reference_data`.`id`) FROM `reference_data`
+  [1m[36m (49.3ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'INV')[0m
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'LINV')
+  [1m[36m (265.7ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'USV')[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'USNV')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (TEST = '')[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'GMV')
+  [1m[36m (10.7ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'FRV')[0m
+  [1m[35m (3.6ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'UKV')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'GMNV')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'FRNV')
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'UKNV')[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ksa_development) instead. (called from <class:AccountBase> at /home/eccma/mci-idp/app/models/classification.rb:8)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(`classifications`.`cat_id`) FROM `classifications`
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:factory_development) instead. (called from <class:FacAccount> at /home/eccma/mci-idp/app/models/mm_factory.rb:7)
+  [1m[36m (108.1ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (Language= 'en')[0m
+  [1m[35m (66.2ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'Cancel Suggestion')
+  [1m[36m (69.5ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'CANCELLED')[0m
+  [1m[35m (63.4ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'Merged')
+  [1m[36m (63.3ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'NEW LICENSE')[0m
+  [1m[35m (64.7ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'OPERATIONAL')
+  [1m[36m (63.8ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'STOPPED')[0m
+  [1m[35m (63.7ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'UNDER CONSTRUCTION')
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ex_development) instead. (called from <class:Accountex> at /home/eccma/mci-idp/app/models/ex_classification.rb:8)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(`classifications`.`cat_id`) FROM `classifications`[0m
+  Rendered source_data/chart.html.erb within layouts/application (31.8ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_topnavbar.html.erb (8.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 1899ms (Views: 565.2ms | ActiveRecord: 1042.1ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-01-23 10:45:16 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-23 10:45:16 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-01-23 10:45:16 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-01-23 10:45:16 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-01-23 10:45:16 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-01-23 10:45:16 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:16 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:16 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:16 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:16 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/tree1.png" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-01-23 10:45:17 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-23 12:51:59 +0530
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mLanguage Load (1.4ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '1' AND controller_name = 'sessions' AND page_name = 'new.html.erb' AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.1ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '2' AND controller_name = 'sessions' AND page_name = 'new.html.erb' AND language_type = 'en' )
+  [1m[36mLanguage Load (1.0ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '3' AND controller_name = 'sessions' AND page_name = 'new.html.erb' AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.1ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '4' AND controller_name = 'sessions' AND page_name = 'new.html.erb' AND language_type = 'en' )
+  [1m[36mLanguage Load (1.1ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '5' AND controller_name = 'sessions' AND page_name = 'new.html.erb' AND language_type = 'en' )[0m
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (136.0ms)
+Completed 200 OK in 730ms (Views: 561.0ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started GET "/assets/loginlogo4.png" for 127.0.0.1 at 2016-01-23 12:52:00 +0530
+
+
+Started POST "/en/auth/login" for 127.0.0.1 at 2016-01-23 12:52:13 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZP+gFeEsaoHEeo8GfRY7Hs0b26zuBMKo34dJlYs3rU8V+pyjLUjgDGUXAHuEPsjbF/L27CFz/Knt9uh1SjOTA==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "locale"=>"en"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'test@gmail.com'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2016-01-23 06:18:22', `current_sign_in_at` = '2016-01-23 07:22:14', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 82, `updated_at` = '2016-01-23 07:22:14' WHERE `users`.`id` = 1
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/en/source_data/chart
+Completed 302 Found in 179ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/en/source_data/chart" for 127.0.0.1 at 2016-01-23 12:52:14 +0530
+Processing by SourceDataController#chart as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(`source_data`.`id`) FROM `source_data`[0m
+  [1m[35m (3.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'INV')
+  [1m[36m (54.4ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'LINV')[0m
+  [1m[35m (34.3ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'USV')
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'USNV')[0m
+  [1m[35m (5.0ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FLAG = '')
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'GMV')[0m
+  [1m[35m (2.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'FRV')
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'UKV')[0m
+  [1m[35m (1.9ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'GMNV')
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'FRNV')[0m
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FLAG= 'UKNV')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(`reference_data`.`id`) FROM `reference_data`[0m
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'INV')
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'LINV')[0m
+  [1m[35m (122.4ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'USV')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'USNV')[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (TEST = '')
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'GMV')[0m
+  [1m[35m (10.3ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'FRV')
+  [1m[36m (3.8ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'UKV')[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'GMNV')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'FRNV')[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (TEST= 'UKNV')
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ksa_development) instead. (called from <class:AccountBase> at /home/eccma/mci-idp/app/models/classification.rb:8)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(`classifications`.`cat_id`) FROM `classifications`[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:factory_development) instead. (called from <class:FacAccount> at /home/eccma/mci-idp/app/models/mm_factory.rb:7)
+  [1m[35m (111.7ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (Language= 'en')
+  [1m[36m (66.0ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'Cancel Suggestion')[0m
+  [1m[35m (66.9ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'CANCELLED')
+  [1m[36m (63.3ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'Merged')[0m
+  [1m[35m (63.1ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'NEW LICENSE')
+  [1m[36m (64.7ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'OPERATIONAL')[0m
+  [1m[35m (63.3ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'STOPPED')
+  [1m[36m (63.5ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'UNDER CONSTRUCTION')[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ex_development) instead. (called from <class:Accountex> at /home/eccma/mci-idp/app/models/ex_classification.rb:8)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(`classifications`.`cat_id`) FROM `classifications`
+  Rendered source_data/chart.html.erb within layouts/application (29.1ms)
+  Rendered layouts/_navigation.html.erb (8.1ms)
+  Rendered layouts/_topnavbar.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1074ms (Views: 140.9ms | ActiveRecord: 842.4ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-01-23 12:52:15 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-01-23 12:52:15 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-01-23 12:52:15 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:15 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-01-23 12:52:15 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:15 +0530
+
+
+Started GET "/assets/tree1.png" for 127.0.0.1 at 2016-01-23 12:52:15 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-01-23 12:52:15 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-01-23 12:52:15 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-01-23 12:52:15 +0530
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 127.0.0.1 at 2016-01-23 12:52:15 +0530
+
+
+Started GET "/en/source?TYPE=all" for 127.0.0.1 at 2016-01-23 12:52:43 +0530
+Processing by SourceDataController#source as HTML
+  Parameters: {"TYPE"=>"all", "locale"=>"en"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLanguage Load (1.2ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '14'  AND language_type = 'en' )
+  [1m[36mLanguage Load (1.1ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )
+  [1m[36mLanguage Load (1.0ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '13' AND controller_name = 'langs' AND page_name = 'show.html.erb' AND language_type = 'en' )[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM `source_data`
+  [1m[36mSourceDatum Load (63.5ms)[0m  [1mSELECT  `source_data`.* FROM `source_data` LIMIT 10 OFFSET 0[0m
+  Rendered source_data/source.html.erb within layouts/application (123.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 190ms (Views: 116.8ms | ActiveRecord: 70.8ms)
+
+
+Started GET "/en/viewsource?NSN=---" for 127.0.0.1 at 2016-01-23 12:52:46 +0530
+Processing by SourceDataController#viewsource as HTML
+  Parameters: {"NSN"=>"---", "locale"=>"en"}
+  [1m[35mUser Load (2.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mLanguage Load (1.0ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '14'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.1ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )
+  [1m[36mLanguage Load (1.1ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '34'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.5ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '35'  AND language_type = 'en' )
+  [1m[36mSourceDatum Load (76.0ms)[0m  [1mSELECT `source_data`.* FROM `source_data` WHERE (NSN = '---' )[0m
+  Rendered source_data/viewsource.html.erb within layouts/application (88.2ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 110ms (Views: 22.9ms | ActiveRecord: 83.0ms)
+
+
+Started GET "/ar/viewsource?NSN=---" for 127.0.0.1 at 2016-01-23 12:52:48 +0530
+Processing by SourceDataController#viewsource as HTML
+  Parameters: {"NSN"=>"---", "locale"=>"ar"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mLanguage Load (1.0ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '14'  AND language_type = 'ar' )[0m
+  [1m[35mLanguage Load (1.1ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'ar' )
+  [1m[36mLanguage Load (1.4ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '34'  AND language_type = 'ar' )[0m
+  [1m[35mLanguage Load (1.3ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '35'  AND language_type = 'ar' )
+  [1m[36mSourceDatum Load (1.9ms)[0m  [1mSELECT `source_data`.* FROM `source_data` WHERE (NSN = '---' )[0m
+  Rendered source_data/viewsource.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_topnavbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 128ms (Views: 116.9ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/applicationrtls.css?body=1" for 127.0.0.1 at 2016-01-23 12:52:48 +0530
+
+
+Started GET "/assets/bootstrap-rtl/bootstrap-rtl.css?body=1" for 127.0.0.1 at 2016-01-23 12:52:48 +0530
+
+
+Started GET "/en/viewsource?NSN=---" for 127.0.0.1 at 2016-01-23 12:52:59 +0530
+Processing by SourceDataController#viewsource as HTML
+  Parameters: {"NSN"=>"---", "locale"=>"en"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mLanguage Load (1.1ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '14'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.3ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )
+  [1m[36mLanguage Load (1.1ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '34'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.0ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '35'  AND language_type = 'en' )
+  [1m[36mSourceDatum Load (1.8ms)[0m  [1mSELECT `source_data`.* FROM `source_data` WHERE (NSN = '---' )[0m
+  Rendered source_data/viewsource.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 24.2ms | ActiveRecord: 7.7ms)

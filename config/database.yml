@@ -117,3 +117,122 @@ ex_development:
   timeout: 5000
   username: root
   password: eccmadb@54321
+production:
+  adapter: mysql2
+  database: cmm
+  pool: 5
+  timeout: 5000
+  username: root
+  password: eccmadb@54321
+
+development:
+  adapter: mysql2
+  database: cmm_dev
+  pool: 5
+  timeout: 5000
+  username: root
+  password: password
+
+staging:
+  adapter: mysql2
+  database: cmm_staging
+  pool: 5
+  timeout: 5000
+  username: root
+  password: eccmadb@54321
+
+eotd_staging:
+  adapter: mysql2
+  database: eotd_prod
+  timeout: 5000
+  host: 72.47.192.194
+  username: prod
+  password: prod123
+
+eotd_production:
+  adapter: mysql2
+  database: eotd_prod
+  timeout: 5000
+  host: 72.47.192.194
+  username: prod
+  password: prod123
+
+eotd_development:
+  adapter: mysql2
+  database: eotd_prod
+  timeout: 5000
+  host: 72.47.192.194
+  username: prod
+  password: prod123
+
+
+factory_staging:
+  adapter: mysql2
+  database: factory_live
+  timeout: 5000
+  username: root
+  password: eccmadb@54321
+
+factory_production:
+  adapter: mysql2
+  database: factory_live
+  #pool: 5
+  timeout: 5000
+  username: root
+  password: eccmadb@54321
+
+factory_development:
+  adapter: mysql2
+  database: factory_live
+ # pool: 5
+  timeout: 5000
+  username: root
+  password: eccmadb@54321
+
+
+ksa_staging:
+  adapter: mysql2
+  database: made_in_ksa
+  timeout: 5000
+  username: root
+  password: eccmadb@54321
+
+ksa_production:
+  adapter: mysql2
+  database: made_in_ksa
+  #pool: 5
+  timeout: 5000
+  username: root
+  password: eccmadb@54321
+
+ksa_development:
+  adapter: mysql2
+  database: made_in_ksa
+ # pool: 5
+  timeout: 5000
+  username: root
+  password: eccmadb@54321
+
+
+ex_staging:
+  adapter: mysql2
+  database: exemption
+  timeout: 5000
+  username: root
+  password: eccmadb@54321
+
+ex_production:
+  adapter: mysql2
+  database: exemption
+  #pool: 5
+  timeout: 5000
+  username: root
+  password: eccmadb@54321
+
+ex_development:
+  adapter: mysql2
+  database: exemption
+ # pool: 5
+  timeout: 5000
+  username: root
+  password: eccmadb@54321
