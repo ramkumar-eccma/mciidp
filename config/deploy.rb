@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:ramkumar-eccma/mciidp.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/var/www/ksa-demo'
+set :deploy_to, '/home/deploy/ksa-demo'
 
 # Default value for :scm is :git
 set :scm, :git
