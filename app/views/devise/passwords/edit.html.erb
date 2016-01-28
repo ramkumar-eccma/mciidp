@@ -46,16 +46,19 @@
 
       <div class="form-group">
         <%- if I18n.locale== :ar %>
+            <label class="pull-left">الرمز السري(<small>يجب أن تكون كلمة المرور من 8 إلى 16 حرفا</small>)</label>
             <%= f.password_field :password, autofocus: true, autocomplete: "off" ,class:'form-control', placeholder:'New password',required:"required" %>
         <% else %>
+        <label class="pull-left">Password <span class="text-danger">(<small>Password must be 8 to 16 characters  </small>)</span></label>
             <%= f.password_field :password, autofocus: true, autocomplete: "off" ,class:'form-control', placeholder:'New password',required:"required" %>
         <% end -%>
-      
-
+    <br>
       <div class="form-group">
         <%- if I18n.locale== :ar %>
+            <label class="pull-left">تأكيد كلمة السر</label>
             <%= f.password_field :password_confirmation, autocomplete: "off" ,class:'form-control', placeholder:'تأكيد كلمة المرور الجديدة',required:"required" %>
         <% else %>
+            <label class="pull-left">Confirm Password</label>
             <%= f.password_field :password_confirmation, autocomplete: "off" ,class:'form-control', placeholder:'Confirm new password',required:"required" %>
         <% end -%>
       </div>

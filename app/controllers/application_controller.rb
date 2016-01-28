@@ -1,17 +1,22 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
+  before_action :set_locale 
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+    Rails.application.routes.default_url_options[:locale]= I18n.locale 
+  end
   protect_from_forgery with: :exception
   before_filter :authenticate_user!
   before_filter :configure_permitted_parameters, if: :devise_controller?
   before_filter :set_locale
   protect_from_forgery with: :null_session
  
-  private
-  def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
-    Rails.application.routes.default_url_options[:locale]= I18n.locale 
-  end
+  # private
+  # def set_locale
+  #   I18n.locale = params[:locale] || I18n.default_locale
+  #   Rails.application.routes.default_url_options[:locale]= I18n.locale 
+  # end
   protected
     def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :password,:password_confirmation, :Organization_name, :designation) }

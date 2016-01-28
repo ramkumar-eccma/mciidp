@@ -1,7 +1,7 @@
 <div class="middle-box text-center loginscreen  animated fadeInDown">
     <div>
         <div>
-          <%= image_tag "loginlogo2.png"%>
+          <%= image_tag "loginlogo4.png"%>
         </div>
         <br>
         <div style="border:1px solid #DCE8E7;">
@@ -49,10 +49,10 @@
             <div class="form-group">
               <% if @validatable %>
                 <%- if I18n.locale== :ar %>
-                <label class="pull-left">الرمز السري</label>
+                <label class="pull-left">الرمز السري(<small>يجب أن تكون كلمة المرور من 8 إلى 16 حرفا</small>)</label>
                   <%= f.password_field :password,class:'form-control', autocomplete: "off", placeholder:'كلمة المرور 8 أحرف كحد أدنى',required:"required"%>
                 <% else %>
-                <label class="pull-left">Password <span class="text-danger">(<small>Password must be 8 to 16 characters  </small>)</span></label>
+                <label class="pull-left">Password <span class="text-danger">(<small>Password must be 8 to 16 characters</small>)</span></label>
                   <%= f.password_field :password,class:'form-control', autocomplete: "off", placeholder:'',required:"required"%>
                 <% end -%>
               <% end %>
