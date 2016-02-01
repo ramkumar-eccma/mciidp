@@ -43,7 +43,7 @@
             </li>
             <li class="<%= 'active' if current_page?('registrations/edit') %>">
                  <%- if I18n.locale== :ar %>
-                    <%= link_to '<i class="fa fa-desktop"></i> تعديل الملف الشخصي'.html_safe,  edit_user_registration_path %> 
+                    <%= link_to '<i class="fa fa-user"></i> <span class="nav-label">تعديل الملف الشخصي</span>'.html_safe,  edit_user_registration_path %> 
                   <% else %>
                     <%= link_to '<i class="fa fa-user"></i> <span class="nav-label">Edit Profile</span>'.html_safe,  edit_user_registration_path %> 
                 <% end -%> 

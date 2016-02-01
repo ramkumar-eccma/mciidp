@@ -16,3 +16,4 @@
 //= require pace/pace.min.js
 //= require slimscroll/jquery.slimscroll.min.js
 //= require wice_grid
+//= require inspinia.js

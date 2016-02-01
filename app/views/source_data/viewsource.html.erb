@@ -108,13 +108,13 @@
                                     <th>NIIN</th>
                                     <td><%= v.NIIN %> </td>
                                 <tr>
-                                    <% if v.FLAG == 'USV'%>
+                                    <% if v.ECCMA_FLAG == 'USV'%>
 
-                                    <th><%= link_to 'NSN' , {:controller => :source_data,:action => :edit, :NSN => v.NSN, :PART =>v.PART_NUMBER, :CAGE => v.CAGEC } %></th>
-                                    <td> <%= link_to v.NSN , {:controller => :source_data,:action => :edit, :NSN => v.NSN, :PART => v.PART_NUMBER, :CAGE => v.CAGEC} %></td>
+                                    <th><%= link_to 'ECCMA_NSN' , {:controller => :source_data,:action => :edit, :NSN => v.ECCMA_NSN, :PART =>v.PART_NUMBER, :CAGE => v.CAGEC } %></th>
+                                    <td> <%= link_to v.ECCMA_NSN , {:controller => :source_data,:action => :edit, :NSN => v.ECCMA_NSN, :PART => v.PART_NUMBER, :CAGE => v.CAGEC} %></td>
                                     <% else %>
                                         <th>NSN</th>
-                                        <td> <%= v.NSN  %></td>
+                                        <td> <%= v.ECCMA_NSN  %></td>
                                     <% end %>
 
                                 </tr>

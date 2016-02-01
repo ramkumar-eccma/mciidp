@@ -27,6 +27,7 @@ class LangsController < ApplicationController
 	#language ='ar'
 	var = request.query_parameters
 	@data=var['Factory_ID']
+	 @show=var['map']
 	# @data1="Factory_Name" language
 	@name =Factory.select("Value").where("Factory_ID = ? AND Client_seq = ? AND language = ?", @data,'1',language)
 	@fname =Factory.select("Value","property","Client_seq").where("Factory_ID = ? AND Client_seq = ? AND language = ?", @data,'1',language)

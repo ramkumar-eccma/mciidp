@@ -116,8 +116,9 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td><%= @esci%></td>
-                         <% @con_dn.each do |t|  %> 
+                    <% @con_dn.each do |t|  %>
+                        <td><%= t.concept_ID%></td>
+                          
                             <td><% if t.concept_is_deprecated== '0' %>
                             Active
                             <% else %>
@@ -171,14 +172,14 @@
                 </tr>
               </thead> 
             <tbody>
-             <% @mm.each do |t|  %> 
+             <% @con_dn.each do |t|  %> 
                 <tr>
                     <td><%= t.term_ID %></td> 
                    <td><%= t.language_name %></td>
-                   <td><%= t.content %></td>
-                   <td><%= t.organization_name %></td>
-                    <td><%= t.orginator_reference %></td>
-                    <td><% if t.is_Deprecated== '0' %>
+                   <td><%= t.term_content %></td>
+                   <td><%= t.term_organization_name %></td>
+                    <td><%= t.term_originator_reference %></td>
+                    <td><% if t.term_is_deprecated== '0' %>
                     Active
                     <% else %>
                     Inactive             
@@ -235,14 +236,14 @@
                         </tr>
                     </thead> 
                     <tbody>
-                          <% @def.each do |d|  %> 
+                          <% @con_dn.each do |d|  %> 
                         <tr>
                             <td><%= @definition %></td> 
                             <td><%= d.language_name %></td>
-                            <td><%= d.content %></td>
-                            <td><%= d.organization_name %></td>
-                            <td><%= d.orginator_reference %></td>
-                            <td><% if d.is_Deprecated== '0' %>
+                            <td><%= d.definition_content %></td>
+                            <td><%= d.definition_organization_name %></td>
+                            <td><%= d.definition_originator_reference %></td>
+                            <td><% if d.definition_is_deprecated== '0' %>
                             Active
                             <% else %>
                             Inactive             
@@ -257,7 +258,6 @@
         </div>
     </div>
   </div>
-</div>
 </div>
 <% content_for :javascript do %>
 

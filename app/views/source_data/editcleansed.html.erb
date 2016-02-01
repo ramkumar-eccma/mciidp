@@ -1,0 +1,299 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+        <img alt="image" class="img-responsive" src="<%= image_url 'headerlogo.jpg' %> " height="50px" />
+        <!--  <div class="col-lg-6">
+        <img alt="image" src="<%= image_url 'l3.jpg' %>" style="margin-left:-15px;" />
+        </div>
+        <div class="col-lg-2">
+        <img alt="image" src="<%= image_url 'l2.jpg' %>" style="align:center;"/>
+        </div>
+        <div class="col-lg-4">
+            <img alt="image" src="<%= image_url 'l1.jpg' %>" style="margin-top:15px;margin-left:220px;" />
+        </div>  -->
+     
+        <div class="clearfix"></div>
+         <ol class="breadcrumb" style="background:#F3F3F4; padding:10px;">
+          <!--  <li>
+                <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>">Home</a>
+            </li>
+            <li>
+                <a href="<%= url_for :controller => 'madein_ksa', :action => 'show' %>">MADE IN KSA Searcher</a>
+            </li>
+             <li class="active">
+                <b>MADE IN KSA Details</b>
+            </li>-->
+            <li>
+             <%- if I18n.locale==:ar%>
+                 <span class="">
+                  <% @ar_breadcrum_home = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '14','ar')%>
+                  <% @ar_breadcrum_home.each do |ar_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= ar_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+            <% else %>
+                <span class="">
+                  <% @en_breadcrum_home = Language.select("language_property").where("language_id= ? AND language_type = ?",'14','en')%>
+                  <% @en_breadcrum_home.each do |en_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= en_breadcrum_home.language_property %></a>
+            <% end %>
+                </span>
+            <% end -%>
+            </li>
+            <li>
+             <%- if I18n.locale==:ar%>
+                 <span class="">
+                  <% @ar_breadcrum_search = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '40','ar')%>
+                  <% @ar_breadcrum_search.each do |ar_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'madein_ksa', :action => 'show' %>"><%= ar_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+            <% else %>
+                <span class="">
+                  <% @ar_breadcrum_search = Language.select("language_property").where("language_id= ? AND language_type = ?",'40','en')%>
+                  <% @ar_breadcrum_search.each do |en_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'madein_ksa', :action => 'show' %>"><%= en_breadcrum_home.language_property %></a>
+            <% end %>
+                </span>
+            <% end -%>
+          
+            </li>
+            <li>
+                <a href="<%= url_for :controller => 'source_data', :action => 'cleansed' %>">Cleansed Searcher
+                
+                </a>
+            </li>
+            <li>
+                <strong>Edit Cleansed</strong>
+            </li>
+        </ol>
+        
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+     <div class="col-lg-12">
+        <div class="ibox" style="border:1px solid #21B6A8;">
+          <div class="ibox-title" style="background:#21B6A8;color:#f3f3f4 !important;">
+          <%- if I18n.locale== :ar %>
+            تفاصيل مادية
+                <% else %>
+                   Material Details
+                <% end -%>
+              <div class="ibox-tools hide">
+                  <a class="collapse-link" style="color:#f3f3f4 !important;">
+                      <i class="fa fa-chevron-up"></i>
+                  </a>
+                 
+                  <a class="close-link" style="color:#f3f3f4 !important;">
+                      <i class="fa fa-times"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="ibox-content">
+            <!--<%=form_tag(view1_path,:multipart => true) do %> -->
+            <%= form_for :image, :html =>{:multipart => true},:url => view1_path  do |f| %>
+            <table class="table table-bordered">
+                <% @data.each do |a|%>
+                <tr>
+                    <th>CMM MATERIAL NO</th>
+                    <th>MATERIAL ID</th>
+                    <th>DATE CREATED</th>
+                    <th>SOURCE DATA</th>
+                    <!--<th></th>-->
+                </tr>
+                <tr>
+                    <td><%=a.cmm_material_no%>
+                   <input type="hidden" name="cat_id" id="cmm_material_no" value="<%=a.cat_id%>" ></td>
+                  
+                    <td><%=a.material_id%></td>
+                    <td><%=a.datecreated%></td>
+                    <td class="text-center"><a href="<%= url_for :controller => 'source_data', :action => 'edit',:NSN =>  a.material_id  %>" target="_blank"><i class="fa fa-eye text-danger"></i></a></td>
+                   
+                <% end %>
+                <%end %>
+                </tr>    
+            </table>
+            <% end %>       
+        </div>
+      </div>
+     </div>
+      <div class="col-lg-12">
+       <div class="ibox" style="border:1px solid #21B6A8;">
+          <div class="ibox-title" style="background:#21B6A8;color:#f3f3f4 !important;">
+                <%- if I18n.locale==:ar%>
+                   <span class="">
+                    <% @ar_breadcrum_desc = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '43','ar')%>
+                    <% @ar_breadcrum_desc.each do |ar_breadcrum_desc|%>
+                   <%= ar_breadcrum_desc.language_property %>
+                     <% end %>
+                <% else %>
+                      <% @ar_breadcrum_desc = Language.select("language_property").where("language_id= ? AND language_type = ?",'43','en')%>
+                      <% @ar_breadcrum_desc.each do |en_breadcrum_desc|%>
+                      <%= en_breadcrum_desc.language_property %>
+                <% end %>
+              <% end -%>
+          </div>
+          <div class="ibox-content">
+            <table class="table table-bordered"  width="100%" style="table-layout: fixed; word-wrap: break-word;">
+              <%@data.each do |b|%>
+              <tr>
+                  <th style="width:40%">SHORT DESCRIPTION</th>
+                  <td style="width:60%"><%=b.short_description%></td>
+              </tr>
+              <tr>
+                  <th style="width:40%">LONG DESCRIPTION</th>
+                  <td style="width:60%"><%=b.long_description%></td>
+              </tr>
+              <% end %>
+           </table>
+          </div>
+          </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="tabs-container custom-tab" style="border:1px solid #21B6A8;">
+                <ul class="nav nav-tabs" style="background:#21B6A8;" >
+                    <li class="active">
+                  <%- if I18n.locale==:ar%>
+                 
+                  <% @ar_breadcrum_technical = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '41','ar')%>
+                  <% @ar_breadcrum_technical.each do |ar_breadcrum_technical|%>
+                    <a data-toggle="tab" href="#tab-1" style="color:#f3f3f4 !important;"><%= ar_breadcrum_technical.language_property %></a>
+
+                   <% end %>
+               
+            <% else %>
+                
+                  <% @ar_breadcrum_technical = Language.select("language_property").where("language_id= ? AND language_type = ?",'41','en')%>
+                  <% @ar_breadcrum_technical.each do |en_breadcrum_technical|%>
+                   <a data-toggle="tab" href="#tab-1" style="color:#f3f3f4 !important;"><%= en_breadcrum_technical.language_property %></a>
+            <% end %>
+               
+            <% end -%>
+            </li>
+
+             <li class="">
+                  <%- if I18n.locale==:ar%>
+              
+                  <% @ar_breadcrum_technical = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '42','ar')%>
+                  <% @ar_breadcrum_technical.each do |ar_breadcrum_technical|%>
+                    <a data-toggle="tab" href="#tab-2" style="color:#f3f3f4 !important;"><%= ar_breadcrum_technical.language_property %></a>
+
+                   <% end %>
+             
+            <% else %>
+           
+                  <% @ar_breadcrum_technical = Language.select("language_property").where("language_id= ? AND language_type = ?",'42','en')%>
+                  <% @ar_breadcrum_technical.each do |en_breadcrum_technical|%>
+                   <a data-toggle="tab" href="#tab-2" style="color:#f3f3f4 !important;"><%= en_breadcrum_technical.language_property %></a>
+            <% end %>
+             
+            <% end -%>
+            </li>
+         
+
+
+                   <!-- <a data-toggle="tab" href="#tab-1" style="color:#f3f3f4 !important;"> TECHNICAL SPECIFICATIONS</a></li>
+                    <li class=""><a data-toggle="tab" href="#tab-2" style="color:#f3f3f4 !important;">REFERENCE DATA</a></li> -->  
+                </ul>
+      
+        <div class="tab-content">
+         <div id="tab-1" class="tab-pane active">
+              <div class="panel-body">
+                <span id="tech_spec" class="tech_spec" style="margin-left:100px !important;"></span>
+                  <div class="row" style="padding-top:10px;">
+                      <table class="table table-bordered" >
+                      <%@technical.each do |c| %>
+                      <tr>
+                          <td><strong><%= c.propertyRef %></strong></td>
+                          <% if c.source=='VE' %>
+                          <td><div class="form-group has-success">
+                             <input type="text text-danger" value="<%=c.value%>" class="form-control">
+                          </div>
+                          </td>
+                          <% else %>
+                          <td><div class="form-group">
+                             <input type="text text-danger" value="<%=c.value%>" class="form-control">
+                          </div></td>
+                          <% end %>
+                         <% if c.source=='VE' %>
+                          <td><div class="form-group has-success">
+                            <input type="text" value="<%=c.source%>" class="form-control">
+                          </div></td>
+                          <% else %>
+                          <td><div class="form-group">
+                              <input type="text" value="<%=c.source%>" class="form-control">
+                          </div></td>
+                          <% end %>
+                         
+                      </tr>
+                      <% end %>
+                      </table>
+                  </div>
+               </div>
+            </div>
+        
+            <div id="tab-2" class="tab-pane">
+              <div class="panel-body">
+                  <div class="row" style="padding-top:10px;">
+                  <table class="table table-bordered">
+                  <%@reference.each do |d| %>
+                    <tr>
+                      <td><strong><%= d.property%></strong></td>
+                      <td><input type="text" value="<%= d.value %>" class="form-control"></td>
+                      <td><input type="text" value="<%= d.value2 %>" class="form-control"></td>
+                    </tr>
+                  <% end %>
+                  </table>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    <br>
+      </div>
+      </div>
+</div>
+
+<% content_for :javascript do %>
+<!--<script type="text/javascript">
+    function upload()
+    {
+        $("#image1").change(function(){
+            readURL(this)
+        });
+    }
+    function readURL(input)
+    {
+         if (input.files && input.files[0]) 
+         {
+          var reader = new FileReader();
+
+          reader.onload = function (e)
+          {
+              $('.field').css('background', 'url(' + e.target.result + ')');
+              $('.field1, #uploadClick').hide();
+          }
+          $('.deletePhoto').show();
+
+          reader.readAsDataURL(input.files[0]);
+         }
+    }
+</script>-->
+<script type="text/javascript">
+    $(function() {
+  $('#pictureInput').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+    $('#imgprev').attr('src',file.target.result)
+    };
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+
+});
+</script>
+<% end %>

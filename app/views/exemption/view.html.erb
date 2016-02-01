@@ -1,0 +1,189 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+        <img alt="image" class="img-responsive" src="<%= image_url 'headerlogo.jpg' %> " height="50px" />
+        <!--  <div class="col-lg-6">
+        <img alt="image" src="<%= image_url 'l3.jpg' %>" style="margin-left:-15px;" />
+        </div>
+        <div class="col-lg-2">
+        <img alt="image" src="<%= image_url 'l2.jpg' %>" style="align:center;"/>
+        </div>
+        <div class="col-lg-4">
+            <img alt="image" src="<%= image_url 'l1.jpg' %>" style="margin-top:15px;margin-left:220px;" />
+        </div>  -->
+     
+        <div class="clearfix"></div>
+         <ol class="breadcrumb">
+           <!-- <li>
+                <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>">Home</a>
+            </li>
+            <li>
+                <a href="<%= url_for :controller => 'exemption', :action => 'show' %>">Exemption Searcher</a>
+            </li>
+             <li class="active">
+                <b>Exemption Details</b>
+            </li>-->
+             <li>
+             <%- if I18n.locale==:ar%>
+                 <span class="">
+                  <% @ar_breadcrum_home = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '14','ar')%>
+                  <% @ar_breadcrum_home.each do |ar_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= ar_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+            <% else %>
+                <span class="">
+                  <% @en_breadcrum_home = Language.select("language_property").where("language_id= ? AND language_type = ?",'14','en')%>
+                  <% @en_breadcrum_home.each do |en_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= en_breadcrum_home.language_property %></a>
+            <% end %>
+                </span>
+            <% end -%>
+            </li>
+            <li>
+             <%- if I18n.locale==:ar%>
+                 <span class="">
+                  <% @ar_breadcrum_search = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '44','ar')%>
+                  <% @ar_breadcrum_search.each do |ar_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'exemption', :action => 'show' %>"><%= ar_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+            <% else %>
+                <span class="">
+                  <% @ar_breadcrum_search = Language.select("language_property").where("language_id= ? AND language_type = ?",'44','en')%>
+                  <% @ar_breadcrum_search.each do |en_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'exemption', :action => 'show' %>"><%= en_breadcrum_home.language_property %></a>
+            <% end %>
+                </span>
+            <% end -%>
+          
+            </li>
+             <li class="active">
+                <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_view = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '17','ar')%>
+                  <% @ar_breadcrum_view.each do |ar_breadcrum_view|%>
+                   <%= ar_breadcrum_view.language_property %>
+
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_view = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '17','en')%>
+                  <% @en_breadcrum_view.each do |en_breadcrum_view|%>
+                 <%= en_breadcrum_view.language_property %>
+
+                   <% end %>
+                </span>
+              <% end -%>
+            </li>
+        </ol>
+        
+    </div>
+</div>
+  
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox" style="border:1px solid #49C5E8;">
+                <div class="ibox-title" style="background:#49C5E8;color:#f3f3f4 !important;">
+                     <%- if I18n.locale== :ar %>
+            تفاصيل مادية
+                <% else %>
+                   Material Details
+                <% end -%>
+              <div class="ibox-tools hide">
+                  <a class="collapse-link" style="color:#f3f3f4 !important;">
+                      <i class="fa fa-chevron-up"></i>
+                  </a>
+                 
+                  <a class="close-link" style="color:#f3f3f4 !important;">
+                      <i class="fa fa-times"></i>
+                  </a>
+              </div>
+                </div>
+                    <div class="ibox-content">
+                        <table class="table table-bordered">
+                            <% @data.each do |a|%>
+                            <tr>
+                                <th>CMM MATERIAL NO</th>
+                                <th>MATERIAL ID</th>
+                                <th>DATE CREATED</th>
+                            </tr>
+                            <tr>
+                                <td><%=a.cmm_material_no%></td>
+                                <td><%=a.material_id%></td>
+                                <td><%=a.datecreated%></td>
+                            </tr>
+                             <% end %>
+                        </table>
+                    </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="ibox" style="border:1px solid #23C6C8;">
+                    <div class="ibox-title" style="background:#23C6C8;color:#f3f3f4 !important;">
+                          <%- if I18n.locale==:ar%>
+                               <span class="">
+                                <% @ar_breadcrum_desc = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '43','ar')%>
+                                <% @ar_breadcrum_desc.each do |ar_breadcrum_desc|%>
+                               <%= ar_breadcrum_desc.language_property %>
+                                <% end %>
+                            <% else %>
+                                  <% @ar_breadcrum_desc = Language.select("language_property").where("language_id= ? AND language_type = ?",'43','en')%>
+                                  <% @ar_breadcrum_desc.each do |en_breadcrum_desc|%>
+                                  <%= en_breadcrum_desc.language_property %>
+                            <% end %>
+                          <% end -%>
+                    </div>
+                        <div class="ibox-content">
+                         <table class="table table-bordered">
+                            <%@data.each do |b|%>
+                            <tr>
+                                <th>SHORT DESCRIPTION</th>
+                                <td><%=b.short_description%></td>
+                            </tr>
+                            <tr>
+                                <th>LONG DESCRIPTION</th>
+                                <td><%=b.long_description%></td>
+                            </tr>
+                            <% end %>
+                        </table>
+                       </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="ibox" style="border:1px solid #3366CC;">
+                <div class="ibox-title" style="background:#3366CC;color:#f3f3f4 !important;">
+                      <%- if I18n.locale==:ar%>
+                           <span class="">
+                            <% @ar_breadcrum_desc = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '41','ar')%>
+                            <% @ar_breadcrum_desc.each do |ar_breadcrum_desc|%>
+                           <%= ar_breadcrum_desc.language_property %>
+                            <% end %>
+                        <% else %>
+                              <% @ar_breadcrum_desc = Language.select("language_property").where("language_id= ? AND language_type = ?",'41','en')%>
+                              <% @ar_breadcrum_desc.each do |en_breadcrum_desc|%>
+                              <%= en_breadcrum_desc.language_property %>
+                        <% end %>
+                      <% end -%>
+                </div>
+                <div class="ibox-content">
+                     <table class="table table-bordered">
+                     <thead> 
+                        <th>Property</th>
+                        <th>Value</th>
+                     </thead>
+                    <% @data1.each do |c|%>
+                    <tr>
+                        <td><strong><%= c.property%></strong></td>
+                        <td><input type="text" value="<%= c.value%>" class="form-control"></td>
+                    </tr>
+                    <% end %>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

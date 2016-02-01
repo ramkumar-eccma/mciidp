@@ -152,15 +152,17 @@
                     
                     #s.column :name => 'FPKID',:attribute => 'FPKID'
                     #s.action_column 
-                    s.column :name => 'FACTORY ID', :attribute => 'Factory_ID' do |s|
-                        link_to s.Factory_ID ,{:controller => :langs,:action => :view,:Factory_ID => s.Factory_ID},:target => "_blank" 
-                    end 
+                    # s.column :name => 'FACTORY ID', :attribute => 'Factory_ID' do |s|
+                    #     link_to s.Factory_ID ,{:controller => :langs,:action => :view,:Factory_ID => s.Factory_ID},:target => "_blank" 
+                    # end 
                         
             #       s.column :name => 'Factory_ID', :attribute => 'Factory_ID' do  |s|
             #           link_to s.Factory_ID ,{:controller => :langs,:action => :external_view, :Factory_ID => s.Factory_ID},:title => 'External ID view'
                     # end
                      # s.column :name => 'Factory_ID', :attribute => 'Factory_ID'
-                s.column :name => 'FACTORY NAME', :attribute => 'Factory_Name' 
+                s.column :name => 'FACTORY NAME', :attribute => 'Factory_Name' do |s|
+                        link_to s.Factory_Name ,{:controller => :langs,:action => :view,:Factory_ID => s.Factory_ID},:target => "_blank" 
+                    end 
 
                 s.column :name => 'FACTORY WEBSITE', :attribute => 'Factory_Website'do |s|
                     if s.Factory_Website == 'NULL'

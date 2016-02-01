@@ -3,6 +3,7 @@ production:
   database: cmm
   pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -11,14 +12,16 @@ development:
   database: cmm_dev
   pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
-  password: password
+  password: eccmadb@54321
 
 staging:
   adapter: mysql2
   database: cmm_staging
   pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -51,6 +54,7 @@ factory_staging:
   adapter: mysql2
   database: factory_live
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -59,6 +63,7 @@ factory_production:
   database: factory_live
   #pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -67,6 +72,7 @@ factory_development:
   database: factory_live
  # pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -75,6 +81,7 @@ ksa_staging:
   adapter: mysql2
   database: made_in_ksa
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -83,6 +90,7 @@ ksa_production:
   database: made_in_ksa
   #pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -91,6 +99,7 @@ ksa_development:
   database: made_in_ksa
  # pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -99,6 +108,7 @@ ex_staging:
   adapter: mysql2
   database: exemption
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -107,6 +117,7 @@ ex_production:
   database: exemption
   #pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -115,13 +126,16 @@ ex_development:
   database: exemption
  # pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
+  
 production:
   adapter: mysql2
   database: cmm
   pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -130,6 +144,7 @@ development:
   database: cmm_dev
   pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: password
 
@@ -138,6 +153,7 @@ staging:
   database: cmm_staging
   pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -170,6 +186,7 @@ factory_staging:
   adapter: mysql2
   database: factory_live
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -178,6 +195,7 @@ factory_production:
   database: factory_live
   #pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -186,6 +204,7 @@ factory_development:
   database: factory_live
  # pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -194,6 +213,7 @@ ksa_staging:
   adapter: mysql2
   database: made_in_ksa
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -202,6 +222,7 @@ ksa_production:
   database: made_in_ksa
   #pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -210,6 +231,7 @@ ksa_development:
   database: made_in_ksa
  # pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -218,6 +240,7 @@ ex_staging:
   adapter: mysql2
   database: exemption
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -226,6 +249,7 @@ ex_production:
   database: exemption
   #pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 
@@ -234,6 +258,7 @@ ex_development:
   database: exemption
  # pool: 5
   timeout: 5000
+  host: 192.241.185.189
   username: root
   password: eccmadb@54321
 

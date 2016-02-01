@@ -1,0 +1,76 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+        <img alt="image" class="img-responsive" src="<%= image_url 'headerlogo.jpg' %> " height="50px" />
+        <!--  <div class="col-lg-6">
+        <img alt="image" src="<%= image_url 'l3.jpg' %>" style="margin-left:-15px;" />
+        </div>
+        <div class="col-lg-2">
+        <img alt="image" src="<%= image_url 'l2.jpg' %>" style="align:center;"/>
+        </div>
+        <div class="col-lg-4">
+            <img alt="image" src="<%= image_url 'l1.jpg' %>" style="margin-top:15px;margin-left:220px;" />
+        </div>  -->
+     
+        <div class="clearfix"></div>
+         <ol class="breadcrumb">
+            <li>
+                <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>">Home</a>
+            </li>
+            <li>
+                <a href="<%= url_for :controller => 'exemption', :action => 'show' %>">Exemption Searcher</a>
+            </li>
+             <li class="active">
+                <b>Exemption Details</b>
+            </li>
+        </ol>
+        
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content">
+             <h2> VIEW </h2>
+                  
+                        <table class="table table-bordered">
+                            <% @data.each do |a|%>
+                            <tr>
+                                <th>CMM MATERIAL NO</th>
+                                <th>MATERIAL ID</th>
+                                <th>DATE CREATED</th>
+                            </tr>
+                            <tr>
+                                <td><%=a.cmm_material_no%></td>
+                                <td><%=a.material_id%></td>
+                                <td><%=a.datecreated%></td>
+                            </tr>
+                             <% end %>
+                        </table>
+               
+                        <table class="table table-bordered">
+                            <%@data.each do |b|%>
+                            <tr>
+                                <th>SHORT DESCRIPTION</th>
+                                <td><%=b.short_description%></td>
+                            </tr>
+                            <tr>
+                                <th>LONG DESCRIPTION</th>
+                                <td><%=b.long_description%></td>
+                            </tr>
+                            <% end %>
+                        </table>
+                        <table class="table table-bordered">
+                            <% @data1.each do |c|%>
+                            <tr>
+                                <td><strong><%= c.property%></strong></td>
+                                <td><input type="text" value="<%= c.value%>" class="form-control"></td>
+                            </tr>
+                            <% end %>
+                        </table>
+                         
+            </div>
+        </div>
+    </div>
+</div>
+</div>

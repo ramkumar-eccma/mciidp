@@ -92,7 +92,11 @@
                          <div class="col-md-6">
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#8B4513;"></div>
                             <div class="pull-left">&nbsp;&nbsp;ValiDatad Records (0)</div>
-                        </div>                  
+                        </div>   
+                        <div class="col-md-6">
+                            <br>
+                           <a href="<%= url_for :controller => 'madein_ksa',:action => 'detail_view' %>" target="_blank" class="btn btn-xs btn-outline btn-success pull-right">More ..... <i class="fa fa-long-arrow-right"></i> </a>
+                        </div>                
                     </div>       
                 </div>
             </div>
@@ -111,7 +115,7 @@
                     <div id="tab-1" class="tab-pane active">
                         <div class="panel-body">
                             <h3 style="font-size:17px;font-weight:normal;">CMM Database (NSN)</h3>
-                            <span id="db_cmm" class="db_cmm" style="margin-left:100px !important;"></span>
+                            <span id="db_cmm" class="db_cmm" style="margin-left:200px !important;"></span>
                             <div class="row" style="padding-top:10px;">
                                 <div class="col-md-6">
                                     <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
@@ -142,14 +146,25 @@
                                     <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'UKNV' %>"  target="_blank">&nbsp;&nbsp;Unavailable NSN-GBR (<%= @db_nonoffuk.inspect %>)</a></div><br>
                                      <div class="pull-left" style="width:15px;height:15px;;background-color:#8B4513;"></div>
                                     <div class="pull-left"> &nbsp;<a <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => '' %>"  target="_blank">&nbsp;&nbsp;Other Countries NSN (<%= @db_other.inspect %>)</a></div>
-                                </div>          
+                                </div> 
+                                <div class="col-md-6">&nbsp;
+                                </div> 
+                                <div class="col-md-6">
+                                    <br>
+                                   <a href="<%= url_for :controller => 'source_data',:action => 'morensn' %>" target="_blank" class="btn btn-xs btn-outline btn-success pull-right">More ..... <i class="fa fa-long-arrow-right"></i> </a>
+                                </div>    
                             </div>
+                             <br>
+                             <div style="border:1px solid #A0B2C3;"></div> 
+                             <div class="col-lg-12"><br>
+                                 <a href="<%= url_for :controller => 'source_data',:action => 'cleansed' %>" target="_blank">Cleansed Items (<%= @dbcleansed.inspect %>)</a>
+                             </div> 
                         </div>
                     </div>
                     <div id="tab-2" class="tab-pane">
                         <div class="panel-body">
                             <h3 style="font-size:17px;font-weight:normal;">CMM Database (CAGE)</h3>
-                           <span id="dbref_cmm" class="dbref_cmm" style="margin-left:100px !important;"></span>
+                           <span id="dbref_cmm" class="dbref_cmm" style="margin-left:200px !important;"></span>
                             <div class="row" style="padding-top:10px;">
                                 <div class="col-md-6">
                                     <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
@@ -212,7 +227,7 @@
                         </div>  
                         <div class="col-md-6 ">
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
-                            <div class="pull-left"> &nbsp;&nbsp;Items Available (<%= @db_exclass.inspect %>)</div>
+                            <div class="pull-left"><a href="<%= url_for :controller => 'exemption', :action => 'show' %>" target="_blank"> &nbsp;&nbsp;Items Available (<%= @db_exclass.inspect %>)</div>
                         </div>                    
                     </div>   
                 </div>
@@ -237,7 +252,7 @@
                         </div>
                       </div>
                     </div>
-                    <ul id="tree-data" style="display:none">
+                       <ul id="tree-data" style="display:none">
                         <li id="root">
                             <span id="source">
                                 <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank" style="font-size:12px !important;">Source Data</a></h5>
@@ -247,14 +262,15 @@
                             <ul>
                                 <li>
                                     <span id="sourced" style="background:red;">
-                                       <h5 ><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank" style="font-size:12px !important;">Valid</a></h5>
+                                       <h5 ><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'valid' %>" target="_blank" style="font-size:12px !important;">Valid</a></h5>
                                         <div style="border-top:2px solid #e7eaec;color: #E66D96;background-color: #E66D96;height:1px;margin:8px 0;"></div>
                                         <p><%= @db_valid %></p>
                                     </span>
                                     <ul>
                                         <li>
                                             <span id="valid">
-                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'USV' %>"  target="_blank" style="font-size:12px !important;">USA</a></h5>
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'countrywise',:valid =>'USV',:invalid =>'USNV' %>"  target="_blank" style="font-size:12px !important;">USA</a></h5>
+                                                <!--h5 style="font-size:12px !important;">USA</h5-->
                                                 <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
                                                 <p><%= @db_usa %></p>
                                             </span>
@@ -277,7 +293,7 @@
                                         </li>
                                         <li>
                                             <span id="unitedkingdom">
-                                                <h5><a href="" style="font-size:12px !important;">GBR</a></h5>
+                                               <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'countrywise',:valid =>'UKV',:invalid =>'UKNV' %>"  target="_blank" style="font-size:12px !important;">UK</a></h5>
                                                 <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
                                                 <p><%= @db_gbr %></p>
                                             </span>
@@ -300,7 +316,7 @@
                                         </li>
                                         <li>
                                             <span id="german-root">
-                                                <h5><a href="" style="font-size:12px !important;">Germany</a></h5>
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'countrywise',:valid =>'GMV',:invalid =>'GMNV' %>"  target="_blank" style="font-size:12px !important;">Germany</a></h5>
                                                 <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
                                                 <p><%= @db_deu %></p>
                                             </span>
@@ -323,7 +339,7 @@
                                         </li>
                                         <li>
                                             <span id="france-root">
-                                                <h5><a href="" style="font-size:12px !important;">France</a></h5>
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'countrywise',:valid =>'FRV',:invalid =>'FRNV' %>"  target="_blank" style="font-size:12px !important;">France</a></h5>
                                                 <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
                                                 <p><%= @db_fra %></p>
                                             </span>
@@ -346,7 +362,7 @@
                                         </li>
                                         <li>
                                             <span id="othercountries">
-                                                <h5><a href="" style="font-size:12px !important;">Others</a></h5>
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => '' %>" style="font-size:12px !important;">Others</a></h5>
                                                 <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
                                                 <p><%= @db_other %></p>
                                             </span>
@@ -355,21 +371,21 @@
                                 </li>
                                 <li>
                                     <span id="invalidformat">
-                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank" style="font-size:12px !important;">Invalid</a></h5>
+                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'invalid' %>" target="_blank" style="font-size:12px !important;">Invalid</a></h5>
                                         <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
                                          <p><%= @db_invalid %></p>
                                     </span>
                                      <ul>
                                         <li>
                                             <span id="invalidformat">
-                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank" style="font-size:12px !important;">XXXX SAL XXXXXX</a></h5>
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'LINV' %>" target="_blank" style="font-size:12px !important;">XXXX SAL XXXXXX</a></h5>
                                                 <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
                                                  <p><%= @db_locinv %></p>
                                             </span>
                                         </li>
                                         <li>
                                             <span id="invalidformat">
-                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank" style="font-size:12px !important;">Invalid Chars</a></h5>
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'INV' %>" target="_blank" style="font-size:12px !important;">Invalid Chars</a></h5>
                                                 <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
                                                  <p><%= @db_inv %></p>
                                             </span>

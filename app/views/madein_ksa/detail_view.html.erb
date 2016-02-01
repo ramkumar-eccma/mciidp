@@ -1,0 +1,190 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+        <img alt="image" class="img-responsive" src="<%= image_url 'headerlogo.jpg' %> " height="50px" />
+        <!--  <div class="col-lg-6">
+        <img alt="image" src="<%= image_url 'l3.jpg' %>" style="margin-left:-15px;" />
+        </div>
+        <div class="col-lg-2">
+        <img alt="image" src="<%= image_url 'l2.jpg' %>" style="align:center;"/>
+        </div>
+        <div class="col-lg-4">
+            <img alt="image" src="<%= image_url 'l1.jpg' %>" style="margin-top:15px;margin-left:220px;" />
+        </div>  -->
+        <!--<%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+|
+        <%= link_to_unless I18n.locale == :ar, "Arabic", locale: :ar %>-->
+        <div class="clearfix"></div>
+         <ol class="breadcrumb" style="background:#F3F3F4; padding:10px;">
+            <li>
+            <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>">Made </a>
+        </li>
+        <li>
+            <a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory' %>">MADE IN KSA Searcher</a>
+        </li>
+        <li class="active">
+            <strong>More Charts</strong> 
+        </li>
+    </ol>
+        
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+         <div class="col-lg-6">
+            <div class="ibox float-e-margins" style="border:1px solid #23C6C8;">
+                <div class="ibox-title text-primary" style="background:#23C6C8;">
+                    <h5 style="color:#f3f3f4 !important;">More Details</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link" style="color:#f3f3f4 !important;">
+                            <i class="fa fa-chevron-up" ></i>
+                        </a>               
+                        <a class="close-link hide" style="color:#f3f3f4 !important;">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content text-center h-200">
+                    <span id="ksa_class" class="ksa_class"></span>
+                    <div class="row" style="padding-top:10px;">
+                         <div class="col-md-12">
+                          
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'madein_ksa', :action => 'showclass',:TYPE => 'all'%>" target="_blank">&nbsp;&nbsp;Total (<%= @classname_count.inspect  %>)</a></div><br>
+                           
+                              <% @top1.each do |a|  %>
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#01FFFF;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'madein_ksa', :action => 'showclass',:TYPE => a.catalog_name %>" target="_blank">&nbsp;&nbsp;<%= a.catalog_name %>(<%= a.total %>)</a></div><br>
+                             <% end %>
+                              <% @top2.each do |b|  %>
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showclass',:TYPE => b.catalog_name %>" target="_blank">&nbsp;&nbsp;<%= b.catalog_name %>(<%= b.total %>)</a></div><br>
+                              <% end %>
+                              <% @top3.each do |c|  %>
+                              <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'madein_ksa', :action => 'showclass',:TYPE => c.catalog_name %>" target="_blank">&nbsp;&nbsp;<%= c.catalog_name %>(<%= c.total %>))</a></div><br>
+                            <% end %>
+                        </div>  
+                         <div class="col-md-12">
+                          <% @top4.each do |d|  %>
+                             <div class="pull-left" style="width:15px;height:15px;background-color:#FF1493;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showclass',:TYPE => d.catalog_name %>" target="_blank">&nbsp;&nbsp;<%= d.catalog_name %>(<%= d.total %>))</a></div><br>
+                        <% end %>
+                        </div>
+                            <div class="col-lg-6 pull-left">
+                                <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
+                                 <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showclass',:TYPE => 'Others' %>" target="_blank">&nbsp;&nbsp;Others (<%= @ksa_others.inspect %>)</a></div>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="<%= url_for :controller => 'madein_ksa',:action => 'more_details',:TYPE => 'classname' %>" target="_blank" class="btn btn-xs btn-outline btn-success pull-right">More ..... <i class="fa fa-long-arrow-right"></i> </a>
+                        </div>                                
+                    </div>              
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins" style="border:1px solid #23C6C8;">
+                <div class="ibox-title text-primary" style="background:#23C6C8;">
+                    <h5 style="color:#f3f3f4 !important;">Factories</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link" style="color:#f3f3f4 !important;">
+                            <i class="fa fa-chevron-up" ></i>
+                        </a>               
+                        <a class="close-link hide" style="color:#f3f3f4 !important;">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content text-center h-200">
+                    <span id="ksa_factory" class="ksa_factory"></span>
+                    <div class="row" style="padding-top:10px;">
+                         <div class="col-md-12">
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => 'all'%>" target="_blank">&nbsp;&nbsp;Total (<%= @classname_count.inspect  %>)</a></div><br>
+                            <% @top_factory1.each do |e|  %>
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#FF7F50;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => e.FACTORY_ID %>" target="_blank">&nbsp;&nbsp;<%= e.FACTORY_NAME %>(<%= e.total %>))</a></div><br>
+                            <% end %>
+                            <% @top_factory2.each do |f|  %>
+                               <div class="pull-left" style="width:15px;height:15px;;background-color:#0099c6;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => f.FACTORY_ID %>" target="_blank">&nbsp;&nbsp;<%= f.FACTORY_NAME %>(<%= f.total %>))</a></div><br>
+                            <% end %>
+                        </div>
+                        <div class="col-md-12">
+                             <% @top_factory3.each do |g|  %>
+                            <div class="pull-left" style="width:15px;height:15px;;background-color:#990099;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => g.FACTORY_ID %>" target="_blank">&nbsp;&nbsp;<%= g.FACTORY_NAME %>(<%= g.total %>))</a></div><br>
+                            <% end %>
+                        </div>
+                             
+                         <div class="col-md-12">
+                         <% @top_factory4.each do |h|  %>
+                             <div class="pull-left" style="width:15px;height:15px;;background-color:#DB7093;"></div>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => h.FACTORY_ID %>" target="_blank">&nbsp;&nbsp;<%= h.FACTORY_NAME %>(<%= h.total %>))</a></div><br>
+                        <% end %>
+                        </div>
+                            <div class="col-lg-6 pull-left">
+                                <div class="pull-left" style="width:15px;height:15px;background-color:#DEB887;"></div>
+                                 <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => 'Others' %>" target="_blank">&nbsp;&nbsp;Others (<%= @ksa_factory_others.inspect %>)</a></div>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="<%= url_for :controller => 'madein_ksa',:action => 'more_details',:TYPE => 'factory' %>" target="_blank" class="btn btn-xs btn-outline btn-success pull-right">More ..... <i class="fa fa-long-arrow-right"></i> </a>
+                        </div>                                
+                    </div>              
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+$(function() {
+    $(".ksa_class").sparkline(['<%= @ksa_top1.inspect %>','<%= @ksa_top2.inspect %>','<%= @ksa_top3.inspect %>','<%= @ksa_top4.inspect %>','<%= @ksa_others.inspect %>'], {
+        type: 'pie',
+        height: '250px',
+        sliceColors: ['#00FFFF','#3366cc','#dc3912','#FF1493','#66aa00','#FF7F50','#0099c6','#990099','#DB7093','#DEB887','#8B4513'],
+        //sliceColors: ['#1ab394','#B5B8CF'],
+        highlight: "#1ab394",
+        scaleBackdropColor: "rgba(255,255,255,0.75)",
+    });  
+     $(".ksa_factory").sparkline(['<%= @ksa_top_factory1.inspect %>','<%= @ksa_top_factory2.inspect %>','<%= @ksa_top_factory3.inspect %>','<%= @ksa_top_factory4.inspect %>','<%= @ksa_factory_others.inspect %>'], {
+        type: 'pie',
+        height: '250px',
+        sliceColors: ['#FF7F50','#0099c6','#990099','#DB7093','#DEB887','#8B4513'],
+        //sliceColors: ['#1ab394','#B5B8CF #0199C6'],
+        highlight: "#1ab394",
+        scaleBackdropColor: "rgba(255,255,255,0.75)",
+    });
+    $("#db_factory").sparkline(['<%= @db_cancel.inspect %>','<%= @db_cansug.inspect %>','<%= @db_merged.inspect %>','<%= @db_newoper.inspect %>','<%= @db_stop.inspect %>','<%= @db_under.inspect %>','<%= @db_newlic.inspect %>'], {
+        type: 'pie',
+         height: '250px',
+         sliceColors: ['#3366cc','#DC3912','#FF1493','#66aa00','#DEB887','#49C5E8','#990099','#DB7093','#DEB887','#8B4513'],
+        //sliceColors: ['#1ab394','#B5B8CF'],
+       highlight: "#1ab394",
+        scaleBackdropColor: "rgba(255,255,255,0.75)",
+
+     });
+
+    $("#db_ksa").sparkline(['<%= @db_classbalance.inspect %>', '<%= @db_classification.inspect %>'], {
+       type: 'pie',
+       height: '250px',
+        sliceColors: ['#3366cc','#dc3912','#ff9900','#109618','#66aa00','#dd4477','#0099c6','#990099'],
+    //     //sliceColors: ['#1ab394','#B5B8CF'],
+         highlight: "#1ab394",
+         scaleBackdropColor: "rgba(255,255,255,0.75)",
+     }); 
+
+     $("#db_excemption").sparkline(['<%= @db_exbalance.inspect %>', '<%= @db_exclass.inspect %>'], {
+        type: 'pie',
+       height: '250px',
+       sliceColors: ['#3366cc','#dc3912','#ff9900','#109618','#66aa00','#dd4477','#0099c6','#990099'],
+    //     //sliceColors: ['#1ab394','#B5B8CF'],
+        highlight: "#1ab394",
+        scaleBackdropColor: "rgba(255,255,255,0.75)",
+    });   
+});
+
+</script>
+
+<% end %>

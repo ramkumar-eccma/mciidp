@@ -15,6 +15,20 @@
     <!-- Main javascript files -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <style>
+    .borderless {
+            border-bottom:0px !important;
+        }
+        .borderless th, .borderless td {
+            border: 0px !important;
+        }
+        .borderless {
+            border:0px !important;
+        }
+        .custom-tab .nav-tabs > li.active > a, .tabs-container .nav-tabs > li.active > a:hover, .tabs-container .nav-tabs > li.active > a:focus{
+            background-color: #009688;
+        }
+    </style>
 </head>
 <%- if I18n.locale== :ar %>
     <body class="md-skin fixed-nav rtls">
