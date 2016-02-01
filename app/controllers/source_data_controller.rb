@@ -282,7 +282,7 @@ class SourceDataController < ApplicationController
       #Force Given 
       @db_morecmm = SourceDatum.count(:FORCE_NAME)
       @db_morecommon = SourceDatum.where(["`FORCE_NAME` LIKE ?", '%COMMON%']).count
-      @db_morenull = SourceDatum.where(["`FORCE_NAME` = ?", 'Nill']).count
+      @db_morenull = SourceDatum.where.not(FORCE_NAME: nil).count
       @db_moremsd = SourceDatum.where(["`FORCE_NAME` LIKE ?", '%MSD%']).count
       @db_morersadf = SourceDatum.where(["`FORCE_NAME` LIKE ?", '%RSADF%']).count
       @db_morersaf = SourceDatum.where(["`FORCE_NAME` LIKE ?", '%RSAF%']).count
