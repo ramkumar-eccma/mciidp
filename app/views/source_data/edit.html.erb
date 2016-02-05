@@ -112,16 +112,16 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td><%= t.ECCMA_NSN %></td>
-                        <td><%= t.FIIG_4065 %></td>
-                        <td><% if t.INC_4080 == '77777' ||  t.INC_4080 == '69181'  %>
+                        <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><%= t.ECCMA_NSN %></td>
+                       <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><%= t.FIIG_4065 %></td>
+                        <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><% if t.INC_4080 == '77777' ||  t.INC_4080 == '69181'  %>
                             <%= t.INC_4080 %>
                             <% else %>
                             <%= link_to t.INC_4080 , {:controller => :source_data,:action => :dictionary_detail, :term => t.ECCMA_Term_ID, :esci => t.ECCMA_Concept_ID, :def => t.ECCMA_definition_ID}, :target => "_blank" %>
                             <% end %>
                         </td>
-                        <td><%= t.SHRT_NM_2301 %></td>
-                        <td><img src="C:\Users\Public\Pictures\Sample Pictures\Tulips.jpg" alt="image"></td>
+                       <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><%= t.SHRT_NM_2301 %></td>
+                        <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><img src="C:\Users\Public\Pictures\Sample Pictures\Tulips.jpg" alt="image"></td>
                     </tr>
                     </tbody>
                 </table>
@@ -282,9 +282,9 @@
                 <% end -%>
                 <div class="pull-right">
                 <%- if I18n.locale== :ar %>
-                  <button type="button" class="btn btn-danger btn-xs more-button" id="toggle">المزيد من التفاصيل</button>
+                  <button type="button" class="btn btn-danger btn-xs more-button" id="toggle">مصدر</button>
                 <% else %>
-                  <button type="button" class="btn btn-danger btn-xs more-button" id="toggle">More details</button>
+                  <button type="button" class="btn btn-danger btn-xs more-button" id="toggle">Provenance</button>
                 <% end -%>
                  </div>
             </div>

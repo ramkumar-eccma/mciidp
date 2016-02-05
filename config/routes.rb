@@ -43,6 +43,7 @@ Myapp::Application.routes.draw do
     get 'view_exemption' => 'exemption#view'
     get 'cleansed' => 'source_data#cleansed'
     get 'editcleansed' => 'source_data#editcleansed'
+    get 'morensn_details' => 'source_data#morensn_details'
 
     #   get 'cage_details' => 'source_data#cage_details'
     #  get 'update_lang' => 'langs#update'

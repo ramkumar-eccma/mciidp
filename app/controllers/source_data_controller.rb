@@ -99,6 +99,9 @@ class SourceDataController < ApplicationController
     @type = vars['TYPE']
     @valid= vars['valid']
     @invalid= vars['invalid']
+    @nsntype= vars['NSNTYPE']
+    @force= vars['FORCE']
+     country=['USV','FRV','GMV','UKV']
     if @type =='all'
         if params[:search]
           @vs = params[:search]
@@ -149,6 +152,190 @@ class SourceDataController < ApplicationController
                 @cmm = initialize_grid(SourceDatum , conditions: ['ECCMA_FLAG = ? OR ECCMA_FLAG = ? ',@valid,@invalid] , :per_page => 10)
                 @cmmcount=SourceDatum.where('ECCMA_FLAG = ? OR ECCMA_FLAG = ? ',@valid,@invalid).count         
             end
+    elsif@type =='FORCE'
+         if @force =='all'
+           if params[:search]
+                @vs = params[:search]
+                #search= 19207
+                 @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                  @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                else
+                  @cmm = initialize_grid(SourceDatum , conditions: ['FORCE_NAME is NOT NULL'] , :per_page => 10)
+                  @cmmcount=SourceDatum.where('FORCE_NAME is NOT NULL').count         
+              end
+          elsif @force =='NULL'
+             if params[:search]
+                @vs = params[:search]
+                #search= 19207
+                 @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                  @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                else
+                  @cmm = initialize_grid(SourceDatum , conditions: ['FORCE_NAME is  NULL'] , :per_page => 10)
+                  @cmmcount=SourceDatum.where('FORCE_NAME is  NULL').count         
+              end
+
+         else
+          if params[:search]
+                @vs = params[:search]
+                #search= 19207
+                 @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                  @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                else
+                  @cmm = initialize_grid(SourceDatum , conditions: ['FORCE_NAME like ?',"%#{@force}%"] , :per_page => 10)
+                  @cmmcount=SourceDatum.where('FORCE_NAME like ?',"%#{@force}%").count         
+              end
+         end
+       elsif@type =='COUNTRY'
+         if @force =='all'
+           if params[:search]
+                @vs = params[:search]
+                #search= 19207
+                 @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                  @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                else
+                  @cmm = initialize_grid(SourceDatum , conditions: ['COUNTRY_ECCMA != ?','NULL'] , :per_page => 10)
+                  @cmmcount=SourceDatum.where('COUNTRY_ECCMA !=?','NULL').count         
+              end
+          elsif @force =='NULL'
+             if params[:search]
+                @vs = params[:search]
+                #search= 19207
+                 @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                  @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                else
+                  @cmm = initialize_grid(SourceDatum , conditions: ['FORCE_NAME is  NULL'] , :per_page => 10)
+                  @cmmcount=SourceDatum.where('FORCE_NAME is  NULL').count         
+              end
+
+              
+         else
+          if params[:search]
+                @vs = params[:search]
+                #search= 19207
+                 @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                  @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                else
+                  @cmm = initialize_grid(SourceDatum , conditions: ['COUNTRY_ECCMA = ?',@force] , :per_page => 10)
+                  @cmmcount=SourceDatum.where('COUNTRY_ECCMA = ?',@force).count         
+              end
+         end
+          elsif@type =='FORCEAVAIL'
+            country=['USV','FRV','GMV','UKV']
+           if @force =='all'
+             if params[:search]
+                  @vs = params[:search]
+                  #search= 19207
+                   @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                    @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                  else
+                    @cmm = initialize_grid(SourceDatum , conditions: ['ECCMA_FLAG IN (?)',country] , :per_page => 10)
+                    @cmmcount=SourceDatum.where('ECCMA_FLAG IN (?)',country).count         
+                end
+            elsif @force =='NULL'
+               if params[:search]
+                  @vs = params[:search]
+                  #search= 19207
+                   @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                    @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                  else
+                    @cmm = initialize_grid(SourceDatum , conditions: ['FORCE_NAME is  NULL'] , :per_page => 10)
+                    @cmmcount=SourceDatum.where('FORCE_NAME is  NULL').count         
+                end
+                
+                
+           else
+            if params[:search]
+                  @vs = params[:search]
+                  #search= 19207
+                   @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                    @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                  else
+                    @cmm = initialize_grid(SourceDatum , conditions: ['ECCMA_FLAG IN (?) AND FORCE_NAME LIKE ?',country,"%#{@force}%"] , :per_page => 10)
+                    @cmmcount=SourceDatum.where('ECCMA_FLAG IN (?) AND FORCE_NAME LIKE ?',country,"%#{@force}%").count         
+                end
+           end
+         elsif@type =='COUNTRYAVAIL'
+         if @force =='all'
+           if params[:search]
+                @vs = params[:search]
+                #search= 19207
+                 @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                  @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                else
+                  @cmm = initialize_grid(SourceDatum , conditions: ['ECCMA_FLAG IN (?)',country] , :per_page => 10)
+                  @cmmcount=SourceDatum.where('ECCMA_FLAG IN (?)',country).count         
+              end
+          elsif @force =='NULL'
+             if params[:search]
+                @vs = params[:search]
+                #search= 19207
+                 @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                  @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                else
+                  @cmm = initialize_grid(SourceDatum , conditions: ['FORCE_NAME is  NULL'] , :per_page => 10)
+                  @cmmcount=SourceDatum.where('FORCE_NAME is  NULL').count         
+              end
+
+              
+         else
+          if params[:search]
+                @vs = params[:search]
+                #search= 19207
+                 @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                  @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                else
+                 @cmm = initialize_grid(SourceDatum , conditions: ['ECCMA_FLAG IN (?) AND COUNTRY_ECCMA = ?',country,@force] , :per_page => 10)
+                  @cmmcount=SourceDatum.where('ECCMA_FLAG IN (?) AND COUNTRY_ECCMA = ?',country,@force).count   
+              end
+         end
+       elsif@type =='CAGE'
+         if @force =='all'
+           if params[:search]
+                @vs = params[:search]
+                #search= 19207
+                 @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                  @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                else
+                  @cmm = initialize_grid(SourceDatum , conditions: ['COUNTRY_ECCMA != ?','NULL'] , :per_page => 10)
+                  @cmmcount=SourceDatum.where('COUNTRY_ECCMA !=?','NULL').count         
+              end
+          elsif @force =='NULL'
+             if params[:search]
+                @vs = params[:search]
+                #search= 19207
+                @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                else
+                @cmm = initialize_grid(SourceDatum , conditions: ['FORCE_NAME is  NULL'] , :per_page => 10)
+                @cmmcount=SourceDatum.where('FORCE_NAME is  NULL').count         
+              end
+              
+         else
+          if params[:search]
+                @vs = params[:search]
+                #search= 19207
+                 @cmm = initialize_grid(SourceDatum ,conditions: ["CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%"] , :per_page => 10)
+                  @cmmcount=SourceDatum.where("CAGEC like ? OR ECCMA_NSN like ? OR PART_NUMBER like ? OR NAME like ? ", "%#{@vs}%","%#{@vs}%","%#{@vs}%","%#{@vs}%").count
+
+                else
+                  @cmm = initialize_grid(SourceDatum , conditions: ['CAGEC = ?',@force] , :per_page => 10)
+                  @cmmcount=SourceDatum.where('CAGEC = ?',@force).count         
+              end
+         end
 
     else
         if params[:search]
@@ -280,7 +467,7 @@ class SourceDataController < ApplicationController
 
   def morensn
       #Force Given 
-      @db_morecmm = SourceDatum.count(:FORCE_NAME)
+      @db_morecmm = SourceDatum.where(["`FORCE_NAME` != ?", '']).count
       @db_morecommon = SourceDatum.where(["`FORCE_NAME` LIKE ?", '%COMMON%']).count
       @db_morenull = SourceDatum.where.not(FORCE_NAME: nil).count
       @db_moremsd = SourceDatum.where(["`FORCE_NAME` LIKE ?", '%MSD%']).count
@@ -289,19 +476,24 @@ class SourceDataController < ApplicationController
       @db_morersdf = SourceDatum.where(["`FORCE_NAME` LIKE ?", '%RSDF%']).count
       @db_morerslf = SourceDatum.where(["`FORCE_NAME` LIKE ?", '%RSLF%']).count
       @db_morersnf = SourceDatum.where(["`FORCE_NAME` LIKE ?", '%RSNF%']).count
+      @db_morenullforce = SourceDatum.where(["`FORCE_NAME` is NULL"]).count
 
 
       # Force Available
+      country=['USV','FRV','GMV','UKV']
 
       @db_morecmm_avil = SourceDatum.find_by_sql(["SELECT * FROM `source_data` where ECCMA_FLAG in ('USV','FRV','GMV','UKV') ORDER BY `CAGEC` DESC"]).count
-      @db_morecmm_common=420      
-      @db_morecmm_msd = 0
-      @db_morecmm_rsadf = 2948
-      @db_morecmm_rsaf = 12613
-      @db_morecmm_rsdf = 2482
-      @db_morecmm_rslf = 4792
-      @db_morecmm_rsnf = 2129
-      @db_morecmm_null = 25780
+      #@db_morecmm_common=SourceDatum.find_by_sql(["SELECT * FROM `source_data` where ECCMA_FLAG in ('USV','FRV','GMV','UKV') AND FORCE_NAME like '%COMMON%'ORDER BY `CAGEC` DESC"]).count  
+      @db_morecmm_common = SourceDatum.where(["`FORCE_NAME` LIKE ? AND ECCMA_FLAG IN (?)", '%COMMON%',country]).count    
+      @db_morecmm_msd = SourceDatum.where(["`FORCE_NAME` LIKE ? AND ECCMA_FLAG IN (?)", '%MSD%',country]).count  
+      @db_morecmm_rsadf = SourceDatum.where(["`FORCE_NAME` LIKE ? AND ECCMA_FLAG IN (?)", '%RSADF%',country]).count 
+      @db_morecmm_rsaf = SourceDatum.where(["`FORCE_NAME` LIKE ? AND ECCMA_FLAG IN (?)", '%RSAF%',country]).count 
+      @db_morecmm_rsdf = SourceDatum.where(["`FORCE_NAME` LIKE ? AND ECCMA_FLAG IN (?)", '%RSDF%',country]).count 
+      @db_morecmm_rslf = SourceDatum.where(["`FORCE_NAME` LIKE ? AND ECCMA_FLAG IN (?)", '%RSLF%',country]).count 
+      @db_morecmm_rsnf = SourceDatum.where(["`FORCE_NAME` LIKE ? AND ECCMA_FLAG IN (?)", '%RSNF%',country]).count 
+      @db_morecmm_null = SourceDatum.where(["`FORCE_NAME` is NULL AND ECCMA_FLAG IN (?)", country]).count 
+
+
 
 
       #Cage Code Given
@@ -326,7 +518,7 @@ class SourceDataController < ApplicationController
 
       #Country Given
 
-      @more_country = SourceDatum.find_by_sql(["SELECT count(*) as total FROM `source_data` where country_eccma!='NULL' ORDER BY `CAGEC` DESC"])
+      @more_country = SourceDatum.find_by_sql(["SELECT count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' ORDER BY `CAGEC` DESC"])
       @more_countrycode_1 = SourceDatum.find_by_sql(["SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 0,1"])
       @more_countrycode_1 = SourceDatum.find_by_sql(["SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 0,1"])
       @more_countrycode_2 = SourceDatum.find_by_sql(["SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 1,1"])
@@ -366,6 +558,27 @@ class SourceDataController < ApplicationController
     @data=CmmClassification.where("cat_id = ? ",@id)
     @technical=CmmTechnicalSpecification.select("propertyRef","value","source").where("cat_id = ? ",@id)
     @reference=CmmRxmlReference.select("property","value","value2").where("cat_id = ?",@id)
+  end
+
+  def morensn_details
+   vars = request.query_parameters
+    @type = vars['TYPE']
+      if @type =='country'
+        if params[:search]
+            @vs = params[:search]
+            @more= SourceDatum.find_by_sql(["SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC"])
+         else
+          @more= SourceDatum.find_by_sql(["SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC"])
+         end
+    else
+          if params[:search]
+              @vs = params[:search]
+            @more= SourceDatum.find_by_sql(["SELECT distinct FACTORY_NAME, FACTORY_ID,count(*) AS total FROM `classifications` where FACTORY_NAME ='#{@vs}'  group by FACTORY_NAME ORDER BY total DESC limit 0,15"])
+
+          else
+          @more= SourceDatum.find_by_sql(["SELECT distinct FACTORY_NAME, FACTORY_ID,count(*) AS total FROM `classifications` group by FACTORY_NAME ORDER BY total DESC limit 0,15"])
+          end
+      end
   end
 
   #  def edit
