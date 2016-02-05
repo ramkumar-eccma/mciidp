@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KSA</title>
     <!-- Include style per-controller - vendor plugins -->
-    <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") %>
+    <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css.scss") %>
     <!-- Main css styles -->
     <%- if I18n.locale== :ar %>
         <%= stylesheet_link_tag    'applicationrtls', media: 'all', 'data-turbolinks-track' => true %>
@@ -68,7 +68,7 @@
         <% end %>   
     </div>
     <!-- End wrapper-->
-    <%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js") %>
+    <%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js.coffee") %>
     <!-- Include javascript per-view -->
     <!-- For demo purpose we include javascript in view but you can easily start SeedProject and organize it with Rails asset pipeline as you want -->
     <%= yield :javascript %>

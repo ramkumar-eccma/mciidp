@@ -101,6 +101,7 @@
             <ul class="nav nav-tabs" style="background:#21B6A8;">
                 <li class="active"><a data-toggle="tab" href="#tab-1"style="color:#f3f3f4 !important;"> NSN</a></li>
                 <li class=""><a data-toggle="tab" href="#tab-2" style="color:#f3f3f4 !important;">CAGE CODE</a></li>
+                <li><a data-toggle="tab" href="#tab-3" style="color:#f3f3f4 !important;">الهرمي</a></li>
                  <li class="pull-left"><a data-toggle="tab" href="#tab-2" style="color:#f3f3f4 !important;"><i class="fa fa-chevron-up"></i></a></li>
             </ul>
             <div class="tab-content">
@@ -175,6 +176,12 @@
                     </div>
                     </div>
                 </div>
+                <div id="tab-3" class="tab-pane">
+                        <div class="panel-body">
+                        <h3 style="font-size:17px;font-weight:normal;">قاعدة بيانات ل أ ج ب ( متميزة NSN )</h3><br><br>
+                         <img alt="image" class="img-responsive"  src="<%= image_url 'tree1.png' %> " data-toggle="modal" data-target=".bs-example-modal-lg"/> 
+                        </div>
+                    </div>
             </div>
 
 
@@ -207,12 +214,173 @@
     </div> 
 </div>
 </div>
-
+ <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content" style="border:2px solid #E66D96;">
+                            <div class="modal-header" style="background:#E66D96;">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"  style="color:#f3f3f4 !important;"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="gridSystemModalLabel" style="color:#f3f3f4 !important;">قاعدة بيانات ل أ ج ب الهرمي مشاهدة</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="tree-view"></div>
+                                    </div>
+                                </div>  
+                            </div>  
+                        </div>
+                      </div>
+                    </div>
+                       <ul id="tree-data" style="display:none">
+                        <li id="root">
+                            <span id="source">
+                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'all' %>" target="_blank" style="font-size:12px !important;">مصدر معلومات</a></h5>
+                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                <p><%= @db_cmm %></p>                                        
+                            </span>
+                            <ul>
+                                <li>
+                                    <span id="sourced" style="background:red;">
+                                       <h5 ><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'valid' %>" target="_blank" style="font-size:12px !important;">سارية المفعول</a></h5>
+                                        <div style="border-top:2px solid #e7eaec;color: #E66D96;background-color: #E66D96;height:1px;margin:8px 0;"></div>
+                                        <p><%= @db_valid %></p>
+                                    </span>
+                                    <ul>
+                                        <li>
+                                            <span id="valid">
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'countrywise',:valid =>'USV',:invalid =>'USNV' %>"  target="_blank" style="font-size:12px !important;">USA</a></h5>
+                                                <!--h5 style="font-size:12px !important;">USA</h5-->
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                <p><%= @db_usa %></p>
+                                            </span>
+                                            <ul>
+                                                <li>
+                                                    <span id="us">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'USV' %>"  target="_blank" style="font-size:12px !important;">متاح</a></h5> 
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_match %></p>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span id="us-unavilable">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'USNV' %>"  target="_blank"  style="font-size:12px !important;">غير متوفره</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_nonoff %></p>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span id="unitedkingdom">
+                                               <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'countrywise',:valid =>'UKV',:invalid =>'UKNV' %>"  target="_blank" style="font-size:12px !important;">UK</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                <p><%= @db_gbr %></p>
+                                            </span>
+                                            <ul>
+                                                <li>
+                                                   <span id="uk"> 
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'UKV' %>"  target="_blank" style="font-size:12px !important;">متاح</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_matchukv %></p>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span id="uk-unavilable">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'UKNV' %>"  target="_blank" style="font-size:12px !important;">غير متوفره</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_nonoffuk %></p>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span id="german-root">
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'countrywise',:valid =>'GMV',:invalid =>'GMNV' %>"  target="_blank" style="font-size:12px !important;">Germany</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                <p><%= @db_deu %></p>
+                                            </span>
+                                            <ul>
+                                                <li>
+                                                    <span id="german">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'GMV' %>"  target="_blank" style="font-size:12px !important;">متاح</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_matchgmv %></p>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span id="german-unavilable">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'GMNV' %>"  target="_blank" style="font-size:12px !important;">غير متوفره</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_nonoffgmv %></p>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span id="france-root">
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'countrywise',:valid =>'FRV',:invalid =>'FRNV' %>"  target="_blank" style="font-size:12px !important;">France</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                <p><%= @db_fra %></p>
+                                            </span>
+                                            <ul>
+                                                <li>
+                                                    <span id="france">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FRV' %>"  target="_blank" style="font-size:12px !important;">متاح</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_matchfrv %></p>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span id="france-unavilable">
+                                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FRNV' %>"  target="_blank" style="font-size:12px !important;">غير متوفره</a></h5>
+                                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                        <p><%= @db_nonoffrnv %></p>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span id="othercountries">
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => '' %>" style="font-size:12px !important;">آخرون</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                <p><%= @db_other %></p>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span id="invalidformat">
+                                        <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'invalid' %>" target="_blank" style="font-size:12px !important;">غير صالحة</a></h5>
+                                        <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                         <p><%= @db_invalid %></p>
+                                    </span>
+                                     <ul>
+                                        <li>
+                                            <span id="invalidformat">
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'LINV' %>" target="_blank" style="font-size:12px !important;">XXXX SAL XXXXXX</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                 <p><%= @db_locinv %></p>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span id="invalidformat">
+                                                <h5><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'INV' %>" target="_blank" style="font-size:12px !important;">غير صالحة الأحرف</a></h5>
+                                                <div style="border-top:2px solid #e7eaec;color: #ffffff;background-color: #ffffff;height:1px;margin:8px 0;"></div>
+                                                 <p><%= @db_inv %></p>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>  
 
 <% content_for :javascript do %>
 
 <script type="text/javascript">
-
+$("#tree-data").jOrgChart({
+  chartElement: $("#tree-view")
+});
 
 $(function() {
     $(".db_cmm").sparkline(['<%= @db_inv.inspect %>','<%= @db_locinv.inspect %>','<%= @db_match.inspect %>','<%= @db_nonoff.inspect %>','<%= @db_matchgmv.inspect %>','<%= @db_matchfrv.inspect %>','<%= @db_matchukv.inspect %>','<%= @db_nonoffgmv.inspect %>','<%= @db_nonoffrnv.inspect %>','<%= @db_nonoffuk.inspect %>','<%= @db_other.inspect %>'], {
