@@ -51500,3 +51500,3628 @@ Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-01-30 17:05:27 +0530
 
 
 Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-01-30 17:05:27 +0530
+
+
+Started GET "/en/source_data/chart" for 127.0.0.1 at 2016-02-08 11:47:18 +0530
+
+Mysql2::Error (Access denied for user 'root'@'117.247.206.214' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.1ms)
+
+
+Started GET "/en/source_data/chart" for 127.0.0.1 at 2016-02-08 11:48:31 +0530
+
+Mysql2::Error (Access denied for user 'eccmadb'@'117.247.206.214' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.4ms)
+
+
+Started GET "/en/source_data/chart" for 127.0.0.1 at 2016-02-08 11:48:34 +0530
+
+Mysql2::Error (Access denied for user 'eccmadb'@'117.247.206.214' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.5ms)
+
+
+Started GET "/en/source_data/chart" for 127.0.0.1 at 2016-02-08 11:48:58 +0530
+
+Mysql2::Error (Access denied for user 'eccmadb'@'117.247.206.214' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-08 11:49:04 +0530
+
+Mysql2::Error (Access denied for user 'eccmadb'@'117.247.206.214' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-08 11:49:20 +0530
+
+Mysql2::Error (Access denied for user 'eccmadb'@'117.247.206.214' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-08 11:49:30 +0530
+
+Mysql2::Error (Access denied for user 'eccma'@'117.247.206.214' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-08 11:50:00 +0530
+
+Mysql2::Error (Can't connect to MySQL server on '192.168.0.4' (111)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-08 11:50:29 +0530
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/source_data/chart
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 94ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/source_data/chart" for 127.0.0.1 at 2016-02-08 11:50:29 +0530
+Processing by SourceDataController#chart as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(`source_data`.`id`) FROM `source_data`[0m
+  [1m[35m (3.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'INV')
+  [1m[36m (60.6ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'LINV')[0m
+  [1m[35m (21.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'USV')
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'USNV')[0m
+  [1m[35m (4.4ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG = '')
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'GMV')[0m
+  [1m[35m (2.2ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'FRV')
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'UKV')[0m
+  [1m[35m (1.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'GMNV')
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'FRNV')[0m
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'UKNV')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(`reference_data`.`id`) FROM `reference_data`[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'INV')
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'LINV')[0m
+  [1m[35m (116.5ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'USV')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'USNV')[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST = '')
+  [1m[36m (5.1ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'GERV')[0m
+  [1m[35m (10.1ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'FRV')
+  [1m[36m (3.5ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'UKV')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'GMNV')
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'FRNV')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'UKNV')
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ksa_development) instead. (called from <class:AccountBase> at /home/eccma/mciidp/app/models/classification.rb:8)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(`classifications`.`cat_id`) FROM `classifications`[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:factory_development) instead. (called from <class:FacAccount> at /home/eccma/mciidp/app/models/mm_factory.rb:7)
+  [1m[35m (218.2ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (Language= 'en')
+  [1m[36m (64.7ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'Cancel Suggestion')[0m
+  [1m[35m (65.5ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'CANCELLED')
+  [1m[36m (61.9ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'Merged')[0m
+  [1m[35m (61.9ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'NEW LICENSE')
+  [1m[36m (63.6ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'OPERATIONAL')[0m
+  [1m[35m (61.8ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'STOPPED')
+  [1m[36m (62.1ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'UNDER CONSTRUCTION')[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ex_development) instead. (called from <class:Accountex> at /home/eccma/mciidp/app/models/ex_classification.rb:8)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(`classifications`.`cat_id`) FROM `classifications`
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_Cleansed= 'y')[0m
+  Rendered source_data/chart.html.erb within layouts/application (27.3ms)
+  Rendered layouts/_navigation.html.erb (11.0ms)
+Completed 500 Internal Server Error in 1435ms (ActiveRecord: 920.8ms)
+
+ActionView::Template::Error (undefined local variable or method `user_list_path' for #<#<Class:0x00555b98e94b68>:0x00555b98e541a8>):
+    53:                  <%- if I18n.locale== :ar %>
+    54:                     <%= link_to '<i class="fa fa-users"></i> <span class="nav-label">قائمة المستخدمين</span>'.html_safe,  user_list_path %> 
+    55:                   <% else %>
+    56:                     <%= link_to '<i class="fa fa-users"></i> <span class="nav-label">List Users</span>'.html_safe,  user_list_path %> 
+    57:                 <% end -%> 
+    58:             </li>
+    59:             <% end  -%>
+  app/views/layouts/_navigation.html.erb:56:in `_app_views_layouts__navigation_html_erb___1325510811167044983_46925969400340'
+  app/views/layouts/application.html.erb:42:in `_app_views_layouts_application_html_erb__4393094636490671662_46925946626080'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.6ms)
+
+
+Started GET "/source_data/chart" for 127.0.0.1 at 2016-02-08 11:51:00 +0530
+Processing by SourceDataController#chart as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(`source_data`.`id`) FROM `source_data`[0m
+  [1m[35m (3.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'INV')
+  [1m[36m (74.7ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'LINV')[0m
+  [1m[35m (25.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'USV')
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'USNV')[0m
+  [1m[35m (4.6ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG = '')
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'GMV')[0m
+  [1m[35m (1.9ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'FRV')
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'UKV')[0m
+  [1m[35m (1.9ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'GMNV')
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'FRNV')[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'UKNV')
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(`reference_data`.`id`) FROM `reference_data`[0m
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'INV')
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'LINV')[0m
+  [1m[35m (116.7ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'USV')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'USNV')[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST = '')
+  [1m[36m (5.3ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'GERV')[0m
+  [1m[35m (10.0ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'FRV')
+  [1m[36m (3.4ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'UKV')[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'GMNV')
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'FRNV')[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'UKNV')
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ksa_development) instead. (called from <class:AccountBase> at /home/eccma/mciidp/app/models/classification.rb:8)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(`classifications`.`cat_id`) FROM `classifications`[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:factory_development) instead. (called from <class:FacAccount> at /home/eccma/mciidp/app/models/mm_factory.rb:7)
+  [1m[35m (64.0ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (Language= 'en')
+  [1m[36m (64.8ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'Cancel Suggestion')[0m
+  [1m[35m (65.4ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'CANCELLED')
+  [1m[36m (62.0ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'Merged')[0m
+  [1m[35m (61.9ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'NEW LICENSE')
+  [1m[36m (63.7ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'OPERATIONAL')[0m
+  [1m[35m (61.8ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'STOPPED')
+  [1m[36m (62.7ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'UNDER CONSTRUCTION')[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ex_development) instead. (called from <class:Accountex> at /home/eccma/mciidp/app/models/ex_classification.rb:8)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(`classifications`.`cat_id`) FROM `classifications`
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_Cleansed= 'y')[0m
+  Rendered source_data/chart.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_topnavbar.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 880ms (Views: 26.8ms | ActiveRecord: 797.2ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/tree1.png" for 127.0.0.1 at 2016-02-08 11:51:01 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:51:02 +0530
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 127.0.0.1 at 2016-02-08 11:51:02 +0530
+
+
+Started GET "/en/source_data/morensn" for 127.0.0.1 at 2016-02-08 11:51:07 +0530
+Processing by SourceDataController#morensn as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mUser Load (2.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (196.5ms)[0m  [1mSELECT COUNT(`source_data`.`FORCE_NAME`) FROM `source_data`[0m
+  [1m[35m (33.2ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%COMMON%')
+  [1m[36m (28.6ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`source_data`.`FORCE_NAME` IS NOT NULL)[0m
+  [1m[35m (33.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%MSD%')
+  [1m[36m (37.6ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSADF%')[0m
+  [1m[35m (37.6ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSAF%')
+  [1m[36m (37.5ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSDF%')[0m
+  [1m[35m (38.2ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSLF%')
+  [1m[36m (37.4ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSNF%')[0m
+  [1m[35mSourceDatum Load (2504.3ms)[0m  SELECT * FROM `source_data` where ECCMA_FLAG in ('USV','FRV','GMV','UKV') ORDER BY `CAGEC` DESC
+  [1m[36mSourceDataCage Load (71.7ms)[0m  [1mSELECT sum(cou) as cagetotal FROM `source_data_cages` where CAGEC is NOT NULL[0m
+  [1m[35mSourceDataCage Load (7.3ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 0,1
+  [1m[36mSourceDataCage Load (6.1ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 1,1[0m
+  [1m[35mSourceDataCage Load (5.7ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 2,1
+  [1m[36mSourceDataCage Load (5.4ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 3,1[0m
+  [1m[35mSourceDataCage Load (5.7ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 4,1
+  [1m[36mSourceDataCageMatch Load (13.4ms)[0m  [1mSELECT sum(cou) as total FROM `source_data_cage_matches`[0m
+  [1m[35mSourceDataCageMatch Load (5.2ms)[0m  SELECT * FROM `source_data_cage_matches` limit 0,1
+  [1m[36mSourceDataCageMatch Load (1.3ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 1,1[0m
+  [1m[35mSourceDataCageMatch Load (1.0ms)[0m  SELECT * FROM `source_data_cage_matches` limit 2,1
+  [1m[36mSourceDataCageMatch Load (1.0ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 3,1[0m
+  [1m[35mSourceDataCageMatch Load (1.0ms)[0m  SELECT * FROM `source_data_cage_matches` limit 4,1
+  [1m[36mSourceDatum Load (131.1ms)[0m  [1mSELECT count(*) as total FROM `source_data` where country_eccma!='NULL' ORDER BY `CAGEC` DESC[0m
+  [1m[35mSourceDatum Load (133.1ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 0,1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 0,1[0m
+  [1m[35mSourceDatum Load (132.8ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 1,1
+  [1m[36mSourceDatum Load (134.1ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 2,1[0m
+  [1m[35mSourceDatum Load (133.5ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 3,1
+  [1m[36mSourceDatum Load (133.0ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL'  group by COUNTRY_ECCMA order by total DESC limit 4,1[0m
+  [1m[35mSourceDatum Load (86.9ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG in ('UKV','GMV','FRV','USV')
+  [1m[36mSourceDatum Load (156.9ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='USV'[0m
+  [1m[35mSourceDatum Load (10.4ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='FRV'
+  [1m[36mSourceDatum Load (3.9ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='GMV'[0m
+  [1m[35mSourceDatum Load (4.9ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='ukv'
+  [1m[36mCageDetail Load (75.6ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '19207')[0m
+  [1m[35mCageDetail Load (24.2ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'S3002')
+  [1m[36mCageDetail Load (29.6ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'D8009')[0m
+  [1m[35mCageDetail Load (24.2ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '96906')
+  [1m[36mCageDetail Load (2.5ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'D8046')[0m
+  Rendered source_data/morensn.html.erb within layouts/application (171.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6281ms (Views: 60.8ms | ActiveRecord: 4342.4ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:51:13 +0530
+
+
+Started GET "/en/source_data/morensn" for 127.0.0.1 at 2016-02-08 11:54:20 +0530
+Processing by SourceDataController#morensn as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (73.7ms)[0m  [1mSELECT COUNT(`source_data`.`FORCE_NAME`) FROM `source_data`[0m
+  [1m[35m (33.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%COMMON%')
+  [1m[36m (28.7ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`source_data`.`FORCE_NAME` IS NOT NULL)[0m
+  [1m[35m (33.1ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%MSD%')
+  [1m[36m (37.7ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSADF%')[0m
+  [1m[35m (37.9ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSAF%')
+  [1m[36m (37.6ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSDF%')[0m
+  [1m[35m (38.2ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSLF%')
+  [1m[36m (37.4ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSNF%')[0m
+  [1m[35mSourceDatum Load (2046.2ms)[0m  SELECT * FROM `source_data` where ECCMA_FLAG in ('USV','FRV','GMV','UKV') ORDER BY `CAGEC` DESC
+  [1m[36mSourceDataCage Load (6.5ms)[0m  [1mSELECT sum(cou) as cagetotal FROM `source_data_cages` where CAGEC is NOT NULL[0m
+  [1m[35mSourceDataCage Load (7.2ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 0,1
+  [1m[36mSourceDataCage Load (7.4ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 1,1[0m
+  [1m[35mSourceDataCage Load (7.5ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 2,1
+  [1m[36mSourceDataCage Load (7.4ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 3,1[0m
+  [1m[35mSourceDataCage Load (7.4ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 4,1
+  [1m[36mSourceDataCageMatch Load (2.0ms)[0m  [1mSELECT sum(cou) as total FROM `source_data_cage_matches`[0m
+  [1m[35mSourceDataCageMatch Load (1.0ms)[0m  SELECT * FROM `source_data_cage_matches` limit 0,1
+  [1m[36mSourceDataCageMatch Load (0.9ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 1,1[0m
+  [1m[35mSourceDataCageMatch Load (1.3ms)[0m  SELECT * FROM `source_data_cage_matches` limit 2,1
+  [1m[36mSourceDataCageMatch Load (0.7ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 3,1[0m
+  [1m[35mSourceDataCageMatch Load (0.8ms)[0m  SELECT * FROM `source_data_cage_matches` limit 4,1
+  [1m[36mSourceDatum Load (99.9ms)[0m  [1mSELECT count(*) as total FROM `source_data` where country_eccma!='NULL' ORDER BY `CAGEC` DESC[0m
+  [1m[35mSourceDatum Load (133.6ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 0,1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 0,1[0m
+  [1m[35mSourceDatum Load (134.0ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 1,1
+  [1m[36mSourceDatum Load (133.1ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 2,1[0m
+  [1m[35mSourceDatum Load (133.3ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 3,1
+  [1m[36mSourceDatum Load (133.4ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL'  group by COUNTRY_ECCMA order by total DESC limit 4,1[0m
+  [1m[35mSourceDatum Load (86.9ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG in ('UKV','GMV','FRV','USV')
+  [1m[36mSourceDatum Load (156.1ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='USV'[0m
+  [1m[35mSourceDatum Load (10.3ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='FRV'
+  [1m[36mSourceDatum Load (4.0ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='GMV'[0m
+  [1m[35mSourceDatum Load (4.9ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='ukv'
+  Rendered source_data/morensn.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 4916ms (ActiveRecord: 3484.7ms)
+
+ActionView::Template::Error (No route matches {:TYPE=>"country", :action=>"morensn_details", :controller=>"source_data", :locale=>:en}):
+    124:                         <div class="col-md-6">&nbsp;
+    125:                         </div> 
+    126:                         <div class="col-md-6">
+    127:                             <a href="<%= url_for :controller => 'source_data',:action => 'morensn_details',:TYPE => 'country' %>" target="_blank" class="btn btn-xs btn-outline btn-success pull-right">More ..... <i class="fa fa-long-arrow-right"></i> </a>
+    128:                     </div> 
+    129:                     </div>
+    130:                     <div style="border:1px solid #8B4513; margin:15px 0;"></div>             
+  app/views/source_data/morensn.html.erb:127:in `_app_views_source_data_morensn_html_erb__1281878750401164681_70229834940040'
+
+
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/eccma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.9ms)
+
+
+Started GET "/en/source_data/morensn" for 127.0.0.1 at 2016-02-08 11:55:20 +0530
+Processing by SourceDataController#morensn as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (100.9ms)[0m  SELECT COUNT(`source_data`.`FORCE_NAME`) FROM `source_data`
+  [1m[36m (36.7ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%COMMON%')[0m
+  [1m[35m (28.8ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`source_data`.`FORCE_NAME` IS NOT NULL)
+  [1m[36m (33.1ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%MSD%')[0m
+  [1m[35m (37.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSADF%')
+  [1m[36m (37.6ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSAF%')[0m
+  [1m[35m (37.4ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSDF%')
+  [1m[36m (38.2ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSLF%')[0m
+  [1m[35m (37.3ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSNF%')
+  [1m[36mSourceDatum Load (2047.6ms)[0m  [1mSELECT * FROM `source_data` where ECCMA_FLAG in ('USV','FRV','GMV','UKV') ORDER BY `CAGEC` DESC[0m
+  [1m[35mSourceDataCage Load (6.4ms)[0m  SELECT sum(cou) as cagetotal FROM `source_data_cages` where CAGEC is NOT NULL
+  [1m[36mSourceDataCage Load (4.7ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 0,1[0m
+  [1m[35mSourceDataCage Load (4.0ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 1,1
+  [1m[36mSourceDataCage Load (4.1ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 2,1[0m
+  [1m[35mSourceDataCage Load (4.0ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 3,1
+  [1m[36mSourceDataCage Load (4.1ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 4,1[0m
+  [1m[35mSourceDataCageMatch Load (2.4ms)[0m  SELECT sum(cou) as total FROM `source_data_cage_matches`
+  [1m[36mSourceDataCageMatch Load (0.8ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 0,1[0m
+  [1m[35mSourceDataCageMatch Load (1.2ms)[0m  SELECT * FROM `source_data_cage_matches` limit 1,1
+  [1m[36mSourceDataCageMatch Load (1.4ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 2,1[0m
+  [1m[35mSourceDataCageMatch Load (1.4ms)[0m  SELECT * FROM `source_data_cage_matches` limit 3,1
+  [1m[36mSourceDataCageMatch Load (1.3ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 4,1[0m
+  [1m[35mSourceDatum Load (85.1ms)[0m  SELECT count(*) as total FROM `source_data` where country_eccma!='NULL' ORDER BY `CAGEC` DESC
+  [1m[36mSourceDatum Load (131.8ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 0,1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 0,1
+  [1m[36mSourceDatum Load (131.5ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 1,1[0m
+  [1m[35mSourceDatum Load (138.7ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 2,1
+  [1m[36mSourceDatum Load (131.6ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 3,1[0m
+  [1m[35mSourceDatum Load (131.6ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL'  group by COUNTRY_ECCMA order by total DESC limit 4,1
+  [1m[36mSourceDatum Load (87.0ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG in ('UKV','GMV','FRV','USV')[0m
+  [1m[35mSourceDatum Load (156.3ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='USV'
+  [1m[36mSourceDatum Load (10.5ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='FRV'[0m
+  [1m[35mSourceDatum Load (4.2ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='GMV'
+  [1m[36mSourceDatum Load (5.2ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='ukv'[0m
+  [1m[35mCageDetail Load (0.6ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '19207')
+  [1m[36mCageDetail Load (1.3ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'S3002')[0m
+  [1m[35mCageDetail Load (1.2ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'D8009')
+  [1m[36mCageDetail Load (1.3ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '96906')[0m
+  [1m[35mCageDetail Load (1.2ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'D8046')
+  Rendered source_data/morensn.html.erb within layouts/application (39.0ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5275ms (Views: 54.8ms | ActiveRecord: 3521.8ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:55:26 +0530
+
+
+Started GET "/en/source?FORCE=all&NSNTYPE=GIVEN&TYPE=FORCE" for 127.0.0.1 at 2016-02-08 11:55:33 +0530
+Processing by SourceDataController#source as HTML
+  Parameters: {"FORCE"=>"all", "NSNTYPE"=>"GIVEN", "TYPE"=>"FORCE", "locale"=>"en"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG = 'FORCE' )
+  [1m[36mLanguage Load (1.2ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '14'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.4ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.5ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '13' AND controller_name = 'langs' AND page_name = 'show.html.erb' AND language_type = 'en' )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG = 'FORCE' )[0m
+  [1m[35mSourceDatum Load (1.5ms)[0m  SELECT  `source_data`.* FROM `source_data` WHERE (ECCMA_FLAG = 'FORCE' ) LIMIT 10 OFFSET 0
+  Rendered source_data/source.html.erb within layouts/application (111.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 140ms (Views: 118.7ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:55:34 +0530
+
+
+Started GET "/en/source?FORCE=all&NSNTYPE=GIVEN&TYPE=FORCE" for 127.0.0.1 at 2016-02-08 11:57:28 +0530
+Processing by SourceDataController#source as HTML
+  Parameters: {"FORCE"=>"all", "NSNTYPE"=>"GIVEN", "TYPE"=>"FORCE", "locale"=>"en"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (93.4ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FORCE_NAME is NOT NULL)
+  [1m[36mLanguage Load (0.4ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '14'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (0.5ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (0.8ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '13' AND controller_name = 'langs' AND page_name = 'show.html.erb' AND language_type = 'en' )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FORCE_NAME is NOT NULL)[0m
+  [1m[35mSourceDatum Load (1.2ms)[0m  SELECT  `source_data`.* FROM `source_data` WHERE (FORCE_NAME is NOT NULL) LIMIT 10 OFFSET 0
+  Rendered source_data/source.html.erb within layouts/application (89.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 236ms (Views: 97.1ms | ActiveRecord: 117.4ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:57:29 +0530
+
+
+Started GET "/en/edit?CAGE=19207&NSN=2510004050210&PART=10871302" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+Processing by SourceDataController#edit as HTML
+  Parameters: {"CAGE"=>"19207", "NSN"=>"2510004050210", "PART"=>"10871302", "locale"=>"en"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLanguage Load (1.2ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '14'  AND language_type = 'en' )
+  [1m[36mLanguage Load (1.1ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.1ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '17'  AND language_type = 'en' )
+  [1m[36mLanguage Load (1.0ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '18'  AND language_type = 'en' )[0m
+  [1m[35mASegment Load (21.6ms)[0m  SELECT `a_segments`.* FROM `a_segments` WHERE (ECCMA_NSN= '2510004050210')
+  [1m[36mLanguage Load (1.1ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '19'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.4ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '22'  AND language_type = 'en' )
+  [1m[36mLanguage Load (1.0ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '20'  AND language_type = 'en' )[0m
+  [1m[35mNsnmrcxs Load (49.1ms)[0m  SELECT `nsnmrcxs`.* FROM `nsnmrcxs` WHERE (ECCMA_NSN= '2510004050210')
+  [1m[36mLanguage Load (1.1ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '21'  AND language_type = 'en' )[0m
+  [1m[35mReferenceDatum Load (42.1ms)[0m  SELECT `reference_data`.* FROM `reference_data` WHERE (ECCMA_NSN = '2510004050210' )
+  [1m[36mLanguage Load (1.0ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '37'  AND language_type = 'en' )[0m
+  [1m[35mReferenceDatum Load (1.4ms)[0m  SELECT `reference_data`.* FROM `reference_data` WHERE (id= NULL)
+  Rendered source_data/edit.html.erb within layouts/application (201.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 224ms (Views: 71.0ms | ActiveRecord: 147.9ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:57:36 +0530
+
+
+Started GET "/en/edit?CAGE=19207&NSN=2510004050210&PART=10871302&vendor=115120" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+Processing by SourceDataController#edit as HTML
+  Parameters: {"CAGE"=>"19207", "NSN"=>"2510004050210", "PART"=>"10871302", "vendor"=>"115120", "locale"=>"en"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLanguage Load (1.2ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '14'  AND language_type = 'en' )
+  [1m[36mLanguage Load (1.1ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.1ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '17'  AND language_type = 'en' )
+  [1m[36mLanguage Load (1.1ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '18'  AND language_type = 'en' )[0m
+  [1m[35mASegment Load (1.7ms)[0m  SELECT `a_segments`.* FROM `a_segments` WHERE (ECCMA_NSN= '2510004050210')
+  [1m[36mLanguage Load (1.2ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '19'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.1ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '22'  AND language_type = 'en' )
+  [1m[36mLanguage Load (1.4ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '20'  AND language_type = 'en' )[0m
+  [1m[35mNsnmrcxs Load (2.9ms)[0m  SELECT `nsnmrcxs`.* FROM `nsnmrcxs` WHERE (ECCMA_NSN= '2510004050210')
+  [1m[36mLanguage Load (1.1ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '21'  AND language_type = 'en' )[0m
+  [1m[35mReferenceDatum Load (3.3ms)[0m  SELECT `reference_data`.* FROM `reference_data` WHERE (ECCMA_NSN = '2510004050210' )
+  [1m[36mLanguage Load (1.3ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '37'  AND language_type = 'en' )[0m
+  [1m[35mReferenceDatum Load (62.9ms)[0m  SELECT `reference_data`.* FROM `reference_data` WHERE (id= '115120')
+  Rendered source_data/edit.html.erb within layouts/application (105.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 132ms (Views: 45.5ms | ActiveRecord: 82.9ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:57:49 +0530
+
+
+Started GET "/en/detail_view" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+Processing by MadeinKsaController#detail_view as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ksa_development) instead. (called from <class:AccountBase> at /home/eccma/mciidp/app/models/classification.rb:8)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(`classifications`.`cat_id`) FROM `classifications`
+  [1m[36mClassification Load (94.9ms)[0m  [1mSELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 0,1[0m
+  [1m[35mClassification Load (20.4ms)[0m  SELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 1,1
+  [1m[36mClassification Load (16.5ms)[0m  [1mSELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 2,1[0m
+  [1m[35mClassification Load (11.8ms)[0m  SELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 3,1
+  [1m[36mClassification Load (10.1ms)[0m  [1mSELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 4,1[0m
+  [1m[35m (3.2ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (catalog_name= 'PIPE,METALLIC')
+  [1m[36m (3.4ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (catalog_name= 'PANEL,CEILING')[0m
+  [1m[35m (3.3ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (catalog_name= 'VALVE,GATE')
+  [1m[36m (3.1ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (catalog_name= 'BATTERY,STORAGE')[0m
+  [1m[35mClassification Load (20.0ms)[0m  SELECT distinct FACTORY_NAME,FACTORY_ID,count(*) as total FROM `classifications` where FACTORY_NAME!='NULL' group by FACTORY_NAME ORDER BY `total` DESC limit 0,1
+  [1m[36mClassification Load (14.5ms)[0m  [1mSELECT distinct FACTORY_NAME,FACTORY_ID,count(*) as total FROM `classifications` where FACTORY_NAME!='NULL' group by FACTORY_NAME ORDER BY `total` DESC limit 1,1[0m
+  [1m[35mClassification Load (14.5ms)[0m  SELECT distinct FACTORY_NAME,FACTORY_ID,count(*) as total FROM `classifications` where FACTORY_NAME!='NULL' group by FACTORY_NAME ORDER BY `total` DESC limit 2,1
+  [1m[36mClassification Load (14.6ms)[0m  [1mSELECT distinct FACTORY_NAME,FACTORY_ID,count(*) as total FROM `classifications` where FACTORY_NAME!='NULL' group by FACTORY_NAME ORDER BY `total` DESC limit 3,1[0m
+  [1m[35m (8.7ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID= '24249')
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID= '25738')[0m
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID= '2531')
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID= '3065')[0m
+  Rendered madein_ksa/detail_view.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 314ms (Views: 22.4ms | ActiveRecord: 254.5ms)
+
+
+Started GET "/assets/madein_ksa.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:12 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:58:13 +0530
+
+
+Started GET "/en/more_details?TYPE=factory" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+Processing by MadeinKsaController#more_details as HTML
+  Parameters: {"TYPE"=>"factory", "locale"=>"en"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mClassification Load (40.9ms)[0m  [1mSELECT distinct FACTORY_NAME, FACTORY_ID,count(*) AS total FROM `classifications` group by FACTORY_NAME ORDER BY total DESC limit 0,15[0m
+  Rendered madein_ksa/more_details.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 20.3ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:58:15 +0530
+
+
+Started GET "/en/source_data/morensn" for 127.0.0.1 at 2016-02-08 11:58:30 +0530
+Processing by SourceDataController#morensn as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mUser Load (3.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (81.5ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` != '')[0m
+  [1m[35m (33.2ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%COMMON%')
+  [1m[36m (29.1ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`source_data`.`FORCE_NAME` IS NOT NULL)[0m
+  [1m[35m (33.1ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%MSD%')
+  [1m[36m (37.6ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSADF%')[0m
+  [1m[35m (37.6ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSAF%')
+  [1m[36m (37.4ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSDF%')[0m
+  [1m[35m (38.4ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSLF%')
+  [1m[36m (37.5ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSNF%')[0m
+  [1m[35m (28.1ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` is NULL)
+  [1m[36mSourceDatum Load (2040.6ms)[0m  [1mSELECT * FROM `source_data` where ECCMA_FLAG in ('USV','FRV','GMV','UKV') ORDER BY `CAGEC` DESC[0m
+  [1m[35m (104.4ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%COMMON%' AND ECCMA_FLAG IN ('USV','FRV','GMV','UKV'))
+  [1m[36m (78.1ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%MSD%' AND ECCMA_FLAG IN ('USV','FRV','GMV','UKV'))[0m
+  [1m[35m (82.1ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSADF%' AND ECCMA_FLAG IN ('USV','FRV','GMV','UKV'))
+  [1m[36m (84.3ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSAF%' AND ECCMA_FLAG IN ('USV','FRV','GMV','UKV'))[0m
+  [1m[35m (81.9ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSDF%' AND ECCMA_FLAG IN ('USV','FRV','GMV','UKV'))
+  [1m[36m (89.1ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSLF%' AND ECCMA_FLAG IN ('USV','FRV','GMV','UKV'))[0m
+  [1m[35m (82.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSNF%' AND ECCMA_FLAG IN ('USV','FRV','GMV','UKV'))
+  [1m[36m (122.2ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` is NULL AND ECCMA_FLAG IN ('USV','FRV','GMV','UKV'))[0m
+  [1m[35mSourceDataCage Load (1.8ms)[0m  SELECT sum(cou) as cagetotal FROM `source_data_cages` where CAGEC is NOT NULL
+  [1m[36mSourceDataCage Load (1.8ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 0,1[0m
+  [1m[35mSourceDataCage Load (2.0ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 1,1
+  [1m[36mSourceDataCage Load (2.1ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 2,1[0m
+  [1m[35mSourceDataCage Load (2.2ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 3,1
+  [1m[36mSourceDataCage Load (1.8ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 4,1[0m
+  [1m[35mSourceDataCageMatch Load (1.0ms)[0m  SELECT sum(cou) as total FROM `source_data_cage_matches`
+  [1m[36mSourceDataCageMatch Load (0.5ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 0,1[0m
+  [1m[35mSourceDataCageMatch Load (0.6ms)[0m  SELECT * FROM `source_data_cage_matches` limit 1,1
+  [1m[36mSourceDataCageMatch Load (0.7ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 2,1[0m
+  [1m[35mSourceDataCageMatch Load (0.7ms)[0m  SELECT * FROM `source_data_cage_matches` limit 3,1
+  [1m[36mSourceDataCageMatch Load (0.7ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 4,1[0m
+  [1m[35mSourceDatum Load (79.9ms)[0m  SELECT count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' ORDER BY `CAGEC` DESC
+  [1m[36mSourceDatum Load (133.2ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 0,1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 0,1
+  [1m[36mSourceDatum Load (133.6ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 1,1[0m
+  [1m[35mSourceDatum Load (133.1ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 2,1
+  [1m[36mSourceDatum Load (133.0ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC limit 3,1[0m
+  [1m[35mSourceDatum Load (133.1ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL'  group by COUNTRY_ECCMA order by total DESC limit 4,1
+  [1m[36mSourceDatum Load (86.9ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG in ('UKV','GMV','FRV','USV')[0m
+  [1m[35mSourceDatum Load (157.3ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='USV'
+  [1m[36mSourceDatum Load (10.7ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='FRV'[0m
+  [1m[35mSourceDatum Load (3.8ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='GMV'
+  [1m[36mSourceDatum Load (5.0ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='ukv'[0m
+  [1m[35mCageDetail Load (1.1ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '19207')
+  [1m[36mCageDetail Load (0.5ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'S3002')[0m
+  [1m[35mCageDetail Load (1.0ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'D8009')
+  [1m[36mCageDetail Load (0.4ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '96906')[0m
+  [1m[35mCageDetail Load (0.6ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'D8046')
+  Rendered source_data/morensn.html.erb within layouts/application (18.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5583ms (Views: 27.2ms | ActiveRecord: 4199.1ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:58:36 +0530
+
+
+Started GET "/en/source?FORCE=RSLF&NSNTYPE=GIVEN&TYPE=FORCE" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+Processing by SourceDataController#source as HTML
+  Parameters: {"FORCE"=>"RSLF", "NSNTYPE"=>"GIVEN", "TYPE"=>"FORCE", "locale"=>"en"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (78.6ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (FORCE_NAME like '%RSLF%')
+  [1m[36mLanguage Load (0.5ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '14'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (0.7ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (0.7ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '13' AND controller_name = 'langs' AND page_name = 'show.html.erb' AND language_type = 'en' )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (FORCE_NAME like '%RSLF%')[0m
+  [1m[35mSourceDatum Load (1.4ms)[0m  SELECT  `source_data`.* FROM `source_data` WHERE (FORCE_NAME like '%RSLF%') LIMIT 10 OFFSET 0
+  Rendered source_data/source.html.erb within layouts/application (22.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 122ms (Views: 35.7ms | ActiveRecord: 83.2ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:58:41 +0530
+
+
+Started GET "/en/morensn_details?TYPE=country" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+Processing by SourceDataController#morensn_details as HTML
+  Parameters: {"TYPE"=>"country", "locale"=>"en"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mSourceDatum Load (179.4ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='NULL' group by COUNTRY_ECCMA order by total DESC
+  Rendered source_data/morensn_details.html.erb within layouts/application (29.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 246ms (Views: 53.5ms | ActiveRecord: 180.9ms)
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:46 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:58:47 +0530
+
+
+Started GET "/en/source?FORCE=United+Kingdom&NSNTYPE=GIVEN&TYPE=COUNTRY" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+Processing by SourceDataController#source as HTML
+  Parameters: {"FORCE"=>"United Kingdom", "NSNTYPE"=>"GIVEN", "TYPE"=>"COUNTRY", "locale"=>"en"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (113.1ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (COUNTRY_ECCMA = 'United Kingdom')
+  [1m[36mLanguage Load (0.5ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '14'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.0ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.0ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '13' AND controller_name = 'langs' AND page_name = 'show.html.erb' AND language_type = 'en' )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (COUNTRY_ECCMA = 'United Kingdom')[0m
+  [1m[35mSourceDatum Load (3.5ms)[0m  SELECT  `source_data`.* FROM `source_data` WHERE (COUNTRY_ECCMA = 'United Kingdom') LIMIT 10 OFFSET 0
+  Rendered source_data/source.html.erb within layouts/application (21.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 156ms (Views: 33.0ms | ActiveRecord: 120.4ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:53 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:58:54 +0530
+
+
+Started GET "/en/source?FORCE=France&NSNTYPE=GIVEN&TYPE=COUNTRYAVAIL" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+Processing by SourceDataController#source as HTML
+  Parameters: {"FORCE"=>"France", "NSNTYPE"=>"GIVEN", "TYPE"=>"COUNTRYAVAIL", "locale"=>"en"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (127.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG IN ('USV','FRV','GMV','UKV') AND COUNTRY_ECCMA = 'France')
+  [1m[36mLanguage Load (0.5ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '14'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (1.0ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '27'  AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (0.5ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '13' AND controller_name = 'langs' AND page_name = 'show.html.erb' AND language_type = 'en' )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG IN ('USV','FRV','GMV','UKV') AND COUNTRY_ECCMA = 'France')[0m
+  [1m[35mSourceDatum Load (1.4ms)[0m  SELECT  `source_data`.* FROM `source_data` WHERE (ECCMA_FLAG IN ('USV','FRV','GMV','UKV') AND COUNTRY_ECCMA = 'France') LIMIT 10 OFFSET 0
+  Rendered source_data/source.html.erb within layouts/application (26.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 176ms (Views: 41.3ms | ActiveRecord: 132.6ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 11:59:11 +0530
+
+
+Started GET "/en/detail_view" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+Processing by MadeinKsaController#detail_view as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(`classifications`.`cat_id`) FROM `classifications`
+  [1m[36mClassification Load (36.9ms)[0m  [1mSELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 0,1[0m
+  [1m[35mClassification Load (17.9ms)[0m  SELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 1,1
+  [1m[36mClassification Load (13.4ms)[0m  [1mSELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 2,1[0m
+  [1m[35mClassification Load (10.4ms)[0m  SELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 3,1
+  [1m[36mClassification Load (10.0ms)[0m  [1mSELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 4,1[0m
+  [1m[35m (3.3ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (catalog_name= 'PIPE,METALLIC')
+  [1m[36m (3.4ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (catalog_name= 'PANEL,CEILING')[0m
+  [1m[35m (3.2ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (catalog_name= 'VALVE,GATE')
+  [1m[36m (3.3ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (catalog_name= 'BATTERY,STORAGE')[0m
+  [1m[35mClassification Load (14.6ms)[0m  SELECT distinct FACTORY_NAME,FACTORY_ID,count(*) as total FROM `classifications` where FACTORY_NAME!='NULL' group by FACTORY_NAME ORDER BY `total` DESC limit 0,1
+  [1m[36mClassification Load (14.5ms)[0m  [1mSELECT distinct FACTORY_NAME,FACTORY_ID,count(*) as total FROM `classifications` where FACTORY_NAME!='NULL' group by FACTORY_NAME ORDER BY `total` DESC limit 1,1[0m
+  [1m[35mClassification Load (14.6ms)[0m  SELECT distinct FACTORY_NAME,FACTORY_ID,count(*) as total FROM `classifications` where FACTORY_NAME!='NULL' group by FACTORY_NAME ORDER BY `total` DESC limit 2,1
+  [1m[36mClassification Load (14.5ms)[0m  [1mSELECT distinct FACTORY_NAME,FACTORY_ID,count(*) as total FROM `classifications` where FACTORY_NAME!='NULL' group by FACTORY_NAME ORDER BY `total` DESC limit 3,1[0m
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID= '24249')
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID= '25738')[0m
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID= '2531')
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID= '3065')[0m
+  Rendered madein_ksa/detail_view.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 193ms (Views: 18.2ms | ActiveRecord: 167.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 12:00:53 +0530
+
+
+Started GET "/en/more_details?TYPE=classname" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+Processing by MadeinKsaController#more_details as HTML
+  Parameters: {"TYPE"=>"classname", "locale"=>"en"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mClassification Load (35.0ms)[0m  [1mSELECT distinct catalog_name,count(*) AS total FROM `classifications` group by catalog_name ORDER BY total DESC limit 0,15[0m
+  Rendered madein_ksa/more_details.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 62ms (Views: 22.8ms | ActiveRecord: 36.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 12:00:55 +0530
+
+
+Started GET "/en/detail_view" for 127.0.0.1 at 2016-02-08 12:01:42 +0530
+Processing by MadeinKsaController#detail_view as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(`classifications`.`cat_id`) FROM `classifications`[0m
+  [1m[35mClassification Load (36.8ms)[0m  SELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 0,1
+  [1m[36mClassification Load (17.8ms)[0m  [1mSELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 1,1[0m
+  [1m[35mClassification Load (13.5ms)[0m  SELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 2,1
+  [1m[36mClassification Load (10.2ms)[0m  [1mSELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 3,1[0m
+  [1m[35mClassification Load (10.1ms)[0m  SELECT distinct catalog_name,count(*) as total FROM `classifications` where catalog_name!='NULL' group by catalog_name ORDER BY `total` DESC limit 4,1
+  [1m[36m (3.4ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (catalog_name= 'PIPE,METALLIC')[0m
+  [1m[35m (3.4ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (catalog_name= 'PANEL,CEILING')
+  [1m[36m (3.3ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (catalog_name= 'VALVE,GATE')[0m
+  [1m[35m (3.5ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (catalog_name= 'BATTERY,STORAGE')
+  [1m[36mClassification Load (14.6ms)[0m  [1mSELECT distinct FACTORY_NAME,FACTORY_ID,count(*) as total FROM `classifications` where FACTORY_NAME!='NULL' group by FACTORY_NAME ORDER BY `total` DESC limit 0,1[0m
+  [1m[35mClassification Load (14.5ms)[0m  SELECT distinct FACTORY_NAME,FACTORY_ID,count(*) as total FROM `classifications` where FACTORY_NAME!='NULL' group by FACTORY_NAME ORDER BY `total` DESC limit 1,1
+  [1m[36mClassification Load (14.4ms)[0m  [1mSELECT distinct FACTORY_NAME,FACTORY_ID,count(*) as total FROM `classifications` where FACTORY_NAME!='NULL' group by FACTORY_NAME ORDER BY `total` DESC limit 2,1[0m
+  [1m[35mClassification Load (14.7ms)[0m  SELECT distinct FACTORY_NAME,FACTORY_ID,count(*) as total FROM `classifications` where FACTORY_NAME!='NULL' group by FACTORY_NAME ORDER BY `total` DESC limit 3,1
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID= '24249')[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID= '25738')
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID= '2531')[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID= '3065')
+  Rendered madein_ksa/detail_view.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 199ms (Views: 19.6ms | ActiveRecord: 167.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/madein_ksa.css?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 12:01:43 +0530
+
+
+Started GET "/en/more_details?TYPE=factory" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+Processing by MadeinKsaController#more_details as HTML
+  Parameters: {"TYPE"=>"factory", "locale"=>"en"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mClassification Load (53.6ms)[0m  SELECT distinct FACTORY_NAME, FACTORY_ID,count(*) AS total FROM `classifications` group by FACTORY_NAME ORDER BY total DESC limit 0,15
+  Rendered madein_ksa/more_details.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 84ms (Views: 24.0ms | ActiveRecord: 54.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/madein_ksa.css?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 12:01:46 +0530
+
+
+Started GET "/en/showfactory?FACTORY=24249" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+Processing by MadeinKsaController#showfactory as HTML
+  Parameters: {"FACTORY"=>"24249", "locale"=>"en"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID = '24249')
+  [1m[36mLanguage Load (0.6ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id= '14' AND language_type = 'en')[0m
+  [1m[35mLanguage Load (0.8ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id= '40' AND language_type = 'en')
+  [1m[36mLanguage Load (1.1ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '12' AND controller_name = 'langs' AND page_name = 'show.html.erb' AND language_type = 'en' )[0m
+  [1m[35mLanguage Load (0.6ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '13' AND controller_name = 'langs' AND page_name = 'show.html.erb' AND language_type = 'en' )
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM `classifications` WHERE (FACTORY_ID = '24249')[0m
+  [1m[35mClassification Load (3.4ms)[0m  SELECT  `classifications`.* FROM `classifications` WHERE (FACTORY_ID = '24249') LIMIT 10 OFFSET 0
+  Rendered madein_ksa/showfactory.html.erb within layouts/application (36.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 60ms (Views: 44.8ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/assets/madein_ksa.css?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/exemption.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/langs.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
