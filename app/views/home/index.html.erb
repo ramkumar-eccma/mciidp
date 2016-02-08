@@ -1,14 +1,95 @@
-<div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="text-center m-t-lg">
-                <h1>
-                    <%= @mainTitle %>
-                </h1>
-                <small>
-                    <%= @mainDesc %>
-                </small>
-            </div>
-        </div>
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+        <img alt="image" class="img-responsive" src="<%= image_url 'headerlogo.jpg' %> " height="50px" />      
+        <div class="clearfix"></div>
+        <ol class="breadcrumb">
+            <li>
+              Home
+            </li>
+            <li>
+              Dashboard
+            </li>
+             <li class="active">
+               List User
+            </li>
+        </ol>
     </div>
 </div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+              <h4>List Users</h4>
+          </div>
+          <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Organization Name</th>
+                                <th>Designation</th>
+                                <th>Role</th>
+                                <th>Level</th>
+                                <th>Email Verfication</th>
+                                <th>Approved</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% @users.each do |u| %>                                 
+                                <tr>
+                                    <td><%= u.name %></td>
+                                    <td><%= u.email %></td>
+                                    <td><%= u.Organization_name %></td>
+                                    <td><%= u.designation %></td>
+                                    <td>
+                                        <% if u.admin == true %>
+                                            <i class="fa fa-users text-danger" style="font-size: 25px;display: block;"></i>
+                                        <% elsif u.admin == false %>
+                                            <i class="fa fa-user text-success" style="font-size: 25px;display: block;"></i>
+                                        <% end %> 
+                                    </td>
+                                    <td><%= u.level %></td>
+                                    <td>
+                                        <% if u.confirmation_token.nil? %>
+                                           <i class="fa fa-unlock text-success" style="font-size: 25px;display: block;"></i>
+                                        <% else %>
+                                            <i class="fa fa-lock text-danger" style="font-size: 25px;display: block;"></i>
+                                        <% end %>
+                                    </td>
+                                    <td>
+                                        <% if u.approved == 1 %>
+                                            <i class="fa fa-check text-success" style="font-size: 25px;display: block;"></i>
+                                        <% else %>
+                                            <i class="fa fa-times text-danger" style="font-size: 25px;display: block;"></i>
+                                         <% end %>
+                                    </td>
+                                    <td>
+                                        <%= link_to "Edit User", user_edit_path(id: u.id) %>
+                                    </td>
+                                </tr>
+                            <% end %>
+                        </tbody>
+                    </table>                    
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div> 
+</div>  
+<% content_for :javascript do %>
+<script type="text/javascript">
+$(function() {
+    $('.dataTables-example').dataTable({
+        
+    });
+});
+</script>
+<% end %>
+

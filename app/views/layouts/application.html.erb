@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KSA</title>
-    <!-- Include style per-controller - vendor plugins -->
-    <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") %>
+    <title>KSA</title>    
     <!-- Main css styles -->
+     <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css.scss") %>
     <%- if I18n.locale== :ar %>
         <%= stylesheet_link_tag    'applicationrtls', media: 'all', 'data-turbolinks-track' => true %>
         <% else %>
@@ -16,15 +15,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <style>
-    .borderless {
-            border-bottom:0px !important;
-        }
-        .borderless th, .borderless td {
-            border: 0px !important;
-        }
-        .borderless {
-            border:0px !important;
-        }
         .custom-tab .nav-tabs > li.active > a, .tabs-container .nav-tabs > li.active > a:hover, .tabs-container .nav-tabs > li.active > a:focus{
             background-color: #009688;
         }
@@ -67,10 +57,7 @@
             <div class="col-md-4"></div>
         <% end %>   
     </div>
-    <!-- End wrapper-->
-    <%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js") %>
-    <!-- Include javascript per-view -->
-    <!-- For demo purpose we include javascript in view but you can easily start SeedProject and organize it with Rails asset pipeline as you want -->
+    <%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js.coffee") %>
     <%= yield :javascript %>
 </body>
 </html>

@@ -48,6 +48,15 @@
                     <%= link_to '<i class="fa fa-user"></i> <span class="nav-label">Edit Profile</span>'.html_safe,  edit_user_registration_path %> 
                 <% end -%> 
             </li>
+             <% if current_user.present? && current_user.admin?  -%>
+            <li class="<%= 'active' if current_page?('home/index') %>">
+                 <%- if I18n.locale== :ar %>
+                    <%= link_to '<i class="fa fa-users"></i> <span class="nav-label">قائمة المستخدمين</span>'.html_safe,  user_list_path %> 
+                  <% else %>
+                    <%= link_to '<i class="fa fa-users"></i> <span class="nav-label">List Users</span>'.html_safe,  user_list_path %> 
+                <% end -%> 
+            </li>
+            <% end  -%>
         </ul>
 
     </div>
