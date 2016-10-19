@@ -9,4 +9,6 @@ class AccountBase < ActiveRecord::Base
 end
 class Classification < AccountBase
 	include SafeAttributes::Base
+	has_many :TechnicalSpecification, foreign_key: "cat_id"
+	has_many :RxmlReference, foreign_key: "cat_id" 
 end

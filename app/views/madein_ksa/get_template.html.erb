@@ -1,0 +1,166 @@
+<%= form_tag(view1_path,:method => "post", class: "navbar-form",:multipart => true) do %>
+
+<div class="ibox-content">
+
+	<h2><b><%=t('Technical Specifications')%></b></h2>
+	
+<table class="table table-bordered">
+
+<tr>
+	<th><h3><b><%=t('Property')%></b></h3></th>
+	<th><h3><b><%=t('Value')%></b></h3></th>
+	<th><h3><b><%=t('Source')%></b></h3></th>
+</tr>
+
+<tr>
+	<td><h3><b><%=t('Class')%></b></h3></td>
+	<td colspan="2"><b> <%=@id%></b></td>
+</tr>
+<% @sql.each do |x| %>
+<tr>
+	<td><b><%= link_to x.property , {:controller => :source_data,:action => :dictionary_detail, :term => '',:esci => x.propertyRef,:def =>''}, :target => "_blank" %> <span class="text-danger" style="font-size: 16px;" %></b></td>
+	
+	<td><%= text_field_tag "task1[]",value='',class:"form-control" %>
+	<%= hidden_field_tag "task[]",x['property']%>
+	<%= hidden_field_tag "task2[]",x['propertyRef'] %>
+	<%= hidden_field_tag "task3[]",x['row'] %></td>
+
+	<!--<td><input type="text" name="value_txt" id="value_txt" value=""  ></td>-->
+	<td><input type="text" name="source_txt" id="source_txt" value="" class="form-control"  ></td>
+</tr>
+<% end %>
+
+</table>
+<table class="table table-bordered">
+<div class="row">
+<h2><b><%=t('Identification Data')%></b></h2>
+<tr><td colspan="2"><b><%=t('BUYER DATA')%></b></td></tr>
+<% @mfr.each do |y|%>
+
+<tr>
+<%if y['property']=='BUYER REFERENCE'%>
+
+ <td><b><%= link_to y.property , {:controller => :source_data,:action => :dictionary_detail, :esci => "0161-1#02-132378#1"}, :target => "_blank",:def =>'' %></b></td>
+<td><%= text_field_tag "bu1[]",value='KSA',readonly: 'true',class:"form-control"  %>
+<%= text_field_tag "bu1[]",value='',class:"form-control" %>
+	<%= hidden_field_tag "bu[]",y['property']  %>
+	 <%= hidden_field_tag "other_task4[]",y['Seq']  %></td>
+<% end %>
+</tr>
+<% end %>
+<tr><td colspan="2"><b><%=t('CLASSIFICATION')%></b></td></tr>
+<% @mfr.each do |y|%>
+<tr>
+<% if y.property=='UNSPSC' %>
+	
+ <td><b><%= link_to y.property , {:controller => :source_data,:action => :dictionary_detail, :esci => "0161-1#02-132210#1"}, :target => "_blank",:def =>'' %></b></td>
+	<td><%= text_field_tag "unspsc1",value='' ,placeholder:'Version',class:"form-control" %>
+	<%= text_field_tag "unspsc2",value='' ,placeholder:'Name',class:"form-control"%>
+	<%= text_field_tag "unspsc3",value='' ,placeholder:'Title',class:"form-control" %>
+	<%= hidden_field_tag "unspsc",y.property  %>
+	 <%= hidden_field_tag "unspsc_task4",y.Seq  %></td>
+	
+<% end %>
+</tr>
+<% end %>
+<% @mfr.each do |y|%>
+
+<tr>
+	<% if y['property']=='BRAND NAME' %>
+ <td><b><%= link_to y.property , {:controller => :source_data,:action => :dictionary_detail, :esci => "0161-1#02-148126#1"}, :target => "_blank",:def =>'' %></b></td>
+		<td><%= text_field_tag "bu1[]",value='',class:"form-control"  %>
+	<%= hidden_field_tag "bu[]",y['property']  %>
+	 <%= hidden_field_tag "other_task4[]",y['Seq']  %></td>
+	<% end %>
+</tr>
+<% end %>
+<tr><td colspan="2"><b><%=t('MANUFACTURER DATA')%></b></td></tr>
+<% @mfr.each do |y|%>
+<tr>
+<% if y['property']=='MANUFACTURER REFERENCE' %>
+	
+<td><b><%= link_to y.property , {:controller => :source_data,:action => :dictionary_detail, :esci => "  0161-1#02-132394#1"}, :target => "_blank",:def =>'' %></a></b></td>
+	<td><%= text_field_tag "mfr1[]",value='' ,placeholder: 'MFR NAME',multiple: true,class:"form-control" %>
+	<%= hidden_field_tag "mfr[]",y['property']  %>
+	  <button class="btn btn-info btn-xs"> <a data-toggle="modal" href="#modal-form-mfr"><%=t('BROWSE')%></a></button>
+	   <%= text_field_tag "mfr_partno[]",value='' ,placeholder: 'MFR PART NO',class:"form-control" %>
+	   <%= text_field_tag "mfr_url[]",value='' ,placeholder: 'MFR URL',class:"form-control"%>
+	   <%= hidden_field_tag "mfr_task4[]",y['Seq']  %></td>
+<% end %>
+</tr>
+<% end %>
+<tr><td colspan="2"><b><%=t('SUPPLIER DATA')%></b></td></tr>
+<% @mfr.each do |y|%>
+
+<tr>
+<% if y['property']=='SUPPLIER REFERENCE'%>
+	
+<td><b><%= link_to y.property , {:controller => :source_data,:action => :dictionary_detail, :esci => "0161-1#02-128591#1"}, :target => "_blank",:def =>'' %> </b></td>
+	<td><%= text_field_tag "supp1[]",value='' ,placeholder: 'SUPP NAME',class:"form-control" %>
+	<%= hidden_field_tag "supp[]",y['property']  %>
+  <button class="btn btn-info btn-xs"><a data-toggle="modal" href="#modal-form-supp1"><%=t('BROWSE')%></a></button>
+    <%= text_field_tag "supp_partno[]",value='' ,placeholder: 'SUPP PART NO',class:"form-control" %>
+	   <%= text_field_tag "supp_url[]",value='' ,placeholder: 'SUPP URL',class:"form-control"%>
+	    <%= hidden_field_tag "supp_task4[]",y['Seq']  %>
+	    </td>
+	
+<% end %>
+</tr>
+<% end %>
+<tr><td colspan="2"><b><%=t('BUSINESS UNIT')%></b></td></tr>
+<% @mfr.each do |y|%>
+
+<tr>
+<% if y['property']=='DRAWING NUMBER' || y['property']=='OTHER' %>
+	
+<td><b><%= link_to y.property,{:controller => :source_data,:action => :dictionary_detail, :esci => "0161-1#02-148279#1"}, :target => "_blank",:def =>'' %></b></td>
+	<td><%= text_field_tag "bu1[]",value='',class:"form-control"  %>
+	<%= hidden_field_tag "bu[]",y['property']  %>
+	 <%= hidden_field_tag "other_task4[]",y['Seq']  %></td>
+	
+<% end %>
+</tr>
+<% end %>
+</div>
+</table>
+	<input type="submit" name="generate_desc" id="generate_desc" value="<%=t('Generate Description')%>" class="btn btn-primary"> 
+</div>
+ 
+ 			
+
+<% end %>
+<% content_for :javascript do %>
+<script type="text/javascript"> 
+  $(function() {
+
+    $('.dataTables-example').dataTable({
+        "dom": 'T<"clear">lfrtip',
+        "tableTools": {
+            "sSwfPath": "../assets/dataTables/swf/copy_csv_xls_pdf.swf"
+        }
+    });
+
+    /* Init DataTables */
+    var oTable = $('#editable').dataTable();
+
+    /* Apply the jEditable handlers to the table */
+    oTable.$('td').editable( '../example_ajax.php', {
+        "callback": function( sValue, y ) {
+            var aPos = oTable.fnGetPosition( this );
+            oTable.fnUpdate( sValue, aPos[0], aPos[1] );
+        },
+        "submitdata": function ( value, settings ) {
+            return {
+                "row_id": this.parentNode.getAttribute('id'),
+                "column": oTable.fnGetPosition( this )[2]
+            };
+        },
+
+        "width": "90%",
+        "height": "100%"
+    } );
+
+
+});
+</script>
+<% end %>

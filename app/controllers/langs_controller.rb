@@ -8,16 +8,20 @@ class LangsController < ApplicationController
 			@vs = params[:search]
 			#search= 19207
 			@factory = initialize_grid(MmFactory ,conditions:["(Factory_Name like ? OR Factory_ID like ? OR Factory_Website like ?) AND Language = ?","%#{@vs}%","%#{@vs}%","%#{@vs}%",lan], :per_page => 10)
+			@fc = initialize_grid(MmFactory ,conditions:["(Factory_Name like ? OR Factory_ID like ? OR Factory_Website like ?) AND Language = ?","%#{@vs}%","%#{@vs}%","%#{@vs}%",lan], :per_page => 10).count
 		else
-			@factory = initialize_grid(MmFactory,conditions:["Language = ?",lan],:per_page=>10)     
+			@factory = initialize_grid(MmFactory,conditions:["Language = ?",lan],:per_page=>10) 
+			@fc = initialize_grid(MmFactory,conditions:["Language = ?",lan],:per_page=>10).count     
 		end
 	else
 		if params[:search]
 			@vs = params[:search]
 			#search= 19207
 			@factory = initialize_grid(MmFactory ,conditions:["(Factory_Name like ? OR Factory_ID like ? OR Factory_Website like ?) AND Language = ?","%#{@vs}%","%#{@vs}%","%#{@vs}%",lan], :per_page => 10)
+			@fc = initialize_grid(MmFactory ,conditions:["(Factory_Name like ? OR Factory_ID like ? OR Factory_Website like ?) AND Language = ?","%#{@vs}%","%#{@vs}%","%#{@vs}%",lan], :per_page => 10).count
 		else
 			@factory = initialize_grid(MmFactory,conditions:["`Last Status`= ? AND Language = ?",@type,lan],:per_page=>10)   
+			@fc = initialize_grid(MmFactory,conditions:["`Last Status`= ? AND Language = ?",@type,lan],:per_page=>10).count   
 		end
 	end
   end
@@ -62,8 +66,32 @@ class LangsController < ApplicationController
 	@fmfg_period=Factory.select("Value","property","Client_seq").where("Factory_ID = ? AND Client_seq = ? AND language = ? ", @data,'31',language)
 	@fown_org=Factory.select("Value","property","Client_seq").where("Factory_ID = ? AND Seq = ? AND language = ?", @data,'12',language)
 	@flast_status=Factory.select("Value","property","Seq").where("Factory_ID = ? AND Client_seq = ? AND language = ?", @data,'27',language)
+
+	@fn=Factory.select("Value","property","Client_seq").where("Factory_ID = ? AND Language = ?",@data,'EN')
   end
 
   def update
+    if current_user.level==4
+    @data=params[:Factory_ID]
+     a=params[:ids_to_update]
+     b=params[:task]
+     c=params[:ids_to_update1]
+     @as=''
+     @bs=[]
+     @cs=''
+     @bs=params[:task].zip(params[:ids_to_update1],params[:ids_to_update])
+     @bs.each do |a,b,c|
+      @cs=a
+      @ds=b
+      @es=c
+      @update=Factory.where('Client_seq = ? AND property= ? AND Factory_ID = ? ',@es,@ds,@data).update_all(Value: @cs)
+     end
+      redirect_to controller: 'langs',action: 'view', Factory_ID: @data
+        
+     #   elsif current_user.level==2
+      #    redirect_to controller: 'langs',action: 'view', Factory_ID: @data
+        else
+          redirect_to controller: 'langs',action: 'view', Factory_ID: @data
+    end
   end
 end

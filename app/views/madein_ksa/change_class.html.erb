@@ -1,0 +1,32 @@
+<%= form_tag(view1_path,:method => "post", class: "navbar-form",:multipart => true) do %>
+<table class="table table-bordered">
+ 
+ <tr>
+   <b><th><h3>Property</h3></th></b>
+   <b><th><h3>Value</h3></th></b>
+ </tr>
+ <tr>
+   
+    <td><b><h3>Class</h3></b></td>
+     <td><b> <a href="/" name="new_class" id="new_class" ><%=@change_class%></a></b>
+    <a data-toggle="modal" href="#modal-form-newclass" >BROWSE</a>
+    <input type="hidden" name="new_class1" value="<%=@change_class%>" id="new_class1"></td>
+  
+ </tr>
+ <% for a in @sql %>
+<tr>
+      <td style="font-size:13px;">
+     <b> <%= link_to a.property , {:controller => :source_data,:action => :dictionary_detail, :term => '',:esci => Base64.encode64(a.propertyRef)}, :target => "_blank",:def =>'' %> <span class="text-danger" style="font-size: 16px;" %>  </b>
+      </td>
+      <td>                 
+      <%= text_field_tag "new_value[]",value='', class: "form-control"%>
+      <%= hidden_field_tag "new_propref[]", a['propertyRef'] %>
+      <%= hidden_field_tag "new_row[]", a['row'] %>
+      <%= hidden_field_tag "new_igid", a.igid %>
+      <%= hidden_field_tag "new_prop[]", a['property'] %>
+      <%= text_field_tag :cat_id, params[:cat_id], class: "form-control hide", value: @id %>
+      </td>  
+</tr>
+ <% end %>
+</table>
+<% end %>

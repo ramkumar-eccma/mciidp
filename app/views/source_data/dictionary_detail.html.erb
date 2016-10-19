@@ -115,23 +115,18 @@
                       </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                    <% @con_dn.each do |t|  %>
-                        <td><%= t.concept_ID%></td>
-                          
-                            <td><% if t.concept_is_deprecated== '0' %>
-                            Active
-                            <% else %>
-                            Inactive             
-                            <% end %> </td>
-                         <% end %>
+                    <tr>                    
+                    <td><%= @esci%></td>
+                      
+                      <td>Active</td>
+                      
                     </tr>
                     </tbody>
                 </table>
         </div>
     </div>
   </div>
-    <div class="col-lg-8">
+    <div class="col-lg-12">
    <div class="ibox" style="border:1px solid #23C6C8;">
         <div class="ibox-title" style="background:#23C6C8;color:#f3f3f4 !important;">
             <h5> <%- if I18n.locale== :ar %>
@@ -172,7 +167,7 @@
                 </tr>
               </thead> 
             <tbody>
-             <% @con_dn.each do |t|  %> 
+             <% @mm.each do |t|  %> 
                 <tr>
                     <td><%= t.term_ID %></td> 
                    <td><%= t.language_name %></td>
@@ -236,14 +231,14 @@
                         </tr>
                     </thead> 
                     <tbody>
-                          <% @con_dn.each do |d|  %> 
+                         <% @mm.each do |d|  %>  
                         <tr>
-                            <td><%= @definition %></td> 
+                            <td><%= d.definition_ID %></td> 
                             <td><%= d.language_name %></td>
                             <td><%= d.definition_content %></td>
                             <td><%= d.definition_organization_name %></td>
                             <td><%= d.definition_originator_reference %></td>
-                            <td><% if d.definition_is_deprecated== '0' %>
+                            <td><% if d.  definition_is_deprecated== '0' %>
                             Active
                             <% else %>
                             Inactive             

@@ -111,7 +111,7 @@
                                     <% if v.ECCMA_FLAG == 'USV'%>
 
                                     <th><%= link_to 'ECCMA_NSN' , {:controller => :source_data,:action => :edit, :NSN => v.ECCMA_NSN, :PART =>v.PART_NUMBER, :CAGE => v.CAGEC } %></th>
-                                    <td> <%= link_to v.ECCMA_NSN , {:controller => :source_data,:action => :edit, :NSN => v.ECCMA_NSN, :PART => v.PART_NUMBER, :CAGE => v.CAGEC} %></td>
+                                    <td> <%= link_to 'NATO.NSN:'+v.ECCMA_NSN , {:controller => :source_data,:action => :edit, :NSN => v.ECCMA_NSN, :PART => v.PART_NUMBER, :CAGE => v.CAGEC} %></td>
                                     <% else %>
                                         <th>NSN</th>
                                         <td> <%= v.ECCMA_NSN  %></td>
@@ -136,7 +136,7 @@
                                 </tr>
                                 <tr>
                                     <th>CAGEC</th>
-                                    <td><%= v.CAGEC %> </td>
+                                    <td><%= 'NATO.CAGE:'+v.CAGEC %> </td>
                                 </tr>    
                                 <tr>
                                     <th>EI_FSC</th>
@@ -158,7 +158,13 @@
                                     <th>NAME</th>
                                     <td><%= v.NAME %> </td>
                                 </tr>
-                                <tr>
+                              <% end %>
+                        </table>
+                    </div>
+                    <div class="col-lg-6">
+                        <table class="table table-bordered">
+                             <% @viewnsn.each do |v| %> 
+                                 <tr>
                                     <th>END_ITEM_APPLICATION</th> 
                                     <td><%= v.END_ITEM_APPLICATION %> </td>
                                 </tr>
@@ -166,12 +172,6 @@
                                     <th>DIC</th>
                                     <td><%= v.DIC %> </td>
                                 </tr>
-                              <% end %>
-                        </table>
-                    </div>
-                    <div class="col-lg-6">
-                        <table class="table table-bordered">
-                             <% @viewnsn.each do |v| %> 
                                 <tr>
                                     <th>DOC</th>
                                     <td><%= v.DOC %> </td>
@@ -207,31 +207,11 @@
                                     <th>FILE_NAME</th>
                                     <td><%= v.FILE_NAME %> </td>
                                 </tr>
-                                <tr> 
-                                    <th>NIIN_ECCMA</th>
-                                    <td><%= v.NIIN_ECCMA %> </td>
-                                </tr>   
-                                <tr> 
-                                    <th>FSC_ECCMA</th>
-                                    <td><%= v.FSC_ECCMA %> </td>
-                                </tr>
+                               
                                 <tr> 
                                     <th>COUNTRY_ECCMA</th>
                                     <td><%= v.COUNTRY_ECCMA %> </td>
                                 </tr>
-                                <tr> 
-                                    <th>SHRT_NM_2301_ECCMA</th>
-                                    <td><%= v.SHRT_NM_2301_ECCMA %> </td>
-                                </tr>   
-                                <tr> 
-                                    <th>INC_4080_ECCMA</th>
-                                    <td><%= v.INC_4080_ECCMA %> </td>
-                                </tr>  
-                                 <tr> 
-                                    <th>NAME_ECCMA</th>
-                                    <td><%= v.Name_Eccma %> </td>
-                                </tr>
-                                
                               <% end %>
                         </table>
                     </div>

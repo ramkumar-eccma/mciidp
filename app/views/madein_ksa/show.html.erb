@@ -118,7 +118,8 @@
                  <h3 class='text-info'><%= @madeinksacount %> Results Found</h3><br>
                  <%= grid(@madein_ksa, :html => {:class => 'table table-striped table-bordered table-hover dataTables-example'}) do |s|
                     s.column :name => 'CAT ID', :attribute => 'cat_id' do |s|
-                     link_to s.cat_id ,{:controller => :madein_ksa,:action => :view,:cat_id => s.cat_id},:target => "_blank"
+                     nato ='KSA.MIK:'+s.cat_id.to_s
+                     link_to nato ,{:controller => :madein_ksa,:action => :view,:cat_id => s.cat_id},:target => "_blank"
                         end 
                      s.column :name => 'SHORT DESCRIPTION', :attribute => 'short_description'
                      s.column :name => 'LONG DESCRIPTION', :attribute => 'long_description'

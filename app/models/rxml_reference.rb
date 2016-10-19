@@ -9,4 +9,5 @@ class AccountBase < ActiveRecord::Base
 end
 class RxmlReference < AccountBase
 	include SafeAttributes::Base
+	belongs_to :Classification, foreign_key: "cat_id"
 end

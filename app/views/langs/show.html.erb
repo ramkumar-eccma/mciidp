@@ -148,6 +148,7 @@
                   </br> </br> </br> </br>
                 </div>
                 <div style="width:100%; overflow-x:auto;">
+                  <h3 class='text-info'><%= @fc %> Results Found</h3><br>
                  <%= grid(@factory, :show_filters => :always,:html => {:class => 'table table-striped table-bordered table-hover dataTables-example'}) do |s|
                     
                     #s.column :name => 'FPKID',:attribute => 'FPKID'

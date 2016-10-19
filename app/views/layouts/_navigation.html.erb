@@ -32,31 +32,74 @@
                     MCI
                 </div>
             </li>
-            <li class="<%= 'active' if current_page?('/') %>">
+            <li class="<% if controller.controller_name == "madein_ksa" && controller.action_name == "show" %>active<%end%>">
                 <%= link_to "/" do %>
                 <%- if I18n.locale== :ar %>
-                   <i class="fa fa-laptop"></i> <span class="nav-label">لوحة أجهزة القياس</span>
+                   <i class="fa fa-dashboard"></i> <span class="nav-label">لوحة أجهزة القياس</span>
                   <% else %>
-                    <i class="fa fa-laptop"></i> <span class="nav-label">Dashboard</span>
+                    <i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span>
                 <% end -%> 
                 <% end %>
             </li>
-            <li class="<%= 'active' if current_page?('registrations/edit') %>">
+            <li class="<%= 'active' if current_page?('/') %>">
+             <%- if I18n.locale== :ar %>
+                   <%= link_to '<i class="fa fa-plus"></i> <span class="nav-label">إضافة المواد</span>'.html_safe, viewksa_path %> 
+            <% else %>
+                    <%= link_to '<i class="fa fa-plus"></i> <span class="nav-label">Add Material</span>'.html_safe, viewksa_path %> 
+             <% end -%>
+            </li>
+            <li class="<% if controller.controller_name == "advanced_search" && controller.action_name == "listall" %>active<%end%>">
+                 <%- if I18n.locale== :ar %>
+                    <%= link_to '<i class="fa fa-filter"></i> <span class="nav-label">البحث المتقدم</span>'.html_safe,  advanced_search_listall_path %> 
+                  <% else %>
+                    <%= link_to '<i class="fa fa-filter"></i> <span class="nav-label">Advanced Search</span>'.html_safe,  advanced_search_listall_path %>
+                <% end -%> 
+            </li>
+            <% if current_user.present? && current_user.admin?  -%>
+            <li class="<% if controller.controller_name == "user" && controller.action_name == "list" %>active<%end%>">
+                 <%- if I18n.locale== :ar %>
+                    <%= link_to '<i class="fa fa-users"></i> <span class="nav-label">قائمة المستخدمين</span>'.html_safe,  user_list_path %> 
+                  <% else %>
+                    <%= link_to '<i class="fa fa-users"></i> <span class="nav-label">List Users</span>'.html_safe,  user_list_path %> 
+                <% end -%> 
+            </li>   
+             <% end  -%>         
+            <li class="<% if controller.controller_name == "madein_ksa" && controller.action_name == "template_search" %>active<%end%>">
+                <%- if I18n.locale== :ar %>
+                    <%= link_to '<i class="fa fa-search"></i> <span class="nav-label">قالب البحث</span>'.html_safe, template_search_path %> 
+                <% else %>    
+                    <%= link_to '<i class="fa fa-search"></i> <span class="nav-label">Search Template</span>'.html_safe, template_search_path %> 
+                <% end -%>
+            </li>
+            <li class="<% if controller.controller_name == "madein_ksa" && controller.action_name == "language" %>active<%end%>">
+                <%- if I18n.locale== :ar %>
+                    <%= link_to '<i class="fa fa-language"></i> <span class="nav-label">لغة</span>'.html_safe, language_path %> 
+                <% else %>    
+                    <%= link_to '<i class="fa fa-language"></i> <span class="nav-label">Language</span>'.html_safe, language_path %> 
+                <% end -%>
+            </li>
+
+            <li class="<% if controller.controller_name == "madein_ksa" && controller.action_name == "settings" %>active<%end%>">
+                <%- if I18n.locale== :ar %> 
+                    <%= link_to '<i class="fa fa-cog"></i> <span class="nav-label">إعدادات</span>'.html_safe, settings_path %>
+                <% else %>     
+                    <%= link_to '<i class="fa fa-cog"></i> <span class="nav-label">Settings</span>'.html_safe, settings_path %>
+                <% end -%> 
+            </li>
+            <li>
+                <%- if I18n.locale== :ar %> 
+                    <%= link_to '<i class="fa fa-map-marker"></i> <span class="nav-label">مصانع الموقع</span>'.html_safe, 'http://eccma.org/ksa_map/',:target =>"_blank" %>
+                <% else %>     
+                    <%= link_to '<i class="fa fa-map-marker"></i> <span class="nav-label">Factories Location</span>'.html_safe, 'http://eccma.org/ksa_map/',:target =>"_blank" %>
+                <% end -%> 
+            </li>
+            <li class="<% if controller.controller_name == "registrations" && controller.action_name == "edit" %>active<%end%>">
                  <%- if I18n.locale== :ar %>
                     <%= link_to '<i class="fa fa-user"></i> <span class="nav-label">تعديل الملف الشخصي</span>'.html_safe,  edit_user_registration_path %> 
                   <% else %>
                     <%= link_to '<i class="fa fa-user"></i> <span class="nav-label">Edit Profile</span>'.html_safe,  edit_user_registration_path %> 
                 <% end -%> 
             </li>
-             <% if current_user.present? && current_user.admin?  -%>
-            <li class="<%= 'active' if current_page?('home/index') %>">
-                 <%- if I18n.locale== :ar %>
-                    <%= link_to '<i class="fa fa-users"></i> <span class="nav-label">قائمة المستخدمين</span>'.html_safe,  user_list_path %> 
-                  <% else %>
-                    <%= link_to '<i class="fa fa-users"></i> <span class="nav-label">List Users</span>'.html_safe,  user_list_path %> 
-                <% end -%> 
-            </li>
-            <% end  -%>
         </ul>
 
     </div>

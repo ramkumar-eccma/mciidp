@@ -33,7 +33,7 @@
          <div class="col-lg-6">
             <div class="ibox float-e-margins" style="border:1px solid #23C6C8;">
                 <div class="ibox-title text-primary" style="background:#23C6C8;">
-                    <h5 style="color:#f3f3f4 !important;">More Details</h5>
+                    <h5 style="color:#f3f3f4 !important;">Class Names</h5>
                     <div class="ibox-tools">
                         <a class="collapse-link" style="color:#f3f3f4 !important;">
                             <i class="fa fa-chevron-up" ></i>
@@ -72,7 +72,7 @@
                         </div>
                             <div class="col-lg-6 pull-left">
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
-                                 <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showclass',:TYPE => 'Others' %>" target="_blank">&nbsp;&nbsp;Others (<%= @ksa_others.inspect %>)</a></div>
+                                 <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showclass',:TYPE => 'all' %>" target="_blank">&nbsp;&nbsp;Others (<%= @ksa_others.inspect %>)</a></div>
                             </div>
                             <div class="col-md-6">
                                 <a href="<%= url_for :controller => 'madein_ksa',:action => 'more_details',:TYPE => 'classname' %>" target="_blank" class="btn btn-xs btn-outline btn-success pull-right">More ..... <i class="fa fa-long-arrow-right"></i> </a>
@@ -102,29 +102,30 @@
                             <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => 'all'%>" target="_blank">&nbsp;&nbsp;Total (<%= @classname_count.inspect  %>)</a></div><br>
                             <% @top_factory1.each do |e|  %>
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#FF7F50;"></div>
-                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => e.FACTORY_ID %>" target="_blank">&nbsp;&nbsp;<%= e.FACTORY_NAME %>(<%= e.total %>))</a></div><br>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => e.FACTORY_ID %>" target="_blank">&nbsp;&nbsp;<%= (e.FACTORY_NAME_ECCMA).upcase %>(<%= e.total %>)</a></div><br>
                             <% end %>
                             <% @top_factory2.each do |f|  %>
                                <div class="pull-left" style="width:15px;height:15px;;background-color:#0099c6;"></div>
-                            <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => f.FACTORY_ID %>" target="_blank">&nbsp;&nbsp;<%= f.FACTORY_NAME %>(<%= f.total %>))</a></div><br>
+                            <div class="pull-left"> &nbsp;<a href="<%=  url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => f.FACTORY_ID %>" target="_blank">&nbsp;&nbsp;<%= f.FACTORY_NAME_ECCMA %>(<%= f.total %>)</a></div><br>
                             <% end %>
                         </div>
                         <div class="col-md-12">
                              <% @top_factory3.each do |g|  %>
+                             <% @factname=g.FACTORY_NAME_ECCMA %>
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#990099;"></div>
-                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => g.FACTORY_ID %>" target="_blank">&nbsp;&nbsp;<%= g.FACTORY_NAME %>(<%= g.total %>))</a></div><br>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => g.FACTORY_ID %>" target="_blank">&nbsp;&nbsp;<%= @factname.upcase %>(<%= g.total %>)</a></div><br>
                             <% end %>
                         </div>
                              
                          <div class="col-md-12">
                          <% @top_factory4.each do |h|  %>
                              <div class="pull-left" style="width:15px;height:15px;;background-color:#DB7093;"></div>
-                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => h.FACTORY_ID %>" target="_blank">&nbsp;&nbsp;<%= h.FACTORY_NAME %>(<%= h.total %>))</a></div><br>
+                            <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => h.FACTORY_ID %>" target="_blank">&nbsp;&nbsp;<%= h.FACTORY_NAME_ECCMA %>(<%= h.total %>)</a></div><br>
                         <% end %>
                         </div>
                             <div class="col-lg-6 pull-left">
                                 <div class="pull-left" style="width:15px;height:15px;background-color:#DEB887;"></div>
-                                 <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => 'Others' %>" target="_blank">&nbsp;&nbsp;Others (<%= @ksa_factory_others.inspect %>)</a></div>
+                                 <div class="pull-left"> &nbsp;<a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => 'all' %>" target="_blank">&nbsp;&nbsp;Others (<%= @ksa_factory_others.inspect %>)</a></div>
                             </div>
                             <div class="col-md-6">
                                 <a href="<%= url_for :controller => 'madein_ksa',:action => 'more_details',:TYPE => 'factory' %>" target="_blank" class="btn btn-xs btn-outline btn-success pull-right">More ..... <i class="fa fa-long-arrow-right"></i> </a>

@@ -16,6 +16,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <style>
+    .borderlesstext {
+            border: 0;
+            background:transparent;
+        }
     .borderless {
             border-bottom:0px !important;
         }
@@ -27,6 +31,26 @@
         }
         .custom-tab .nav-tabs > li.active > a, .tabs-container .nav-tabs > li.active > a:hover, .tabs-container .nav-tabs > li.active > a:focus{
             background-color: #009688;
+        }
+        .blue-bg{
+            background-color: #03A9F4;
+            color: #ffffff;
+        }
+        .violet-bg{
+            background-color: #7C40E6;
+            color: #ffffff;
+        }
+        .green-bg{
+            /*background-color: #8BC34A;*/ 
+            background-color: #C922FF;
+            color: #ffffff;
+        }
+        .text-green{
+            color:#069845;
+        }
+        .modal-backdrop
+        {
+            opacity:-2 !important;
         }
     </style>
 </head>

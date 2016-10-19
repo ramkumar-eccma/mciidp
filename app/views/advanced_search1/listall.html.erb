@@ -1,0 +1,269 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+        <img alt="image" class="img-responsive" src="<%= image_url 'headerlogo.jpg' %> " height="50px" />      
+          <div class="clearfix"></div>
+         <ol class="breadcrumb" style="background:#F3F3F4; padding:10px;">
+            <li>
+              <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_home = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '14','ar')%>
+                  <% @ar_breadcrum_home.each do |ar_breadcrum_home|%>
+                    <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= ar_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @en_breadcrum_home = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '14','en')%>
+                  <% @en_breadcrum_home.each do |en_breadcrum_home|%>
+                 <a href="<%= url_for :controller => 'source_data', :action => 'chart' %>"><%= en_breadcrum_home.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% end -%>
+              
+            </li>
+             <li class="active">
+                <%- if I18n.locale== :ar %>
+                <span class="">
+                  <% @ar_breadcrum_adsearch = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '49','ar')%>
+                  <% @ar_breadcrum_adsearch.each do |ar_breadcrum_factsearch|%>
+                    <a href="<%= url_for :controller => 'advanced_search', :action => 'listall' %>"><%= ar_breadcrum_factsearch.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% else %>
+                <span class="">
+                  <% @ar_breadcrum_adsearch = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '48','en')%>
+                  <% @ar_breadcrum_adsearch.each do |en_breadcrum_factsearch|%>
+                 <a href="<%= url_for :controller => 'advanced_search', :action => 'listall' %>"><%= en_breadcrum_factsearch.language_property %></a>
+
+                   <% end %>
+                </span>
+              <% end -%>
+            </li>
+        </ol>
+        </div>
+    </div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-3">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <%- if I18n.locale== :ar %>
+                <h5>
+                  <% @ar_breadcrum_adsearch = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '49','ar')%>
+                  <% @ar_breadcrum_adsearch.each do |ar_breadcrum_factsearch|%>
+                    <a href="<%= url_for :controller => 'advanced_search', :action => 'listall' %>"><%= ar_breadcrum_factsearch.language_property %></a>
+
+                   <% end %>
+                </h5>
+              <% else %>
+                <h5>
+                  <% @ar_breadcrum_adsearch = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '48','en')%>
+                  <% @ar_breadcrum_adsearch.each do |en_breadcrum_factsearch|%>
+                 <a href="<%= url_for :controller => 'advanced_search', :action => 'listall' %>"><%= en_breadcrum_factsearch.language_property %></a>
+
+                   <% end %>
+                </h5>
+              <% end -%>
+            </div>
+            <div class="ibox-content">
+              <%= form_for :advance, :url => {:controller => 'advanced_search', :action => 'listall'}, html: {method: "POST", id: 'srchclass'} do |f| %>
+                <div class="row">
+                  <div class="col-md-12"><h3 class="text-danger">Class:</h3></div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Class Name</label>                      
+                      <select name="class_name" id="class_name" required="required" class="form-control" onchange="populatevalues(value,1)">
+                        <option value="">Select</option>
+                        <% @classifiy.each do |classifiy|%>
+                            <% 
+                            @igid=classifiy.igid 
+                            @igid=Base64.encode64(@igid)
+                            @Class_name=classifiy.Class    
+                            @encode = @igid+'/'+@Class_name                             
+                            %>
+                            <option value= "<%= @igid+'/'+@Class_name%>"                            
+                            <% if @search_all %> <% if @class == @Class_name %><%= @select = "selected" %> <% else %><%= puts "sdfsdfds" %> <% end %> <% end %>><%= @Class_name %></option>
+                        <% end %>
+                      </select>
+                    </div>
+                  </div>      
+                </div>      
+                <div class="row">        
+                  <div id="loading" style="display: none;" align="center"><img alt="image" class="img-responsive" src="<%= image_url 'loading.gif' %>" /></div>
+                    <div id="preview"></div> 
+                    <div id="resetpreview">
+                      <% if @search_all %>
+                        <div style="max-height: 555px;overflow:scroll;">
+                          <div class="col-md-12"><h3 class="text-danger">Characteristics:</h3></div>
+                          <% @list_details_cou.each do |list_details_cou|%>
+                          <% @res_igid=Base64.encode64(list_details_cou.igid) %>
+                          <div class="col-md-12">
+                            <div class="form-group">    
+                              <input type="hidden" value="<%= list_details_cou.Class %>" name="req_classname">
+                              <input type="hidden" value="<%= @res_igid  %>" name="req_igid">
+                              <input type="text" name="chr[]" id="chr" class="hide" value="<%= list_details_cou.property %>"> 
+                              <%= list_details_cou.property %> 
+                              <select name="cmb_value[]" id="cmb_value" class="form-control">
+                                <option value="">Select</option>
+                                 <% @list_details.each do |list_details|%>
+                                   <% if(list_details_cou.property==list_details.property) %>                              
+                                      <option value="<%= list_details.value %>"<% if @cmb_value.include?(list_details.value) %><%= @se="selected" %><% end %>><%= list_details.value %></option>
+                                   <% end %>
+                                 <% end %>
+                              </select>  
+                            </div>
+                          </div>
+                          <% end %>                        
+                          <div class="col-md-12"><h3 class="text-danger">Identification:</h3></div>
+                          <% @list_rxml_cou.each do |list_rxml_cou|%>
+                          <div class="col-md-12">
+                            <div class="form-group">  
+                              <%= list_rxml_cou.property %> 
+                               <input type="text" name="chr_ref[]" id="chr_ref" class="hide" value="<%= list_rxml_cou.property %>"> 
+                               <select name="cmb_value_ref[]" id="cmb_value_ref" class="form-control">
+                                <option value="">Select</option>
+                                 <% @list_rxml.each do |list_rxml|%>
+                                  <% if(list_rxml_cou.property==list_rxml.property) %>
+                                    <option  value= "<%= list_rxml.value %>"<% if @req_cmb_value_ref.include?(list_rxml.value) %><%= @se = "selected" %><% end %>><%=list_rxml.value %></option>
+                                  <% end %>  
+                                 <% end %>
+                               </select>     
+                            </div>
+                          </div>
+                        <% end %>  
+                        </div>  
+                      <% end %>
+                    </div>
+                  <div class="col-md-12" id="show_btn" style="display: none;">
+                      <%= f.submit "Go!",:class => 'btn btn-primary pull-right', :name =>'search' %>
+                      <input type='button' class="btn btn-primary pull-left" style=" padding-right:10px;" value="Reset!" onClick="reset_value();"> 
+                  </div>
+                </div>               
+              <% end %>
+            </div>
+        </div>
+    </div> 
+    <div class="col-md-9" id="resultdata"> 
+        <% if @result_all %>
+        <div id="resultreset">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Advanced Search Reuslts <span class="text-danger">( Total Records <%= @total_count %> )</span></h5>
+            </div>
+            <div class="ibox-content" >                
+                   <table class="table table-striped table-bordered table-hover dataTables-example">
+                    <thead>
+                      <tr>
+                        <th>CMM Material No</th>
+                        <th>System Material No.</th>
+                        <th>Legacy Description</th>
+                        <th>Long Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <% @result_all.each do |result_all|%>
+                        <tr>
+                        <td>
+                        <%= link_to result_all.cmm_material_no ,{:controller => :madein_ksa,:action => :view,:cat_id => result_all.cat_id},:target => "_blank"  %>
+                        </td>
+                        <td><%= result_all.material_id %></td>
+                        <td><%= result_all.short_description %></td>
+                        <td><%= result_all.long_description %></td>
+                      </tr>
+                    <% end %>
+                    </tbody>
+                  </table>                
+            </div>
+        </div>
+        </div>
+        <% end %>   
+        <div id="wait" style="display: none;" align="center"><img alt="image" class="img-responsive" src="<%= image_url '142.gif' %>" /></div> 
+    </div>   
+  </div>  
+</div>  
+<% content_for :javascript do %>
+<script type="text/javascript">
+  function reset_value()
+  {
+    jQuery('#preview div').html('');
+    jQuery('#resetpreview div').html('');
+    // var temp=document.srchclass.class_name.value;
+    // //document.srchclass.cmb_value.value="--Select--";
+    // //document.srchclass.cmb_value_ref.value="--Select--"; 
+    // populatevalues(temp);
+  }
+
+  // $(document).ready(function(){  
+  //     $("#srchclass").submit(function(event) {  
+  //       event.preventDefault();   
+  //       $.post( 'advsearch_response', $("#srchclass").serialize(),  
+  //       function( data ) {  
+  //         $("#preview").html(data); 
+  //       }  
+  //       );
+  //       $.post( 'getresult', $("#srchclass").serialize(),  
+  //       function( data ) {           
+  //         $("#resultdata").html(data);           
+  //       }  
+  //       ); 
+  //     });  
+  //     $(document).ajaxStart(function(){
+  //       $("#wait").css("display","block");
+  //     });
+  //     $(document).ajaxStop(function(){
+  //       $("#wait").css("display","none");
+  //     });
+  // });  
+  $('#srchclass').submit(function() {
+      $('#resultreset div').html('');
+      $('#wait').css("display","block");
+      // 
+      return true;
+  });
+
+    
+  function populatevalues(cval,v)
+  {
+    jQuery('#resetpreview div').html('');
+    // alert(cval);
+    // alert(v);
+  if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();    
+    }
+  else
+    {// code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");     
+    }
+  xmlhttp.onreadystatechange=function()
+  {
+    $("#loading").css("display","block");    
+    jQuery('#preview div').html('');    
+    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+      {
+      document.getElementById("preview").innerHTML=xmlhttp.responseText;
+      $("#loading").css("display","none");
+      $("#show_btn").css("display","block");
+      }
+    else if(xmlhttp.readyState==4 && xmlhttp.status==500){
+      $("#loading").css("display","none");
+      $("#show_btn").css("display","none");
+     }
+    }
+  xmlhttp.open("GET","advsearch_response?req_igid="+cval+"&check="+v,true);
+  xmlhttp.send();
+  }  
+</script>
+<% end %>
+<% content_for :javascript do %>
+<script type="text/javascript">
+$(function deno() {
+    $('.dataTables-example').dataTable({
+        
+    });
+});
+</script>
+<% end %>

@@ -38,33 +38,33 @@
                     <span id="db_morecmm" class="db_morecmm"></span>
                     <div class="row" style="padding-top:10px;">
                          <div class="col-md-6">
-                            <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
-                            <div class="pull-left"> <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCE' ,:NSNTYPE => 'GIVEN',:FORCE => 'all' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">&nbsp;&nbsp;&nbsp;Total NSN (<%= @db_morecmm.inspect  %>)</a></div><br>
+                            <!--div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;Total NSN (<%= @db_morecmm.inspect  %>)</div><br-->
                             
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
-                            <div class="pull-left"> <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCE' ,:NSNTYPE => 'GIVEN',:FORCE => 'COMMON' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;&nbsp;&nbsp;COMMON (<%= @db_morecommon.inspect  %>)</a></div><br>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;COMMON (<%= @db_morecommon.inspect  %>)</div><br>
 
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#990099;"></div>
-                            <div class="pull-left"><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCE' ,:NSNTYPE => 'GIVEN',:FORCE => 'MSD' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;&nbsp;&nbsp;MSD (<%= @db_moremsd.inspect %>)</a></div><br>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;MSD (<%= @db_moremsd.inspect %>)</div><br>
 
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#FF1493;"></div>
-                            <div class="pull-left"><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCE' ,:NSNTYPE => 'GIVEN',:FORCE => 'RSADF' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;&nbsp;&nbsp;RSADF (<%= @db_morersadf.inspect %>)</a></div><br>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;RSADF (<%= @db_morersadf.inspect %>)</div><br>
 
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#49C5E8;"></div>
-                            <div class="pull-left"> <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCE' ,:NSNTYPE => 'GIVEN',:FORCE => 'RSAF' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">&nbsp;&nbsp;&nbsp;RSAF (<%= @db_morersaf.inspect %>)</a></div>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;RSAF (<%= @db_morersaf.inspect %>)</div>
                         </div>  
                          <div class="col-md-6"><br>                           
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
-                            <div class="pull-left"> <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCE' ,:NSNTYPE => 'GIVEN',:FORCE => 'RSDF' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">&nbsp;&nbsp;&nbsp;RSDF (<%= @db_morersdf.inspect %>)</a></div><br>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;RSDF (<%= @db_morersdf.inspect %>)</div><br>
 
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
-                            <div class="pull-left"> <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCE' ,:NSNTYPE => 'GIVEN',:FORCE => 'RSLF' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">&nbsp;&nbsp;&nbsp;RSLF (<%= @db_morerslf.inspect %>)</a></div><br>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;RSLF (<%= @db_morerslf.inspect %>)</div><br>
                          
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#DEB887;"></div>
-                            <div class="pull-left"> <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCE' ,:NSNTYPE => 'GIVEN',:FORCE => 'RSNF' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">&nbsp;&nbsp;&nbsp;RSNF (<%= @db_morersnf.inspect  %>)</a></div><br>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;RSNF (<%= @db_morersnf.inspect  %>)</div><br>
 
-                            <div class="pull-left hide" style="width:15px;height:15px;;background-color:#8B4513;"></div>
-                            <div class="pull-left hide"><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCE' ,:NSNTYPE => 'GIVEN',:FORCE => 'NULL' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;&nbsp;&nbsp;NULL (<%= @db_morenullforce.inspect  %>)</a></div><br>
+                            <!--div class="pull-left" style="width:15px;height:15px;;background-color:#8B4513;"></div>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;OTHERS (495468)</div><br-->
                             
                         </div>                                  
                     </div>
@@ -76,56 +76,56 @@
                     <div class="row" style="padding-top:10px;">
                          <div class="col-md-12">
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
-                            <div class="pull-left"> <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'COUNTRY' ,:NSNTYPE => 'GIVEN',:FORCE => 'all' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;&nbsp;Total Country<% @more_country.each do |c| %> 
+                            <div class="pull-left"> &nbsp;&nbsp;Total NSN<% @more_country.each do |c| %> 
                                     (<%= c.total %>)
                                 <% end %>
-                            </a></div><br>                            
+                            </div><br>                            
                             <div class="pull-left"> 
-                            <% @more_countrycode_1.each do |c| %>
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
-                                <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'COUNTRY' ,:NSNTYPE => 'GIVEN',:FORCE => c.COUNTRY_ECCMA %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">&nbsp;
-                                
+                                &nbsp;
+                                <% @more_countrycode_1.each do |c| %>
                                 <%= c.COUNTRY_ECCMA %> (<%= c.total %>)
                                 <% end %>
-                           </a> </div><br>
+                            </div><br>
                             
                             <div class="pull-left">
-                             <% @more_countrycode_2.each do |c| %>
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#990099;"></div>
                                
-                                <span style="text-align:left;"><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'COUNTRY' ,:NSNTYPE => 'GIVEN',:FORCE => c.COUNTRY_ECCMA %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;
+                                <span style="text-align:left;">
+                                    &nbsp;
+                                     <% @more_countrycode_2.each do |c| %>
                                     <%= c.COUNTRY_ECCMA %> (<%= c.total %>)
                                     <% end %>
                                 </span>
-                            </a></div><br>                          
+                            </div><br>                          
                             
                             <div class="pull-left">
-                            <% @more_countrycode_3.each do |c| %>
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#FF1493;"></div>
-                               <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'COUNTRY' ,:NSNTYPE => 'GIVEN',:FORCE => c.COUNTRY_ECCMA %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;
-                               <%= c.COUNTRY_ECCMA %> (<%= c.total %>)
-                                <% end %>
-                           </a> </div><br>
-                            <div class="pull-left">
-                             <% @more_countrycode_4.each do |c| %>
-                                <div class="pull-left" style="width:15px;height:15px;;background-color:#49C5E8;"></div>
-                                &nbsp;<a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'COUNTRY' ,:NSNTYPE => 'GIVEN',:FORCE => c.COUNTRY_ECCMA %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">
+                                &nbsp;
+                                 <% @more_countrycode_3.each do |c| %>
                                 <%= c.COUNTRY_ECCMA %> (<%= c.total %>)
                                 <% end %>
-                            </a></div><br>
+                            </div><br>
                             <div class="pull-left">
-                            <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'COUNTRY' ,:NSNTYPE => 'GIVEN',:FORCE => "all" %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">
+                                <div class="pull-left" style="width:15px;height:15px;;background-color:#49C5E8;"></div>
+                                &nbsp;
+                                <% @more_countrycode_4.each do |c| %>
+                                <%= c.COUNTRY_ECCMA %> (<%= c.total %>)
+                                <% end %>
+                            </div><br>
+                            <div class="pull-left">
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
                                 &nbsp;
                                 Others (2924)
-                            </a></div><br>                            
+                            </div><br>                            
                         </div>                                  
                     
                         <div class="col-md-6">&nbsp;
                         </div> 
-                        <div class="col-md-6">
-                            <a href="<%= url_for :controller => 'source_data',:action => 'morensn_details',:TYPE => 'country' %>" target="_blank" class="btn btn-xs btn-outline btn-success pull-right">More ..... <i class="fa fa-long-arrow-right"></i> </a>
-                    </div> 
+                        <div class="col-md-6 hide">
+                            <br>
+                           <a href="#" class="btn btn-xs btn-outline btn-success pull-right">More ..... <i class="fa fa-long-arrow-right"></i> </a>
+                        </div>
                     </div>
                     <div style="border:1px solid #8B4513; margin:15px 0;"></div>             
                 </div>
@@ -135,23 +135,22 @@
                     <span id="db_morecage" class="db_morecage"></span><br>
                     <div class="row" style="padding-top:10px;">
                          <div class="col-md-12">
-                            <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
-                            <div class="pull-left"> &nbsp;&nbsp;&nbsp; Total Cage 
-                                <% @db_morecage.each do |c| %> 
-                                    (<%= c.cagetotal %>)
-                                <% end %>
-                            </div><br>                            
+                            <!--div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div-->
+                            <!--div class="pull-left"> &nbsp;&nbsp;&nbsp; Total Cage 
+                                <%# @db_morecage.each do |c| %> 
+                                    (<%#= c.cagetotal %>)
+                                <%# end %>
+                            </div><br-->                            
                             <div class="pull-left"> 
-                            <% @more_cagecode_1.each do |c| %>
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
-                                <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'CAGE' ,:NSNTYPE => 'GIVEN',:FORCE => c.CAGEC %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">&nbsp;
-                                 
+                                &nbsp;
+                                <% @more_cagecode_1.each do |c| %> 
                                 <% @cagename_1 = CageDetail.select("CAGE_Name").where("CAGE_CD = ?", c.CAGEC)%>
                                 <% @cagename_1.each do |cagename_1|%>
                                 <%= cagename_1.CAGE_Name %>
-                                <% end %> (<%= c.cou %>)
+                                <% end %> (<%= c.Cou %>)
                                 <% end %>
-                           </a></div><br>
+                            </div><br>
                             
                             <div class="pull-left">
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#990099;"></div>
@@ -162,7 +161,7 @@
                                     <% @cagename_2 = CageDetail.select("CAGE_Name").where("CAGE_CD = ?", c.CAGEC)%>
                                     <% @cagename_2.each do |cagename_2|%>
                                     <%= cagename_2.CAGE_Name %>
-                                    <% end %> (<%= c.cou %>)
+                                    <% end %> (<%= c.Cou %>)
                                     <% end %>
                                 </span>
                             </div><br>                          
@@ -174,7 +173,7 @@
                                 <% @cagename_3 = CageDetail.select("CAGE_Name").where("CAGE_CD = ?", c.CAGEC)%>
                                 <% @cagename_3.each do |cagename_3|%>
                                 <%= cagename_3.CAGE_Name %>
-                                <% end %> (<%= c.cou %>)
+                                <% end %> (<%= c.Cou %>)
                                 <% end %>
                             </div><br><br>
                             <div class="pull-left">
@@ -184,7 +183,7 @@
                                 <% @cagename_4 = CageDetail.select("CAGE_Name").where("CAGE_CD = ?", c.CAGEC)%>
                                 <% @cagename_4.each do |cagename_4|%>
                                 <%= cagename_4.CAGE_Name %>
-                                <% end %> (<%= c.cou %>)
+                                <% end %> (<%= c.Cou %>)
                                 <% end %>
                             </div><br>
                             <div class="pull-left">
@@ -194,7 +193,7 @@
                                 <% @cagename_5 = CageDetail.select("CAGE_Name").where("CAGE_CD = ?", c.CAGEC)%>
                                 <% @cagename_5.each do |cagename_5|%>
                                 <%= cagename_5.CAGE_Name %>
-                                <% end %> (<%= c.cou %>)
+                                <% end %> (<%= c.Cou %>)
                                 <% end %>
                             </div><br>
                             <div class="pull-left">
@@ -230,28 +229,30 @@
                     <span id="db_morecmmavail" class="db_morecmmavail"></span>
                     <div class="row" style="padding-top:10px;">
                          <div class="col-md-6">
-                            <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
-                            <div class="pull-left"><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCEAVAIL' ,:NSNTYPE => 'AVAIL',:FORCE => 'all' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;&nbsp;&nbsp;Total NSN (<%= @db_morecmm_avil.inspect  %>)</a></div><br>
+                            <!--div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
+                            <%#@db_morecmm_avil.each do |d| %>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;Total NSN (<%#= d.tot  %>)</div><br-->
+                            <%# end %>
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
-                            <div class="pull-left"><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCEAVAIL' ,:NSNTYPE => 'AVAIL',:FORCE => 'COMMON' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">  &nbsp;&nbsp;&nbsp;COMMON (<%= @db_morecmm_common.inspect  %>)</a></div><br>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;COMMON (<%= @db_morecmm_common.inspect  %>)</div><br>
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#990099;"></div>
-                            <div class="pull-left"> <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCEAVAIL' ,:NSNTYPE => 'AVAIL',:FORCE => 'MSD' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;&nbsp;&nbsp;MSD (<%= @db_morecmm_msd.inspect %>)</a></div><br>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;MSD (<%= @db_morecmm_msd.inspect %>)</div><br>
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#FF1493;"></div>
-                            <div class="pull-left"><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCEAVAIL' ,:NSNTYPE => 'AVAIL',:FORCE => 'RSADF' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">  &nbsp;&nbsp;&nbsp;RSADF (<%= @db_morecmm_rsadf.inspect %>)</a></div><br>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;RSADF (<%= @db_morecmm_rsadf.inspect %>)</div><br>
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#49C5E8;"></div>
-                            <div class="pull-left"><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCEAVAIL' ,:NSNTYPE => 'AVAIL',:FORCE => 'RSAF' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">  &nbsp;&nbsp;&nbsp;RSAF (<%= @db_morecmm_rsaf.inspect %>)</a></div>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;RSAF (<%= @db_morecmm_rsaf.inspect %>)</div>
                         </div>  
                          <div class="col-md-6"><br>                           
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
-                            <div class="pull-left"> <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCEAVAIL' ,:NSNTYPE => 'AVAIL',:FORCE => 'RSDF' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;&nbsp;&nbsp;RSDF (<%= @db_morecmm_rsdf.inspect %>)</a></div><br>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;RSDF (<%= @db_morecmm_rsdf.inspect %>)</div><br>
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
-                            <div class="pull-left"><a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCEAVAIL' ,:NSNTYPE => 'AVAIL',:FORCE => 'RSLF' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">  &nbsp;&nbsp;&nbsp;RSLF (<%= @db_morecmm_rslf.inspect %>)</a></div><br>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;RSLF (<%= @db_morecmm_rslf.inspect %>)</div><br>
                          
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#DEB887;"></div>
-                            <div class="pull-left"> <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCEAVAIL' ,:NSNTYPE => 'AVAIL',:FORCE => 'RSNF' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;&nbsp;&nbsp;RSNF (<%= @db_morecmm_rsnf.inspect  %>)</a></div><br>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;RSNF (<%= @db_morecmm_rsnf.inspect  %>)</div><br>
 
-                            <div class="pull-left" style="width:15px;height:15px;;background-color:#8B4513;"></div>
-                            <div class="pull-left"> <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'FORCEAVAIL' ,:NSNTYPE => 'AVAIL',:FORCE => 'all' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;&nbsp;&nbsp;NULL (<%= @db_morecmm_null.inspect  %>)</a></div><br>
+                            <!--div class="pull-left" style="width:15px;height:15px;;background-color:#8B4513;"></div>
+                            <div class="pull-left"> &nbsp;&nbsp;&nbsp;OTHERS (342932)</div><br-->
                             
                         </div>                                  
                     </div>
@@ -264,40 +265,43 @@
                     <div class="row" style="padding-top:10px;">
                          <div class="col-md-12">
                             <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
-                            <div class="pull-left">  <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'COUNTRYAVAIL' ,:NSNTYPE => 'GIVEN',:FORCE => 'all' %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;&nbsp;Total Country<% @more_Availcountry.each do |c| %> 
+                            <div class="pull-left"> &nbsp;&nbsp;Total NSN<% @more_Availcountry.each do |c| %> 
                                     (<%= c.total %>)
                                 <% end %>
-                           </a> </div><br>                            
+                            </div><br>                            
                             <div class="pull-left"> 
-                             <% @more_Availcountrycode_1.each do |c| %>
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
-                                <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'COUNTRYAVAIL' ,:NSNTYPE => 'GIVEN',:FORCE => c.COUNTRY_ECCMA  %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">&nbsp;<%= c.COUNTRY_ECCMA %> (<%= c.total %>)
+                                &nbsp;
+                                <% @more_Availcountrycode_1.each do |c| %>
+                                <%= c.COUNTRY_ECCMA %> (<%= c.total %>)
                                 <% end %>
-                           </a> </div><br>
+                            </div><br>
                             
                             <div class="pull-left">
-                             <% @more_Availcountrycode_2.each do |c| %>
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#990099;"></div>
                                
                                 <span style="text-align:left;">
-                                    <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'COUNTRYAVAIL' ,:NSNTYPE => 'GIVEN',:FORCE => c.COUNTRY_ECCMA  %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"> &nbsp;
+                                    &nbsp;
+                                     <% @more_Availcountrycode_2.each do |c| %>
                                     <%= c.COUNTRY_ECCMA %> (<%= c.total %>)
                                     <% end %>
                                 </span>
-                           </a> </div><br>                          
+                            </div><br>                          
                             
                             <div class="pull-left">
-                            <% @more_Availcountrycode_3.each do |c| %>
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#FF1493;"></div>
-                                 <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'COUNTRYAVAIL' ,:NSNTYPE => 'GIVEN',:FORCE => c.COUNTRY_ECCMA  %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">&nbsp;<%= c.COUNTRY_ECCMA %> (<%= c.total %>)
+                                &nbsp;
+                                 <% @more_Availcountrycode_3.each do |c| %>
+                                <%= c.COUNTRY_ECCMA %> (<%= c.total %>)
                                 <% end %>
-                            </a></div><br>
+                            </div><br>
                             <div class="pull-left">
-                             <% @more_Availcountrycode_4.each do |c| %>
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#49C5E8;"></div>
-                               <a href="<%= url_for :controller => 'source_data', :action => 'source',:TYPE => 'COUNTRYAVAIL' ,:NSNTYPE => 'GIVEN',:FORCE => c.COUNTRY_ECCMA  %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank">&nbsp;<%= c.COUNTRY_ECCMA %> (<%= c.total %>) 
+                                &nbsp;
+                                <% @more_Availcountrycode_4.each do |c| %>
+                                <%= c.COUNTRY_ECCMA %> (<%= c.total %>)
                                 <% end %>
-                            </a></div><br><br><br>               
+                            </div><br><br><br>               
                         </div>                                  
                     
                         <div class="col-md-6">&nbsp;
@@ -315,16 +319,16 @@
                     <span id="db_Availmorecage" class="db_Availmorecage"></span><br>
                     <div class="row" style="padding-top:10px;">
                          <div class="col-md-12">
-                            <div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div>
-                            <div class="pull-left"> &nbsp;&nbsp;Total Cage 
-                                <% @db_Availmorecage.each do |c| %> 
-                                 (<%= c.total %>)
-                                <% end %>
-                            </div><br>                            
+                            <!--div class="pull-left" style="width:15px;height:15px;;background-color:#ffff;"></div-->
+                            <!--div class="pull-left"> &nbsp;&nbsp;Total Cage 
+                                <%# @db_Availmorecage.each do |c| %> 
+                                 (<%#= c.total %>)
+                                <%# end %>
+                            </div><br-->                            
                             <div class="pull-left"> 
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#66AA01;"></div>
                                 &nbsp;
-                                TADANO FAUN GMBH (0)
+                                MILITARY SPECIFICATIONS PROMULGATED BY MILITARY (13297)
                             </div><br>
                             
                             <div class="pull-left">
@@ -332,29 +336,29 @@
                                
                                 <span style="text-align:left;">
                                     &nbsp;
-                                    U S ARMY TANK AUTOMOTIVE COMMAND AMSTA-IM-MM (13024)
+                                    U S ARMY TANK AUTOMOTIVE COMMAND AMSTA-IM-MM (33876)
                                 </span>
                             </div><br>                          
                             
                             <div class="pull-left">
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#FF1493;"></div>
                                 &nbsp;
-                                GENERAL DYNAMICS EUROPEAN,LAND-SYSTEMS-MOWAG GMBH (6)
+                                MILITARY STANDARDS PROMULGATED BY MILITARY DEPARTMENTS (19337)
                             </div><br>
                             <div class="pull-left">
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#49C5E8;"></div>
                                 &nbsp;
-                                DAIMLER AG (15)
+                                BOEING COMPANY, THE DBA BOEING (1706)
                             </div><br>
                             <div class="pull-left">
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#3366CC;"></div>
                                 &nbsp;
-                                MILITARY STANDARDS PROMULGATED BY MILITARY DEPARTMENTS (4331)
+                                THE BOEING COMPANY DBA BOEING (3343)
                             </div><br>  
                             <div class="pull-left">
                                 <div class="pull-left" style="width:15px;height:15px;;background-color:#DC3912;"></div>
                                 &nbsp;
-                                Others (34590)
+                                Others (186065)
                             </div><br>                           
                         </div>                                  
                     
@@ -376,7 +380,7 @@
 <script type="text/javascript">
 
 $(function() {
-    $(".db_morecmm").sparkline(['<%= @db_morecommon.inspect %>','<%= @db_moremsd.inspect %>','<%= @db_morersadf.inspect %>','<%= @db_morersaf.inspect %>','<%= @db_morersdf.inspect %>','<%= @db_morerslf.inspect %>','<%= @db_morersnf.inspect %>'], {
+    $(".db_morecmm").sparkline(['<%= @db_morecommon.inspect %>','<%= @db_moremsd.inspect %>','<%= @db_morersadf.inspect %>','<%= @db_morersaf.inspect %>','<%= @db_morersdf.inspect %>','<%= @db_morerslf.inspect %>','<%= @db_morersnf.inspect %>','<%= @db_morenull.inspect %>'], {
         type: 'pie',
         height: '250px',
         sliceColors: ['#66AA01','#990099','#FF1493','#49C5E8','#3366CC','#DC3912','#DEB887','#8B4513'],
@@ -402,7 +406,7 @@ $(function() {
             scaleBackdropColor: "rgba(255,255,255,0.75)",
     });
 
-    $(".db_morecage").sparkline(['<% @more_cagecode_1.each do |c| %><%= c.cou %><% end %>','<% @more_cagecode_2.each do |c| %><%= c.cou %><% end %>','<% @more_cagecode_3.each do |c| %><%= c.cou %><% end %>','<% @more_cagecode_4.each do |c| %><%= c.cou %><% end %>','<% @more_cagecode_5.each do |c| %><%= c.cou %><% end %>','124239'], {
+    $(".db_morecage").sparkline(['<% @more_cagecode_1.each do |c| %><%= c.Cou %><% end %>','<% @more_cagecode_2.each do |c| %><%= c.Cou %><% end %>','<% @more_cagecode_3.each do |c| %><%= c.Cou %><% end %>','<% @more_cagecode_4.each do |c| %><%= c.Cou %><% end %>','<% @more_cagecode_5.each do |c| %><%= c.Cou %><% end %>','124239'], {
             type: 'pie',
             height: '250px',
             sliceColors: ['#66AA01','#990099','#FF1493','#49C5E8','#3366CC','#DC3912','#DEB887','#8B4513'],

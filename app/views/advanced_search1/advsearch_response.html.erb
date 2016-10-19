@@ -1,0 +1,39 @@
+<div style="max-height: 555px;overflow:scroll;">
+<div class="col-md-12"><h3 class="text-danger">Characteristics:</h3></div>
+<% @list_details_cou.each do |list_details_cou|%>
+	<% @res_igid=Base64.encode64(list_details_cou.igid) %>
+	<div class="col-md-12">
+		<div class="form-group">	
+			<input type="hidden" value="<%= list_details_cou.Class %>" name="req_classname">
+            <input type="hidden" value="<%= @res_igid  %>" name="req_igid">
+            <input type="text" name="chr[]" id="chr" class="hide" value="<%= list_details_cou.property %>"> 
+			<%= list_details_cou.property %> 
+			<select name="cmb_value[]" id="cmb_value" class="form-control">
+				<option value="">Select</option>
+				 <% @list_details.each do |list_details|%>
+					<% if(list_details_cou.property==list_details.property) %>
+						<option value= "<%= list_details.value %>"><%= list_details.value %></option>
+					<% end %>
+				 <% end %>
+			</select>	 
+		</div>
+	</div>
+<% end %>	
+<div class="col-md-12"><h3 class="text-danger">Identification:</h3></div>
+<% @list_rxml_cou.each do |list_rxml_cou|%>
+	<div class="col-md-12">
+		<div class="form-group">	
+			<%= list_rxml_cou.property %>	
+			<input type="text" name="chr_ref[]" id="chr_ref" class="hide" value="<%= list_rxml_cou.property %>"> 
+			 <select name="cmb_value_ref[]" id="cmb_value_ref" class="form-control">
+				<option value="">Select</option>
+				 <% @list_rxml.each do |list_rxml|%>
+					<% if(list_rxml_cou.property==list_rxml.property) %>
+		             	<option value= "<%= list_rxml.value %>"><%= list_rxml.value %></option>
+					<% end %>	 
+				 <% end %>
+			 </select>		 
+		</div>
+	</div>
+<% end %>
+</div>

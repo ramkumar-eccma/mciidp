@@ -4,10 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
        :recoverable, :rememberable, :trackable, :validatable, :confirmable, :lockable
   #protected  its is for skip the mail confirmation
-	# def confirmation_required?
-	#   false
-	# end
-  
+	def confirmation_required?
+	  false
+	end
+
   # Validation Purpose
   validates :email, :password, presence: true
   validates :email, uniqueness: true

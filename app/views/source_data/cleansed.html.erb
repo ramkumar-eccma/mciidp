@@ -31,18 +31,15 @@
                 </span>
             <% end -%>
             </li>
-
             <li>
                 <strong>Cleansed Searcher</strong>
             </li>
-           
         </ol>    
     </div>
 </div>
-
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
-    <div class="col-lg-12">
+      <div class="col-lg-12">
             <div class="ibox float-e-margins">
                 <!-- <div class="ibox-title">
                 sdfdsfds
@@ -56,61 +53,98 @@
                     </div>
                 </div> -->
                 <div class="ibox-title">
-                        <h5>
-                        <%- if I18n.locale== :ar %>
-                                <span class="">
-                                  <% @ar_search = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '12','langs','show.html.erb','ar')%>
-                                  <% @ar_search.each do |ar_search|%>
-                                  <%= ar_search.language_property %>
-                                   <% end %>
-                                </span>
-                              <% else %>
-                                <span class="">
-                                  <% @en_search = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '12','langs','show.html.erb','en')%>
-                                  <% @en_search.each do |en_search|%>
-                                  <%= en_search.language_property %>
-                                   <% end %>
-                                </span>
-                        <% end -%>
-                        </h5>
-                        <div class="pull-right"> 
-                            <%= form_tag( cleansed_path,:method => "get", class: "navbar-form") do %>
-                            <div class="form-group pull-right">
-                             <%= text_field_tag :search, params[:search], class: "span4 form-control", placeholder: "" %>
-                            
-
-                            <!-- <%= submit_tag "Search", :class=>"btn btn btn-primary", :style=>"margin:0;",:name=>nil %>--> <%- if I18n.locale== :ar %>
-                                        <span class="">
-                                          <% @ar_button = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '13','langs','show.html.erb','ar')%>
-                                          <% @ar_button.each do |ar_button|%>
-                                          <%= submit_tag ar_button.language_property, :class=>"btn btn btn-primary", :style=>"margin:0;",:name=>nil %>
-                                           <% end %>
-                                        </span>
-                                      <% else %>
-                                        <span class="">
-                                          <% @en_button = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '13','langs','show.html.erb','en')%>
-                                          <% @en_button.each do |en_button|%>
-                                           <%= submit_tag en_button.language_property, :class=>"btn btn btn-primary", :style=>"margin:0;",:name=>nil %>
-                                           <% end %>
-                                        </span>
-                                      <% end -%>
-                            </div>
-                          <% end %></div><br></br>
-                        </div>
-                        
+                  <h5>
+                  <%- if I18n.locale== :ar %>
+                    <span class="">
+                      <% @ar_search = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '12','langs','show.html.erb','ar')%>
+                      <% @ar_search.each do |ar_search|%>
+                      <%= ar_search.language_property %>
+                       <% end %>
+                    </span>
+                  <% else %>
+                    <span class="">
+                      <% @en_search = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '12','langs','show.html.erb','en')%>
+                      <% @en_search.each do |en_search|%>
+                      <%= en_search.language_property %>
+                       <% end %>
+                    </span>
+                  <% end -%>
+                  </h5>
+                  <div class="pull-right"> 
+                    <%= form_tag( cleansed_path,:method => "get", class: "navbar-form") do %>
+                    <div class="form-group pull-right">
+                     <%= text_field_tag :search, params[:search], class: "span4 form-control", placeholder: "" %>
+                     <!-- <%= submit_tag "Search", :class=>"btn btn btn-primary", :style=>"margin:0;",:name=>nil %>--> <%- if I18n.locale== :ar %>
+                        <span class="">
+                        <% @ar_button = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '13','langs','show.html.erb','ar')%>
+                        <% @ar_button.each do |ar_button|%>
+                        <%= submit_tag ar_button.language_property, :class=>"btn btn btn-primary", :style=>"margin:0;",:name=>nil %>
+                        <% end %>
+                        </span>
+                      <% else %>
+                        <span class="">
+                          <% @en_button = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '13','langs','show.html.erb','en')%>
+                          <% @en_button.each do |en_button|%>
+                           <%= submit_tag en_button.language_property, :class=>"btn btn btn-primary", :style=>"margin:0;",:name=>nil %>
+                           <% end %>
+                        </span>
+                      <% end -%>
+                  </div>
+                  <% end %>
+                  </div><br></br>
+                </div>
             <div class="ibox-content">
                 <div style="width:100%; overflow-x:auto;">
                  <h3 class='text-info'><%= @cleansedcount %> Results Found</h3><br>
                  <%= grid(@cleansed, :html => {:class => 'table table-striped table-bordered table-hover dataTables-example'}) do |s|
                     s.column :name => 'CAT ID', :attribute => 'cat_id' do |s|
-                     link_to s.cat_id ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:target => "_blank"
-                        end 
-                     s.column :name => 'SHORT DESCRIPTION', :attribute => 'short_description'
-                     s.column :name => 'LONG DESCRIPTION', :attribute => 'long_description'
-                      s.column  do  |s|
+                      if s.sts=='VE'
+                        link_to s.cat_id ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:target => "_blank",:class => 'text-green'
+                      elsif s.sts=='VC'
+                        link_to s.cat_id ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:target => "_blank",:class => 'text-danger'
+                      else
+                         link_to s.cat_id ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:target => "_blank"
+                      end
+                    end
 
-              link_to"" ,{:controller => :source_data,:action => :edit, :NSN =>  s.material_id },:target => "_blank" ,:class=> "fa fa-eye", title: 'View source data', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'
-               end
+                    s.column :name => 'NSN', :attribute => 'material_id' do |s| 
+                      if s.sts=='VE'
+                        link_to s.material_id ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:class => 'text-green',:target => "_blank"
+                      elsif s.sts=='VC'
+                        link_to s.material_id ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:class => 'text-danger',:target => "_blank"
+                      else
+                         link_to s.material_id ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:target => "_blank"
+                      end
+                    end 
+
+                    s.column :name => 'SHORT DESCRIPTION', :attribute => 'short_description' do |s| 
+                      if s.sts=='VE'
+                        link_to s.short_description ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:class => 'text-green',:target => "_blank"
+                      elsif s.sts=='VC'
+                        link_to s.short_description ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:class => 'text-danger',:target => "_blank"
+                      else
+                         link_to s.short_description ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:target => "_blank"
+                      end
+                    end
+
+                    s.column :name => 'LONG DESCRIPTION', :attribute => 'long_description' do |s|
+                       if s.sts=='VE'
+                        link_to s.long_description ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:class => 'text-green',:target => "_blank"
+                      elsif s.sts=='VC'
+                        link_to s.long_description ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:class => 'text-danger',:target => "_blank"
+                      else
+                         link_to s.long_description ,{:controller => :source_data,:action => :editcleansed, :cat_id => s.cat_id} ,:target => "_blank"
+                      end
+                    end
+                      s.column  do  |s|
+                        if s.sts=='VE'
+                         link_to"" ,{:controller => :source_data,:action => :edit, :NSN =>  s.material_id },:target => "_blank" ,:class=> "fa fa-eye text-green", title: 'View source data', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'
+                        elsif s.sts=='VC'
+                         link_to"" ,{:controller => :source_data,:action => :edit, :NSN =>  s.material_id },:target => "_blank" ,:class=> "fa fa-eye text-danger", title: 'View source data', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'
+                        else
+                          link_to"" ,{:controller => :source_data,:action => :edit, :NSN =>  s.material_id },:target => "_blank" ,:class=> "fa fa-eye", title: 'View source data', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'
+                        end
+                     end
                     end -%>
                 </div>
          </div>

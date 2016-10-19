@@ -1,0 +1,101 @@
+<div class="ibox fadeInDownBig" style="border:1px solid rgba(237, 85, 101, 0.81);">
+            <div class="ibox-title" style="background:rgba(237, 85, 101, 0.81);">
+                <h5 style="color:#f3f3f4 !important;"><%- if I18n.locale== :ar %>
+                    <span class="">
+                      <% @ar_classif = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '37','ar')%>
+                      <% @ar_classif.each do |ar_classif|%>
+                      <%= ar_classif.language_property %>
+                       <% end %>
+                    </span>
+                  <% else %>
+                    <span class="">
+                      <% @en_classif = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '37','en')%>
+                      <% @en_classif.each do |en_classif|%>
+                      <%= en_classif.language_property %>
+                       <% end %>
+                    </span>
+                <% end -%></h5>
+                <div class="ibox-tools hide">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up" style="color:#f3f3f4 !important;"></i>
+                    </a>
+                </div>
+                <div class="ibox-tools hide">
+                  <a class="close-link">
+                      <i class="fa fa-times" style="color:#f3f3f4 !important;"></i>
+                  </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                   <table class="table table-bordered" width="100%" style="table-layout: fixed; word-wrap: break-word;"> 
+                    <% @more_info.each do |v| %> 
+                        <tr style="width:40;font-size:12px;">
+                            <th>TYPE</th>
+                            <td><%= v.TYPE %> </td>
+                        </tr>
+                        <tr> 
+                            <th>FSC</th>
+                            <td><%= v.FSC %> </td>
+                        </tr>
+                       
+                        <tr> 
+                             <th>RNFC 2920</th>
+                             <td><%= v.RNFC_2920 %> </td>
+                        </tr>
+                        <tr> 
+                            <th>RNCC 2910</th>
+                            <td><%= v.RNCC_2910 %> </td>
+                        </tr>
+                        <tr> 
+                             <th>RNVC 4780</th>
+                             <td><%= v.RNVC_4780 %> </td>
+                        </tr>
+                        <tr>
+                            <th>DAC 2640</th>
+                            <td><%= v.DAC_2640 %> </td>
+                        </tr>    
+                        <tr>
+                            <th>RNAAC 2900</th>
+                            <td><%= v.RNAAC_2900 %> </td>
+                        </tr>
+                        <tr>
+                            <th>RNSC 2923</th>
+                            <td><%= v.RNSC_2923 %> </td>
+                        </tr>
+                        <tr>
+                            <th>RNJC 2750</th>
+                            <td><%= v.RNJC_2750 %> </td>
+                        </tr>
+                        <tr class="hide">
+                            <th>CAGE CD 9250</th>
+                            <td><%= v.CAGE_CD_9250 %> </td>
+                        </tr>      
+                        <tr class="danger">
+                            <th>REF NBR 3570</th>
+                            <td><%= v.REF_NBR_3570 %> </td>
+                        </tr>
+                        <tr>
+                            <th>NAME</th> 
+                            <td><%= v.NAME %> </td>
+                        </tr>
+                        <tr>
+                            <th>SADC 4672</th>
+                            <td><%= v.SADC_4672 %> </td>
+                        </tr>
+                        <tr>
+                            <th>HCC 2579</th>
+                            <td><%= v.HCC_2579 %> </td>
+                        </tr>
+                        <tr>
+                            <th>MSDS ID 9076</th>
+                            <td><%= v.MSDS_ID_9076 %> </td>
+                        </tr>
+                    <% end %>
+                    </table>
+            </div>
+        </div>
+
+
+
+
+

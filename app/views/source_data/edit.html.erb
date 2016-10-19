@@ -112,16 +112,16 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><%= t.ECCMA_NSN %></td>
-                       <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><%= t.FIIG_4065 %></td>
+                        <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><%= 'NATO.NSN:'+t.ECCMA_NSN %></td>
+                        <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><%= t.FIIG_4065 %></td>
                         <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><% if t.INC_4080 == '77777' ||  t.INC_4080 == '69181'  %>
                             <%= t.INC_4080 %>
                             <% else %>
-                            <%= link_to t.INC_4080 , {:controller => :source_data,:action => :dictionary_detail, :term => t.ECCMA_Term_ID, :esci => t.ECCMA_Concept_ID, :def => t.ECCMA_definition_ID}, :target => "_blank" %>
+                            <%= link_to t.INC_4080 , {:controller => :source_data,:action => :dictionary_detail, :esci => t.ECCMA_Concept_ID}, :target => "_blank" %>
                             <% end %>
                         </td>
                        <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><%= t.SHRT_NM_2301 %></td>
-                        <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><img src="C:\Users\Public\Pictures\Sample Pictures\Tulips.jpg" alt="image"></td>
+                        <td data-toggle="tooltip" data-html="true" title="Source : <%= t.ECCMA_source %> &#10;Name : <%= t.ECCMA_name %> &#10;Date Created : <%= t.created_at %>"  style="cursor:pointer;"><img src="<%= image_url 'No_image1.png' %> " alt="image"></td>
                     </tr>
                     </tbody>
                 </table>
@@ -163,7 +163,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-4" style="height: 350px !important;">
         <div class="ibox collapsed border-bottom" style="border:1px solid #0C78B8;">
             <div class="ibox-title" style="background:#0C78B8;">
                 <h5 style="color:#f3f3f4 !important;"><%- if I18n.locale== :ar %>
@@ -200,59 +200,59 @@
                             <td><%= t.NIIN %> </td>
                         </tr>
                         <tr> 
-                            <td><strong>FSG_3994 </strong></td>
+                            <td><strong>FSG 3994 </strong></td>
                             <td><%= t.FSG_3994 %> </td>
                         </tr>
                         <tr> 
-                            <td><strong>FSC_WI_FSG_3996 </strong></td>
+                            <td><strong>FSC WI FSG 3996 </strong></td>
                             <td><%= t.FSC_WI_FSG_3996 %> </td>
                         </tr>
                         <tr> 
-                            <td><strong>NCB_CD_4130 </strong></td>
+                            <td><strong>NCB CD 4130 </strong></td>
                             <td><%= t.NCB_CD_4130 %> </td>
                         </tr>
                         <tr> 
-                            <td><strong>I_I_NBR_4131 </strong></td>
+                            <td><strong>I I NBR 4131 </strong></td>
                             <td><%= t.I_I_NBR_4131 %> </td>
                         </tr>
                         <tr> 
-                            <td><strong>NAIN_5020 </strong></td>
+                            <td><strong>NAIN 5020 </strong></td>
                             <td><%= t.NAIN_5020 %> </td>
                         </tr>
                         <tr> 
-                            <td><strong>CRITL_CD_FIIG_3843 </strong></td>
+                            <td><strong>CRITL CD FIIG 3843 </strong></td>
                             <td><%= t.CRITL_CD_FIIG_3843 %> </td>
                         </tr>
                         <tr> 
-                            <td><strong>TYP_II_4820 </strong></td>
+                            <td><strong>TYP II 4820 </strong></td>
                             <td><%= t.TYP_II_4820 %> </td>
                         </tr>
                         <tr> 
-                            <td><strong>RPDMRC_4765 </strong></td>
+                            <td><strong>RPDMRC 4765 </strong></td>
                             <td><%= t.RPDMRC_4765 %> </td>
                         </tr>
                         <tr> 
-                            <td><strong>DEMIL_CD_0167 </strong></td>
+                            <td><strong>DEMIL CD 0167 </strong></td>
                             <td><%= t.DEMIL_CD_0167 %> </td>
                         </tr>
                         <tr> 
-                            <td><strong>DT_NIIN_ASGMT_2180 </strong></td>
+                            <td><strong>DT NIIN ASGMT 2180 </strong></td>
                             <td><%= t.DT_NIIN_ASGMT_2180 %> </td>
                         </tr>
                         <tr> 
-                            <td><strong>HMIC_0865 </strong></td>
+                            <td><strong>HMIC 0865 </strong></td>
                             <td><%= t.HMIC_0865 %> </td>
                         </tr>
                         <tr class="hide"> 
-                            <td><strong>ESD_EMI_CD_2043 </strong></td>
+                            <td><strong>ESD EMI CD 2043 </strong></td>
                             <td><%= t.ESD_EMI_CD_2043 %> </td>
                         </tr>
                         <tr class="hide"> 
-                            <td><strong>PMIC_0802 </strong></td>
+                            <td><strong>PMIC 0802 </strong></td>
                             <td><%= t.PMIC_0802 %> </td>
                         </tr>
                         <tr class="hide"> 
-                            <td><strong>ADPEC_0801 </strong></td>
+                            <td><strong>ADPEC 0801 </strong></td>
                             <td><%= t.ADPEC_0801 %> </td>
                         </tr>
                     </table>
@@ -303,12 +303,18 @@
                         </thead>
                         <tbody> 
                         <% @nsnmrcxs.each do |f| %>
-                            <tr> 
-                            
+                            <% if f.value_status =="VE" %>
+                              <% @cn='text-green' %>
+                            <% elsif f.value_status =="VC" %>
+                              <% @cn='text-danger' %>
+                            <% else %>
+                             <% @cn ='' %>
+                            <%end%>
+                            <tr class="<%= @cn %>"> 
                             <% if f.DMRC =="NULL" %>
                                 <td><%= f.DMRC %></td> 
                             <% else %>
-                                <td><%= link_to f.DMRC , {:controller => :source_data,:action => :dictionary_detail, :term => f.ECCMA_Term_ID, :esci => f.ECCMA_Concept_ID, :def => f.ECCMA_definition_ID}, :target => "_blank" %></td>
+                                <td><%= link_to f.DMRC , {:controller => :source_data,:action => :dictionary_detail, :esci => f.ECCMA_Concept_ID}, :target => "_blank",:class =>@cn %></td>
                             <% end %>
                                 <td><%= f.RMRC %></td>
                                 <td><%= f.MRC %></td>
@@ -356,16 +362,30 @@
                         <th>Vendor Name</th>
                         <th>Part Number</th>
                         <th>More</th>
+                        <th>eSTS</th>
                       </tr>
                     </thead>
                     <% @c_seg.each do |v| %> 
+                    <% if v.value2 =="VE" %>
+                        <% @cn='text-green' %>
+                      <% elsif v.value2 =="VC" %>
+                        <% @cn='text-danger' %>
+                      <% else %>
+                       <% @cn ='' %>
+                      <%end%>
                       <tbody>
-                        <tr>
-                        <td> <%= link_to v.ECCMA_CAGE_NAME , {:controller => :source_data,:action => :cage_details, :CAGE => v.CAGE_CD_9250}, :target => "_blank" %></td>
+                        <tr class="<%= @cn %>">
+                        <td> <%= link_to v.ECCMA_CAGE_NAME , {:controller => :source_data,:action => :cage_details, :CAGE => v.CAGE_CD_9250}, :target => "_blank",:class => @cn %></td>
                           <td><%= v.REF_NBR_3570 %></td>
                            <td>
-                             <%= link_to "",{:controller => :source_data,:action => :edit, :NSN => @vid, :PART => @part, :CAGE => @cage ,:vendor => v.id ,:anchor => "refe"},:class=> "fa fa-eye",title: 'View More Informations', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'%>
-
+                             <%#= link_to "",{:controller => :source_data,:action => :edit, :NSN => @vid, :PART => @part, :CAGE => @cage ,:vendor => v.id ,:anchor => "refe"},:class=> "fa fa-eye",title: 'View More Informations', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'%>
+                             <span class="fa fa-eye text-success" id="<%= v.id %>" onclick="cage(id)" style="cursor:pointer;" data-toggle ='tooltip' data-placement='bottom' title='View More Informations'></span>
+                            </td>
+                            
+                            <td>
+                            <% if v.ECCMA_Ests!="" %>
+                            <a href="http://localhost:3001/view?cat_id=<%= v.ECCMA_Ests %>" target="_blank"><img src="<%= image_url 'ests.png' %>" alt="" style="height: 25px;width: 25px;" title="view eSTS"></a>
+                            <%end%>
                             </td>
                           
                         </tr>      
@@ -376,111 +396,16 @@
             </div>
         </div>
   </div> 
-  <div class="col-lg-4 <%= @classname %>" id="more-details">
-        <div class="ibox" style="border:1px solid rgba(237, 85, 101, 0.81);">
-            <div class="ibox-title" style="background:rgba(237, 85, 101, 0.81);">
-                <h5 style="color:#f3f3f4 !important;"><%- if I18n.locale== :ar %>
-                    <span class="">
-                      <% @ar_classif = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '37','ar')%>
-                      <% @ar_classif.each do |ar_classif|%>
-                      <%= ar_classif.language_property %>
-                       <% end %>
-                    </span>
-                  <% else %>
-                    <span class="">
-                      <% @en_classif = Language.select("language_property").where("language_id = ?  AND language_type = ? ", '37','en')%>
-                      <% @en_classif.each do |en_classif|%>
-                      <%= en_classif.language_property %>
-                       <% end %>
-                    </span>
-                <% end -%></h5>
-                <div class="ibox-tools hide">
-                    <a class="collapse-link">
-                        <i class="fa fa-chevron-up" style="color:#f3f3f4 !important;"></i>
-                    </a>
-                </div>
-                <div class="ibox-tools">
-                  <a class="close-link">
-                      <i class="fa fa-times" style="color:#f3f3f4 !important;"></i>
-                  </a>
-                </div>
-            </div>
-            <div class="ibox-content">
-                <% @a_seg.each do |t| %>
-                   <table class="table table-bordered" width="100%" style="table-layout: fixed; word-wrap: break-word;"> 
-                    <% @more_info.each do |v| %> 
-                        <tr style="width:40;font-size:12px;">
-                            <th>TYPE</th>
-                            <td><%= v.TYPE %> </td>
-                        </tr>
-                        <tr> 
-                            <th>FSC</th>
-                            <td><%= v.FSC %> </td>
-                        </tr>
-                       
-                        <tr> 
-                             <th>RNFC_2920</th>
-                             <td><%= v.RNFC_2920 %> </td>
-                        </tr>
-                        <tr> 
-                            <th>RNCC_2910</th>
-                            <td><%= v.RNCC_2910 %> </td>
-                        </tr>
-                        <tr> 
-                             <th>RNVC_4780</th>
-                             <td><%= v.RNVC_4780 %> </td>
-                        </tr>
-                        <tr>
-                            <th>DAC_2640</th>
-                            <td><%= v.DAC_2640 %> </td>
-                        </tr>    
-                        <tr>
-                            <th>RNAAC_2900</th>
-                            <td><%= v.RNAAC_2900 %> </td>
-                        </tr>
-                        <tr>
-                            <th>RNSC_2923</th>
-                            <td><%= v.RNSC_2923 %> </td>
-                        </tr>
-                        <tr>
-                            <th>RNJC_2750</th>
-                            <td><%= v.RNJC_2750 %> </td>
-                        </tr>
-                        <tr class="hide">
-                            <th>CAGE_CD_9250</th>
-                            <td><%= v.CAGE_CD_9250 %> </td>
-                        </tr>      
-                        <tr>
-                            <th>REF_NBR_3570</th>
-                            <td><%= v.REF_NBR_3570 %> </td>
-                        </tr>
-                        <tr>
-                            <th>NAME</th> 
-                            <td><%= v.NAME %> </td>
-                        </tr>
-                        <tr>
-                            <th>SADC_4672</th>
-                            <td><%= v.SADC_4672 %> </td>
-                        </tr>
-                        <tr>
-                            <th>HCC_2579</th>
-                            <td><%= v.HCC_2579 %> </td>
-                        </tr>
-                        <tr>
-                            <th>MSDS_ID_9076</th>
-                            <td><%= v.MSDS_ID_9076 %> </td>
-                        </tr>
-                    <% end %>
-                    </table>
-                <% end %>
-            </div>
-        </div>
+  <div class="col-lg-4" id="result">
+        
     </div>
 </div>
 </div>
 <% content_for :javascript do %>
   <script>
-    $(function() {     
+    $(function() {    
+
+
      
       $('#technical td:nth-child(4)').hide(); 
       $('#technical th:nth-child(4)').hide(); 
@@ -495,9 +420,45 @@
       $('#technical th:nth-child(5)').toggle(); 
       $('#technical td:nth-child(6)').toggle(); 
       $('#technical th:nth-child(6)').toggle(); 
-        $('.element').toggleClass('col-lg-8','col-lg-12');
+        
       });
     });
+
+    function cage(cval)
+    {
+     // openModal();
+    if (window.XMLHttpRequest)
+      {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+      }
+    else
+      {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    xmlhttp.onreadystatechange=function()
+      {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+         // json_func();
+          //closeModal();
+        document.getElementById("result").innerHTML=xmlhttp.responseText;
+        }
+      }
+     // qid=document.getElementById("cat_id1").value
+    xmlhttp.open("GET","vendor?vendor="+cval,true);
+    xmlhttp.send();
+
+    }
+    // function openModal() {
+    //         //document.getElementById('modal').style.display = 'block';
+    //         document.getElementById('abc').style.display = 'block';
+    // }
+
+    // function closeModal() {
+    //     //document.getElementById('modal').style.display = 'none';
+    //     document.getElementById('abc').style.display = 'none';
+    // }
+
     </script>
 <% end %>
     

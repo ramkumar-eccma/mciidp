@@ -33,16 +33,23 @@
         <div class="ibox " style="border:1px solid #0C78B8;">
             <div class="ibox-title" style="background:#0C78B8;">
                 <h5 style="color:#f3f3f4 !important;">
-                More Details</h5>
+                Class Count</h5>
                 <div class="ibox-tools hide">
                     <a class="collapse-link">
                         <i class="fa fa-times" style="color:#f3f3f4 !important;"></i>
                     </a>
                 </div>
             </div>
-            <div class="ibox-content"> 
+            <div class="ibox-content">
+            <%= form_tag( more_details_path,:method => "get", class: "navbar-form hide") do %>
+                        <div class="form-group pull-right">
+                         <%= text_field_tag :search, params[:search], class: "span4 form-control", placeholder: "Search" %>
+                 
+                  <%= submit_tag "Search", :class=>"btn btn btn-primary", :style=>"margin:0;",:name=>nil %> 
+                        </div>
+              <% end %> 
             <% if @type=='classname' %>
-               <table class="table table-striped table-bordered table-hover dataTables-example">
+              <table class="table table-striped table-bordered table-hover dataTables-example">
             <thead>
             <tr>
                 <th>Class Names</th>
@@ -76,7 +83,7 @@
             <tbody>
                <% @more.each do |t| %>
                   <tr> 
-                      <td><a href="<%= url_for :controller => 'langs', :action => 'view',:Factory_ID => t.FACTORY_ID, :map =>'show'  %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"><%= t.FACTORY_NAME %></a></td>
+                      <td><a href="<%= url_for :controller => 'langs', :action => 'view',:Factory_ID => t.FACTORY_ID, :map =>'show'  %>"  title='View Factory details', data-toggle= 'tooltip', data-placement='bottom' target="_blank"><%= t.FACTORY_NAME_ECCMA %></a></td>
                       <td><a href="<%= url_for :controller => 'madein_ksa', :action => 'showfactory',:FACTORY => t.FACTORY_ID  %>" title='View Class Names', data-toggle= 'tooltip', data-placement='bottom' target="_blank"><%= t.total %></a></td>
                   </tr>
               <% end %>
@@ -104,8 +111,32 @@
 $(function() {
 
     $('.dataTables-example').dataTable({
+        // "dom": 'T<"clear">lfrtip',
+        // "tableTools": {
+        //     "sSwfPath": "../assets/dataTables/swf/copy_csv_xls_pdf.swf"
+        // }
+    });
 
-    }); 
+    /* Init DataTables */
+    var oTable = $('#editable').dataTable();
+
+    /* Apply the jEditable handlers to the table */
+    oTable.$('td').editable( '../example_ajax.php', {
+        "callback": function( sValue, y ) {
+            var aPos = oTable.fnGetPosition( this );
+            oTable.fnUpdate( sValue, aPos[0], aPos[1] );
+        },
+        "submitdata": function ( value, settings ) {
+            return {
+                "row_id": this.parentNode.getAttribute('id'),
+                "column": oTable.fnGetPosition( this )[2]
+            };
+        },
+
+        "width": "90%",
+        "height": "100%"
+    } );
+
 
 });
 

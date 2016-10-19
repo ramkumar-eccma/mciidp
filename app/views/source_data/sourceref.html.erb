@@ -116,9 +116,11 @@
           # String
             
                   g.column :name => 'NSN', :attribute => 'ECCMA_NSN' do  |g|
-               link_to g.ECCMA_NSN,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.REF_NBR_3570, :CAGE => g.CAGE_CD_9250} ,:target => "_blank" 
+               link_to 'NATO.NSN:'+g.ECCMA_NSN,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.REF_NBR_3570, :CAGE => g.CAGE_CD_9250} ,:target => "_blank" 
               end
-            g.column :name => 'CAGE CODE', :attribute => 'CAGE_CD_9250'
+            g.column :name => 'CAGE CODE', :attribute => 'CAGE_CD_9250' do  |g|
+              'NATO.CAGE:'+g.CAGE_CD_9250
+            end
             g.column :name => 'PART NUMBER', :attribute => 'REF_NBR_3570'
             
             g.column :name => 'NAME', :attribute => 'NAME'

@@ -86,20 +86,20 @@
                 <input type="text" class="hide" name="TYPE" value="<%= @type %>">
              
               <%- if I18n.locale== :ar %>
-                                <span class="">
-                                  <% @ar_button = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '13','langs','show.html.erb','ar')%>
-                                  <% @ar_button.each do |ar_button|%>
-                                  <%= submit_tag ar_button.language_property, :class=>"btn btn btn-primary", :style=>"margin:0;",:name=>nil %>
-                                   <% end %>
-                                </span>
-                              <% else %>
-                                <span class="">
-                                  <% @en_button = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '13','langs','show.html.erb','en')%>
-                                  <% @en_button.each do |en_button|%>
-                                   <%= submit_tag en_button.language_property, :class=>"btn btn btn-primary", :style=>"margin:0;",:name=>nil %>
-                                   <% end %>
-                                </span>
-                              <% end -%>
+                    <span class="">
+                      <% @ar_button = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '13','langs','show.html.erb','ar')%>
+                      <% @ar_button.each do |ar_button|%>
+                      <%= submit_tag ar_button.language_property, :class=>"btn btn btn-primary", :style=>"margin:0;",:name=>nil %>
+                       <% end %>
+                    </span>
+                  <% else %>
+                    <span class="">
+                      <% @en_button = Language.select("language_property").where("language_id = ? AND controller_name = ? AND page_name = ? AND language_type = ? ", '13','langs','show.html.erb','en')%>
+                      <% @en_button.each do |en_button|%>
+                       <%= submit_tag en_button.language_property, :class=>"btn btn btn-primary", :style=>"margin:0;",:name=>nil %>
+                       <% end %>
+                    </span>
+                  <% end -%>
           <% end %>
               </div>
             <div class="ibox-tools hide">
@@ -117,23 +117,89 @@
       <h3 class='text-info'><%= @cmmcount %> Results Found</h3><br>
         <%= grid(@cmm, :html => {:class => 'table table-striped table-bordered table-hover dataTables-example'}) do |g|
           # String
-            
-            g.column :name => 'NSN', :attribute => 'ECCMA_NSN' do  |g|
-                if g.ECCMA_valid == 's'
-                   link_to g.ECCMA_NSN,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.PART_NUMBER, :CAGE => g.CAGEC} ,:target => "_blank"
-                else 
-                   g.ECCMA_NSN
-               end 
-            end
-            g.column :name => 'CAGE CODE', :attribute => 'CAGEC'
-            g.column :name => 'PART NUMBER', :attribute => 'PART_NUMBER'
-            
-            g.column :name => 'NAME', :attribute => 'NAME'
-          
-               g.column  do  |g|
 
-              link_to"" ,{:controller => :source_data,:action => :viewsource, :NSN =>  g.ECCMA_NSN },:target => "_blank" ,:class=> "fa fa-eye", title: 'View source data', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'
+            g.column :name => 'NSN', :attribute => 'ECCMA_NSN' do  |g|
+              nato ='NATO.NSN:'+g.ECCMA_NSN
+               if g.value2=='VE'
+                   if g.ECCMA_valid == 's'
+                   link_to nato,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.PART_NUMBER, :CAGE => g.CAGEC} ,:target => "_blank",:class =>'text-green'
+                  else 
+                     nato
+                 end 
+               elsif g.value2=='VC'
+                if g.ECCMA_valid == 's'
+                   link_to nato,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.PART_NUMBER, :CAGE => g.CAGEC} ,:target => "_blank",:class =>"text-danger"
+                  else 
+                     nato
+                 end
+             else
+              if g.ECCMA_valid == 's'
+                   link_to nato,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.PART_NUMBER, :CAGE => g.CAGEC} ,:target => "_blank"
+                  else 
+                     nato
+                 end
+               
                end
+            end
+            g.column :name => 'CAGE CODE', :attribute => 'CAGEC' do  |g|
+              natocage ='NATO.CAGE:'+g.CAGEC
+                if g.value2 == 'VE'
+                   link_to natocage,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.PART_NUMBER, :CAGE => g.CAGEC} ,:class => "text-green"
+                elsif g.value2 =='VC'
+                   link_to natocage,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.PART_NUMBER, :CAGE => g.CAGEC} ,:class => "text-danger"
+                else
+                 natocage
+
+                end
+            end
+            g.column :name => 'PART NUMBER', :attribute => 'PART_NUMBER' do |g|
+                 if g.value2 == 'VE'
+                   link_to g.PART_NUMBER,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.PART_NUMBER, :CAGE => g.CAGEC} ,:class => "text-green"
+                elsif g.value2 =='VC'
+                   link_to g.PART_NUMBER,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.PART_NUMBER, :CAGE => g.CAGEC} ,:class => "text-danger"
+                else
+                  g.PART_NUMBER
+                end
+
+            end 
+            g.column :name => 'NAME', :attribute => 'NAME' do |g|
+                 if g.value2 == 'VE'
+                   link_to g.NAME,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.PART_NUMBER, :CAGE => g.CAGEC} ,:class => "text-green"
+                elsif g.value2 =='VC'
+                   link_to g.NAME,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.PART_NUMBER, :CAGE => g.CAGEC} ,:class => "text-danger"
+                else
+                  g.NAME
+                end
+
+            end 
+             g.column  do  |g|
+              if g.value2 == 'VE'
+                   link_to"" ,{:controller => :source_data,:action => :viewsource, :NSN =>  g.ECCMA_NSN },:target => "_blank" ,:class=> "fa fa-eye text-green", title: 'View source data', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'
+                elsif g.value2 =='VC'
+                   link_to"" ,{:controller => :source_data,:action => :viewsource, :NSN =>  g.ECCMA_NSN },:target => "_blank" ,:class=> "fa fa-eye text-danger", title: 'View source data', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'
+                else
+                  link_to"" ,{:controller => :source_data,:action => :viewsource, :NSN =>  g.ECCMA_NSN },:target => "_blank" ,:class=> "fa fa-eye", title: 'View source data', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'
+                end
+               end
+            
+
+            # g.column :name => 'NSN', :attribute => 'ECCMA_NSN' do  |g|
+            #     if g.ECCMA_valid == 's'
+            #        link_to g.ECCMA_NSN,{:controller => :source_data,:action => :edit, :NSN => g.ECCMA_NSN, :PART => g.PART_NUMBER, :CAGE => g.CAGEC} ,:target => "_blank"
+            #     else 
+            #        g.ECCMA_NSN
+            #    end 
+            # end
+            
+            # g.column :name => 'CAGE CODE', :attribute => 'CAGEC' 
+            # g.column :name => 'PART NUMBER', :attribute => 'PART_NUMBER'
+            
+            # g.column :name => 'NAME', :attribute => 'NAME'
+          
+            #    g.column  do  |g|
+
+            #   link_to"" ,{:controller => :source_data,:action => :viewsource, :NSN =>  g.ECCMA_NSN },:target => "_blank" ,:class=> "fa fa-eye", title: 'View source data', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom'
+            #    end
 
       end %>    
       </div>
