@@ -55125,3 +55125,973 @@ Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
 
 
 Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-02-08 12:02:00 +0530
+
+
+Started GET "/en/source_data/morensn" for 127.0.0.1 at 2016-10-19 15:38:45 +0530
+
+Mysql2::Error (Access denied for user 'eccmadb'@'218.185.253.20' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/eccma-04/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/eccma-04/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/eccma-04/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/eccma-04/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/eccma-04/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.0ms)
+
+
+Started GET "/en/source_data/morensn" for 127.0.0.1 at 2016-10-19 15:39:38 +0530
+Processing by SourceDataController#morensn as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `source_data`
+  [1m[36m (375.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%COMMON%')[0m
+  [1m[35m (314.3ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`source_data`.`FORCE_NAME` IS NOT NULL)
+  [1m[36m (434.2ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%MSD%')[0m
+  [1m[35m (423.8ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSADF%')
+  [1m[36m (419.9ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSAF%')[0m
+  [1m[35m (418.6ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSDF%')
+  [1m[36m (423.8ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSLF%')[0m
+  [1m[35m (424.6ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSNF%')
+  [1m[36m (418.7ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSFL%')[0m
+  [1m[35m (378.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%AIR FORCE%')
+  [1m[36mSourceDatum Load (167.5ms)[0m  [1mSELECT count(*) as tot  FROM `source_data` where ECCMA_valid='s'[0m
+  [1m[35m (4091.1ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%COMMON%')
+  [1m[36m (4045.9ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%MSD%')[0m
+  [1m[35m (4042.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSADF%')
+  [1m[36m (4056.5ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSAF%')[0m
+  [1m[35m (4073.8ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSDF%')
+  [1m[36m (4106.3ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSLF%')[0m
+  [1m[35m (4082.8ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSNF%')
+  [1m[36m (3980.6ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSFL%')[0m
+  [1m[35m (4148.1ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%AIR FORCE%')
+  [1m[36mSourceDataCage Load (6.9ms)[0m  [1mSELECT sum(cou) as cagetotal FROM `source_data_cages` where CAGEC is NOT NULL[0m
+  [1m[35mSourceDataCage Load (6.6ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 0,1
+  [1m[36mSourceDataCage Load (6.9ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 1,1[0m
+  [1m[35mSourceDataCage Load (6.6ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 2,1
+  [1m[36mSourceDataCage Load (6.6ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 3,1[0m
+  [1m[35mSourceDataCage Load (7.0ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 4,1
+  [1m[36mSourceDataCageMatch Load (4.2ms)[0m  [1mSELECT sum(cou) as total FROM `source_data_cage_matches`[0m
+  [1m[35mSourceDataCageMatch Load (0.8ms)[0m  SELECT * FROM `source_data_cage_matches` limit 0,1
+  [1m[36mSourceDataCageMatch Load (1.1ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 1,1[0m
+  [1m[35mSourceDataCageMatch Load (0.6ms)[0m  SELECT * FROM `source_data_cage_matches` limit 2,1
+  [1m[36mSourceDataCageMatch Load (0.9ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 3,1[0m
+  [1m[35mSourceDataCageMatch Load (1.0ms)[0m  SELECT * FROM `source_data_cage_matches` limit 4,1
+  [1m[36mSourceDatum Load (950.3ms)[0m  [1mSELECT count(*) as total FROM `source_data` where country_eccma!='NULL' ORDER BY `CAGEC` DESC[0m
+  [1m[35mSourceDatum Load (609.9ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 0,1
+  [1m[36mSourceDatum Load (478.6ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 1,1[0m
+  [1m[35mSourceDatum Load (474.2ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 2,1
+  [1m[36mSourceDatum Load (474.3ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 3,1[0m
+  [1m[35mSourceDatum Load (473.9ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!=''  group by COUNTRY_ECCMA order by total DESC limit 4,1
+  [1m[36mSourceDatum Load (4034.1ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_valid='s'[0m
+  [1m[35mSourceDatum Load (4004.6ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='USV'
+  [1m[36mSourceDatum Load (16.2ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='FRV'[0m
+  [1m[35mSourceDatum Load (7.6ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='GMV'
+  [1m[36mSourceDatum Load (12.1ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='ukv'[0m
+  [1m[35mCageDetail Load (0.9ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '19207')
+  [1m[36mCageDetail Load (0.8ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '81349')[0m
+  [1m[35mCageDetail Load (1.3ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '96906')
+  [1m[36mCageDetail Load (1.3ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '18876')[0m
+  [1m[35mCageDetail Load (1.4ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'S3092')
+  Rendered source_data/morensn.html.erb within layouts/application (38.3ms)
+  Rendered layouts/_navigation.html.erb (22.3ms)
+Completed 500 Internal Server Error in 56276ms (ActiveRecord: 52452.6ms)
+
+ActionView::Template::Error (undefined local variable or method `advanced_search_listall_path' for #<#<Class:0x007fe250ac7bc0>:0x007fe250ac5c80>):
+    52:                  <%- if I18n.locale== :ar %>
+    53:                     <%= link_to '<i class="fa fa-filter"></i> <span class="nav-label">البحث المتقدم</span>'.html_safe,  advanced_search_listall_path %> 
+    54:                   <% else %>
+    55:                     <%= link_to '<i class="fa fa-filter"></i> <span class="nav-label">Advanced Search</span>'.html_safe,  advanced_search_listall_path %>
+    56:                 <% end -%> 
+    57:             </li>
+    58:             <% if current_user.present? && current_user.admin?  -%>
+  app/views/layouts/_navigation.html.erb:55:in `_app_views_layouts__navigation_html_erb___3359574003067465263_70305012132300'
+  app/views/layouts/application.html.erb:66:in `_app_views_layouts_application_html_erb___2286397262114602988_70304996602340'
+
+
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.6ms)
+
+
+Started GET "/en/source_data/morensn" for 127.0.0.1 at 2016-10-19 15:41:34 +0530
+Processing by SourceDataController#morensn as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM `source_data`
+  [1m[36m (430.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%COMMON%')[0m
+  [1m[35m (322.0ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`source_data`.`FORCE_NAME` IS NOT NULL)
+  [1m[36m (367.4ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%MSD%')[0m
+  [1m[35m (431.6ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSADF%')
+  [1m[36m (427.6ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSAF%')[0m
+  [1m[35m (420.9ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSDF%')
+  [1m[36m (424.2ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSLF%')[0m
+  [1m[35m (466.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSNF%')
+  [1m[36m (424.1ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSFL%')[0m
+  [1m[35m (395.3ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%AIR FORCE%')
+  [1m[36mSourceDatum Load (215.6ms)[0m  [1mSELECT count(*) as tot  FROM `source_data` where ECCMA_valid='s'[0m
+  [1m[35m (4481.4ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%COMMON%')
+  [1m[36m (4082.5ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%MSD%')[0m
+  [1m[35m (4100.9ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSADF%')
+  [1m[36m (4305.4ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSAF%')[0m
+  [1m[35m (4254.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSDF%')
+  [1m[36m (4026.5ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSLF%')[0m
+  [1m[35m (4072.2ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSNF%')
+  [1m[36m (4071.3ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSFL%')[0m
+  [1m[35m (4072.9ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%AIR FORCE%')
+  [1m[36mSourceDataCage Load (6.9ms)[0m  [1mSELECT sum(cou) as cagetotal FROM `source_data_cages` where CAGEC is NOT NULL[0m
+  [1m[35mSourceDataCage Load (6.2ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 0,1
+  [1m[36mSourceDataCage Load (6.6ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 1,1[0m
+  [1m[35mSourceDataCage Load (6.5ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 2,1
+  [1m[36mSourceDataCage Load (7.0ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 3,1[0m
+  [1m[35mSourceDataCage Load (6.4ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 4,1
+  [1m[36mSourceDataCageMatch Load (4.3ms)[0m  [1mSELECT sum(cou) as total FROM `source_data_cage_matches`[0m
+  [1m[35mSourceDataCageMatch Load (0.7ms)[0m  SELECT * FROM `source_data_cage_matches` limit 0,1
+  [1m[36mSourceDataCageMatch Load (0.4ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 1,1[0m
+  [1m[35mSourceDataCageMatch Load (0.7ms)[0m  SELECT * FROM `source_data_cage_matches` limit 2,1
+  [1m[36mSourceDataCageMatch Load (0.7ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 3,1[0m
+  [1m[35mSourceDataCageMatch Load (0.8ms)[0m  SELECT * FROM `source_data_cage_matches` limit 4,1
+  [1m[36mSourceDatum Load (930.4ms)[0m  [1mSELECT count(*) as total FROM `source_data` where country_eccma!='NULL' ORDER BY `CAGEC` DESC[0m
+  [1m[35mSourceDatum Load (474.1ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 0,1
+  [1m[36mSourceDatum Load (474.0ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 1,1[0m
+  [1m[35mSourceDatum Load (479.5ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 2,1
+  [1m[36mSourceDatum Load (475.3ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 3,1[0m
+  [1m[35mSourceDatum Load (473.7ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!=''  group by COUNTRY_ECCMA order by total DESC limit 4,1
+  [1m[36mSourceDatum Load (3995.2ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_valid='s'[0m
+  [1m[35mSourceDatum Load (4093.0ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='USV'
+  [1m[36mSourceDatum Load (15.8ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='FRV'[0m
+  [1m[35mSourceDatum Load (7.6ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='GMV'
+  [1m[36mSourceDatum Load (12.4ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='ukv'[0m
+  [1m[35mCageDetail Load (0.5ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '19207')
+  [1m[36mCageDetail Load (1.1ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '81349')[0m
+  [1m[35mCageDetail Load (0.5ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '96906')
+  [1m[36mCageDetail Load (0.5ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '18876')[0m
+  [1m[35mCageDetail Load (0.5ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'S3092')
+  Rendered source_data/morensn.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_navigation.html.erb (21.1ms)
+Completed 500 Internal Server Error in 53355ms (ActiveRecord: 53277.0ms)
+
+ActionView::Template::Error (undefined local variable or method `advanced_search_listall_path' for #<#<Class:0x007fe250ac7bc0>:0x007fe251d83340>):
+    52:                  <%- if I18n.locale== :ar %>
+    53:                     <%= link_to '<i class="fa fa-filter"></i> <span class="nav-label">البحث المتقدم</span>'.html_safe,  advanced_search_listall_path %> 
+    54:                   <% else %>
+    55:                     <%= link_to '<i class="fa fa-filter"></i> <span class="nav-label">Advanced Search</span>'.html_safe,  advanced_search_listall_path %>
+    56:                 <% end -%> 
+    57:             </li>
+    58:             <% if current_user.present? && current_user.admin?  -%>
+  app/views/layouts/_navigation.html.erb:55:in `_app_views_layouts__navigation_html_erb___3359574003067465263_70305012132300'
+  app/views/layouts/application.html.erb:66:in `_app_views_layouts_application_html_erb___2286397262114602988_70304996602340'
+
+
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.2ms)
+
+
+Started GET "/en/source_data/morensn" for 127.0.0.1 at 2016-10-19 15:44:21 +0530
+Processing by SourceDataController#morensn as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (3.3ms)[0m  SELECT COUNT(*) FROM `source_data`
+  [1m[36m (444.1ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%COMMON%')[0m
+  [1m[35m (349.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`source_data`.`FORCE_NAME` IS NOT NULL)
+  [1m[36m (396.5ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%MSD%')[0m
+  [1m[35m (436.6ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSADF%')
+  [1m[36m (421.8ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSAF%')[0m
+  [1m[35m (423.0ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSDF%')
+  [1m[36m (421.2ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSLF%')[0m
+  [1m[35m (491.2ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSNF%')
+  [1m[36m (423.6ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSFL%')[0m
+  [1m[35m (381.9ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%AIR FORCE%')
+  [1m[36mSourceDatum Load (167.9ms)[0m  [1mSELECT count(*) as tot  FROM `source_data` where ECCMA_valid='s'[0m
+  [1m[35m (4056.3ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%COMMON%')
+  [1m[36m (4103.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%MSD%')[0m
+  [1m[35m (4175.8ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSADF%')
+  [1m[36m (4264.3ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSAF%')[0m
+  [1m[35m (4181.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSDF%')
+  [1m[36m (4411.1ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSLF%')[0m
+  [1m[35m (4215.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSNF%')
+  [1m[36m (4305.7ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSFL%')[0m
+  [1m[35m (4433.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%AIR FORCE%')
+  [1m[36mSourceDataCage Load (6.6ms)[0m  [1mSELECT sum(cou) as cagetotal FROM `source_data_cages` where CAGEC is NOT NULL[0m
+  [1m[35mSourceDataCage Load (6.8ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 0,1
+  [1m[36mSourceDataCage Load (6.5ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 1,1[0m
+  [1m[35mSourceDataCage Load (6.6ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 2,1
+  [1m[36mSourceDataCage Load (6.6ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 3,1[0m
+  [1m[35mSourceDataCage Load (6.8ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 4,1
+  [1m[36mSourceDataCageMatch Load (4.7ms)[0m  [1mSELECT sum(cou) as total FROM `source_data_cage_matches`[0m
+  [1m[35mSourceDataCageMatch Load (0.6ms)[0m  SELECT * FROM `source_data_cage_matches` limit 0,1
+  [1m[36mSourceDataCageMatch Load (0.5ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 1,1[0m
+  [1m[35mSourceDataCageMatch Load (0.6ms)[0m  SELECT * FROM `source_data_cage_matches` limit 2,1
+  [1m[36mSourceDataCageMatch Load (0.8ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 3,1[0m
+  [1m[35mSourceDataCageMatch Load (0.5ms)[0m  SELECT * FROM `source_data_cage_matches` limit 4,1
+  [1m[36mSourceDatum Load (936.8ms)[0m  [1mSELECT count(*) as total FROM `source_data` where country_eccma!='NULL' ORDER BY `CAGEC` DESC[0m
+  [1m[35mSourceDatum Load (475.7ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 0,1
+  [1m[36mSourceDatum Load (481.9ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 1,1[0m
+  [1m[35mSourceDatum Load (533.8ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 2,1
+  [1m[36mSourceDatum Load (500.8ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 3,1[0m
+  [1m[35mSourceDatum Load (491.6ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!=''  group by COUNTRY_ECCMA order by total DESC limit 4,1
+  [1m[36mSourceDatum Load (4227.4ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_valid='s'[0m
+  [1m[35mSourceDatum Load (4021.8ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='USV'
+  [1m[36mSourceDatum Load (15.9ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='FRV'[0m
+  [1m[35mSourceDatum Load (7.6ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='GMV'
+  [1m[36mSourceDatum Load (12.4ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='ukv'[0m
+  [1m[35mCageDetail Load (0.5ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '19207')
+  [1m[36mCageDetail Load (1.2ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '81349')[0m
+  [1m[35mCageDetail Load (0.6ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '96906')
+  [1m[36mCageDetail Load (0.6ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '18876')[0m
+  [1m[35mCageDetail Load (0.6ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'S3092')
+  Rendered source_data/morensn.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_navigation.html.erb (28.0ms)
+Completed 500 Internal Server Error in 54349ms (ActiveRecord: 54266.6ms)
+
+ActionView::Template::Error (undefined local variable or method `advanced_search_listall_path' for #<#<Class:0x007fe250ac7bc0>:0x007fe251b71700>):
+    52:                  <%- if I18n.locale== :ar %>
+    53:                     <%= link_to '<i class="fa fa-filter"></i> <span class="nav-label">البحث المتقدم</span>'.html_safe,  advanced_search_listall_path %> 
+    54:                   <% else %>
+    55:                     <%= link_to '<i class="fa fa-filter"></i> <span class="nav-label">Advanced Search</span>'.html_safe,  advanced_search_listall_path %>
+    56:                 <% end -%> 
+    57:             </li>
+    58:             <% if current_user.present? && current_user.admin?  -%>
+  app/views/layouts/_navigation.html.erb:55:in `_app_views_layouts__navigation_html_erb___3359574003067465263_70305012132300'
+  app/views/layouts/application.html.erb:66:in `_app_views_layouts_application_html_erb___2286397262114602988_70304996602340'
+
+
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.7ms)
+
+
+Started GET "/en/" for 127.0.0.1 at 2016-10-19 15:45:16 +0530
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/en/source_data/chart
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 410ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/en/source_data/chart" for 127.0.0.1 at 2016-10-19 15:45:16 +0530
+Processing by SourceDataController#chart as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(`source_data`.`id`) FROM `source_data`[0m
+  [1m[35m (122.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'INV')
+  [1m[36m (81.8ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'LINV')[0m
+  [1m[35m (291.4ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'USV')
+  [1m[36m (27.3ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'USNV')[0m
+  [1m[35m (50.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG = '')
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'GMV')[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'FRV')
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'UKV')[0m
+  [1m[35m (16.7ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'GMNV')
+  [1m[36m (139.9ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'FRNV')[0m
+  [1m[35m (46.1ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'UKNV')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(`reference_data`.`id`) FROM `reference_data`[0m
+  [1m[35m (21.4ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'INV')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'LINV')[0m
+  [1m[35m (841.0ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'USV')
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'USNV')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST = '')
+  [1m[36m (4.6ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'GERV')[0m
+  [1m[35m (7.2ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'FRV')
+  [1m[36m (3.5ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'UKV')[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'GMNV')
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'FRNV')[0m
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'UKNV')
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ksa_development) instead. (called from <class:AccountBase> at /home/2016/oct/mciidp/app/models/classification.rb:8)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(`classifications`.`cat_id`) FROM `classifications`[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:factory_development) instead. (called from <class:FacAccount> at /home/2016/oct/mciidp/app/models/mm_factory.rb:7)
+  [1m[35m (255.8ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (Language= 'en')
+  [1m[36m (138.1ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'Cancel Suggestion')[0m
+  [1m[35m (138.3ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'CANCELLED')
+  [1m[36m (133.8ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'Merged')[0m
+  [1m[35m (133.4ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'NEW LICENSE')
+  [1m[36m (135.2ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'OPERATIONAL')[0m
+  [1m[35m (175.3ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'STOPPED')
+  [1m[36m (139.6ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'UNDER CONSTRUCTION')[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ex_development) instead. (called from <class:Accountex> at /home/2016/oct/mciidp/app/models/ex_classification.rb:8)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(`classifications`.`cat_id`) FROM `classifications`
+  [1m[36m (70.8ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_Cleansed= 'y')[0m
+  Rendered source_data/chart.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 3161ms (ActiveRecord: 3014.0ms)
+
+ActionView::Template::Error (No route matches {:DISTRICT=>"AL RIYADH", :action=>"showmap", :controller=>"source_data", :locale=>:en}):
+    323:                 <area shape="rect" coords="287,390,354,411" href="http://www.wikipedia.com/" title="NAJRAN" alt="NAJRAN" />
+    324:                 <area shape="rect" coords="217,366,366,386" href="http://www.skype.com/" title="ASIR" alt="ASIR" />
+    325:                 <area shape="circle" coords="162,364,30" href="http://www.yahoo.com/" title="AL BAHAH" alt="AL BAHAH" /> -->
+    326:                 <area shape="circle" coords="240,364,100" href="<%= url_for :controller => 'source_data', :action => 'showmap',:DISTRICT => 'AL RIYADH' %>" title="AL RIYADH" alt="AL RIYADH" target="_blank" />
+    327:                 <!-- <area shape="rect" coords="176,308,253,332" href="http://www.flickr.com/" title="MAKKAH PROVINCE" alt="MAKKAH PROVINCE" />
+    328:                 <area shape="rect" coords="220,235,284,244" href="http://www.digg.com/" title="AL QASIM" alt="AL QASIM" />
+    329:                 <area shape="circle" coords="206,215,32" href="http://wordpress.org/" title="HA'IL" alt="HA'IL" />
+  app/views/source_data/chart.html.erb:326:in `_app_views_source_data_chart_html_erb__2470669807047727506_70305008952820'
+
+
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/eccma-04/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.1ms)
+
+
+Started GET "/en/" for 127.0.0.1 at 2016-10-19 15:46:14 +0530
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/source_data/chart
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 87ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/source_data/chart" for 127.0.0.1 at 2016-10-19 15:46:15 +0530
+Processing by SourceDataController#chart as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(`source_data`.`id`) FROM `source_data`[0m
+  [1m[35m (84.0ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'INV')
+  [1m[36m (57.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'LINV')[0m
+  [1m[35m (221.9ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'USV')
+  [1m[36m (20.7ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'USNV')[0m
+  [1m[35m (27.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG = '')
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'GMV')[0m
+  [1m[35m (1.9ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'FRV')
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'UKV')[0m
+  [1m[35m (14.0ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'GMNV')
+  [1m[36m (104.7ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'FRNV')[0m
+  [1m[35m (33.4ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_FLAG= 'UKNV')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(`reference_data`.`id`) FROM `reference_data`[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'INV')
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'LINV')[0m
+  [1m[35m (754.5ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'USV')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'USNV')[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST = '')
+  [1m[36m (4.0ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'GERV')[0m
+  [1m[35m (7.5ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'FRV')
+  [1m[36m (3.5ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'UKV')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'GMNV')
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'FRNV')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `reference_data` WHERE (ECCMA_TEST= 'UKNV')
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ksa_development) instead. (called from <class:AccountBase> at /home/2016/oct/mciidp/app/models/classification.rb:8)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(`classifications`.`cat_id`) FROM `classifications`[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:factory_development) instead. (called from <class:FacAccount> at /home/2016/oct/mciidp/app/models/mm_factory.rb:7)
+  [1m[35m (135.5ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (Language= 'en')
+  [1m[36m (143.5ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'Cancel Suggestion')[0m
+  [1m[35m (143.5ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'CANCELLED')
+  [1m[36m (138.2ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'Merged')[0m
+  [1m[35m (136.6ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'NEW LICENSE')
+  [1m[36m (139.1ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'OPERATIONAL')[0m
+  [1m[35m (143.9ms)[0m  SELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'STOPPED')
+  [1m[36m (134.2ms)[0m  [1mSELECT COUNT(*) FROM `mm_factories` WHERE (`Last Status`= 'UNDER CONSTRUCTION')[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ex_development) instead. (called from <class:Accountex> at /home/2016/oct/mciidp/app/models/ex_classification.rb:8)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(`classifications`.`cat_id`) FROM `classifications`
+  [1m[36m (2.8ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_Cleansed= 'y')[0m
+  Rendered source_data/chart.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered layouts/_topnavbar.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 2898ms (Views: 345.0ms | ActiveRecord: 2488.7ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.css?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.css?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/footable/footable.core.css?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.css?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/iCheck/custom.css?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.css?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/footable/footable.all.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/iCheck/icheck.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/flot/jquery.flot.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/flot/jquery.flot.tooltip.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/flot/jquery.flot.resize.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/flot/jquery.flot.pie.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/flot/jquery.flot.time.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/flot/jquery.flot.spline.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-world-mill-en.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/district_new.jpg" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/ksa.png" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/fact.png" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/assets/tree1.png" for 127.0.0.1 at 2016-10-19 15:46:18 +0530
+
+
+Started GET "/en/source_data/morensn" for 127.0.0.1 at 2016-10-19 15:46:39 +0530
+Processing by SourceDataController#morensn as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `source_data`[0m
+  [1m[35m (553.1ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%COMMON%')
+  [1m[36m (316.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`source_data`.`FORCE_NAME` IS NOT NULL)[0m
+  [1m[35m (367.3ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%MSD%')
+  [1m[36m (425.9ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSADF%')[0m
+  [1m[35m (478.4ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSAF%')
+  [1m[36m (420.8ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSDF%')[0m
+  [1m[35m (436.1ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSLF%')
+  [1m[36m (431.9ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSNF%')[0m
+  [1m[35m (441.5ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%RSFL%')
+  [1m[36m (382.7ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (`FORCE_NAME` LIKE '%AIR FORCE%')[0m
+  [1m[35mSourceDatum Load (293.8ms)[0m  SELECT count(*) as tot  FROM `source_data` where ECCMA_valid='s'
+  [1m[36m (4135.4ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%COMMON%')[0m
+  [1m[35m (4134.6ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%MSD%')
+  [1m[36m (4148.3ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSADF%')[0m
+  [1m[35m (4243.6ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSAF%')
+  [1m[36m (4027.0ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSDF%')[0m
+  [1m[35m (4126.8ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSLF%')
+  [1m[36m (4105.5ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSNF%')[0m
+  [1m[35m (4058.2ms)[0m  SELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%RSFL%')
+  [1m[36m (4115.4ms)[0m  [1mSELECT COUNT(*) FROM `source_data` WHERE (ECCMA_valid = 's' and `FORCE_NAME` LIKE '%AIR FORCE%')[0m
+  [1m[35mSourceDataCage Load (6.6ms)[0m  SELECT sum(cou) as cagetotal FROM `source_data_cages` where CAGEC is NOT NULL
+  [1m[36mSourceDataCage Load (6.3ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 0,1[0m
+  [1m[35mSourceDataCage Load (7.0ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 1,1
+  [1m[36mSourceDataCage Load (6.5ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 2,1[0m
+  [1m[35mSourceDataCage Load (6.6ms)[0m  SELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 3,1
+  [1m[36mSourceDataCage Load (6.4ms)[0m  [1mSELECT * FROM `source_data_cages` where CAGEC is NOT NULL ORDER BY `cou` DESC limit 4,1[0m
+  [1m[35mSourceDataCageMatch Load (5.6ms)[0m  SELECT sum(cou) as total FROM `source_data_cage_matches`
+  [1m[36mSourceDataCageMatch Load (0.6ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 0,1[0m
+  [1m[35mSourceDataCageMatch Load (1.2ms)[0m  SELECT * FROM `source_data_cage_matches` limit 1,1
+  [1m[36mSourceDataCageMatch Load (1.2ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 2,1[0m
+  [1m[35mSourceDataCageMatch Load (0.8ms)[0m  SELECT * FROM `source_data_cage_matches` limit 3,1
+  [1m[36mSourceDataCageMatch Load (3.3ms)[0m  [1mSELECT * FROM `source_data_cage_matches` limit 4,1[0m
+  [1m[35mSourceDatum Load (1036.5ms)[0m  SELECT count(*) as total FROM `source_data` where country_eccma!='NULL' ORDER BY `CAGEC` DESC
+  [1m[36mSourceDatum Load (547.0ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 0,1[0m
+  [1m[35mSourceDatum Load (476.6ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 1,1
+  [1m[36mSourceDatum Load (478.3ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 2,1[0m
+  [1m[35mSourceDatum Load (477.7ms)[0m  SELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!='' group by COUNTRY_ECCMA order by total DESC limit 3,1
+  [1m[36mSourceDatum Load (480.8ms)[0m  [1mSELECT distinct COUNTRY_ECCMA, count(*) as total FROM `source_data` where COUNTRY_ECCMA!=''  group by COUNTRY_ECCMA order by total DESC limit 4,1[0m
+  [1m[35mSourceDatum Load (4094.8ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_valid='s'
+  [1m[36mSourceDatum Load (4271.4ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='USV'[0m
+  [1m[35mSourceDatum Load (15.6ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='FRV'
+  [1m[36mSourceDatum Load (7.6ms)[0m  [1mSELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='GMV'[0m
+  [1m[35mSourceDatum Load (11.9ms)[0m  SELECT COUNTRY_ECCMA,count(*) As total FROM `source_data` where ECCMA_FLAG='ukv'
+  [1m[36mCageDetail Load (52.7ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '19207')[0m
+  [1m[35mCageDetail Load (1.2ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '81349')
+  [1m[36mCageDetail Load (1.2ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '96906')[0m
+  [1m[35mCageDetail Load (1.3ms)[0m  SELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = '18876')
+  [1m[36mCageDetail Load (7.5ms)[0m  [1mSELECT `cage_details`.`CAGE_Name` FROM `cage_details` WHERE (CAGE_CD = 'S3092')[0m
+  Rendered source_data/morensn.html.erb within layouts/application (91.1ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_topnavbar.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 53839ms (Views: 49.3ms | ActiveRecord: 53678.6ms)
+
+
+Started GET "/assets/orgchart/orgchart.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/footable/footable.core.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/iCheck/custom.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/source_data.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:33 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/footable/footable.all.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/iCheck/icheck.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/flot/jquery.flot.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/flot/jquery.flot.tooltip.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/flot/jquery.flot.resize.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/flot/jquery.flot.pie.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/flot/jquery.flot.time.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/flot/jquery.flot.spline.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-world-mill-en.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/source_data.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-10-19 15:47:34 +0530
+
+
+Started GET "/en/viewksa" for 127.0.0.1 at 2016-10-19 15:47:37 +0530
+Processing by MadeinKsaController#view as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mUser Load (47.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ksa_development) instead. (called from <class:AccountBase> at /home/2016/oct/mciidp/app/models/technical_specification.rb:4)
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ksa_development) instead. (called from <class:AccountBase> at /home/2016/oct/mciidp/app/models/rxml_reference.rb:8)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(`rxml_references`.`Seq`) FROM `rxml_references` WHERE (cat_id = NULL AND property = 'SUPPLIER REFERENCE')[0m
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ksa_development) instead. (called from <class:AccountBase> at /home/2016/oct/mciidp/app/models/image.rb:5)
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ksa_development) instead. (called from <class:AccountBase> at /home/2016/oct/mciidp/app/models/setting.rb:8)
+  [1m[35m (1703.0ms)[0m  SELECT MAX(`classifications`.`cmm_material_no`) FROM `classifications`
+DEPRECATION WARNING: Passing a string to ActiveRecord::Base.establish_connection for a configuration lookup is deprecated, please pass a symbol (:ksa_development) instead. (called from <class:AccountBase> at /home/2016/oct/mciidp/app/models/corp_igname.rb:5)
+  [1m[36mLanguage Load (0.6ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id= '14' AND language_type = 'en')[0m
+  [1m[35mLanguage Load (0.7ms)[0m  SELECT `languages`.`language_property` FROM `languages` WHERE (language_id= '40' AND language_type = 'en')
+  [1m[36mLanguage Load (0.8ms)[0m  [1mSELECT `languages`.`language_property` FROM `languages` WHERE (language_id = '17'  AND language_type = 'en' )[0m
+  [1m[35mCorpIgname Load (2.4ms)[0m  SELECT `corp_ignames`.`Class_Name`, `corp_ignames`.`igref`, `corp_ignames`.`Class_id` FROM `corp_ignames`
+  [1m[36mMmFactory Load (188.9ms)[0m  [1mSELECT `mm_factories`.* FROM `mm_factories` WHERE (`Last Status` = 'OPERATIONAL' AND  Language = 'en')[0m
+  Rendered madein_ksa/view.html.erb within layouts/application (1844.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 3885ms (Views: 1774.4ms | ActiveRecord: 2004.5ms)
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/jqGrid/ui.jqgrid.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/jquery-ui/jquery-ui-1.10.4.custom.min.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/iCheck/custom.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/madein_ksa.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/footable/footable.core.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/wice_grid_processor.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/wice_grid_init.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/wice_grid_saved_queries_init.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/wice_grid.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/headerlogo.jpg" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/sidelogo.png" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/patterns/4.png" for 127.0.0.1 at 2016-10-19 15:47:42 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:43 +0530
+
+
+Started GET "/assets/orgchart/orgchart.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:43 +0530
+
+
+Started GET "/assets/dataTables/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:43 +0530
+
+
+Started GET "/assets/dataTables/dataTables.responsive.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:43 +0530
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:43 +0530
+
+
+Started GET "/assets/madein_ksa.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:43 +0530
+
+
+Started GET "/assets/dataTables/dataTables.tableTools.min.js?body=1" for 127.0.0.1 at 2016-10-19 15:47:43 +0530

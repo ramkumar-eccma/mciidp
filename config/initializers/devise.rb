@@ -15,6 +15,8 @@ Devise.setup do |config|
   # Configure the class responsible to send e-mails.
   config.mailer = 'Devise::Mailer'
 
+
+
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
@@ -48,6 +50,8 @@ Devise.setup do |config|
   # modifying a user and when used to authenticate or find a user. Default is :email.
   config.strip_whitespace_keys = [ :email ]
 
+config.http_authenticatable_on_xhr = false
+config.navigational_formats = ["*/*", :html, :json]
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
   # given strategies, for example, `config.params_authenticatable = [:database]` will
