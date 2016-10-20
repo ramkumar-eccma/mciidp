@@ -253,7 +253,9 @@
                       </div>
                     <% end %>
                       <div class="col-md-12">
-                          <table class="table table-striped table-bordered table-hover dataTables-example" style="border: 1px solid #F8AC59 !important;">
+                      <%= @lang_setting %>
+                      <br>
+                          <table class="table table-striped table-bordered table-hover" style="border: 1px solid #F8AC59 !important;">
                               <thead> 
                                 <tr> 
                                     <th style="background: #F8AC59;color:#f3f3f4 !important;">Language Name</th>
@@ -264,14 +266,14 @@
                                 </tr>
                               </thead> 
                               <tbody>
-                               <% @lang_settings.each do |l|  %> 
-                                  <tr id="row<%= l.id%>">
-                                     <td><%= l.language_name %></td> 
-                                     <td><%= l.country_code %></td>
-                                     <td><%= l.language_description %></td>
-                                     <td><%= l.language_ID %> <input type="hidden" id="lang_code<%= l.id %>" value="<%= l.language_code   %>"> </td>
+                               <% @lang_settings.each do |lang|  %> 
+                                  <tr id="row<%= lang.id%>">
+                                     <td><%= lang.language_name %></td> 
+                                     <td><%= lang.country_code %></td>
+                                     <td><%= lang.language_description %></td>
+                                     <td><%= lang.language_ID %> <input type="hidden" id="lang_code<%= lang.id %>" value="<%= lang.language_code   %>"> </td>
                                      <!-- <td><span class="" style="cursor:pointer;font-size: 18px;"></span><%#= link_to '',url_for(action: :delete,id: l.language_ID), method: :post,  :confirm => "Are you sure you want to do that?",:class =>"fa fa-trash text-danger",:style =>"cursor:pointer;font-size: 18px;",:title =>'delete' %></td> -->
-                                     <td><span class="fa fa-trash text-danger" style="cursor:pointer;font-size: 18px;" id="<%= l.id %>" onclick="deleteItem(id)"></span></td>
+                                     <td><span class="fa fa-trash text-danger" style="cursor:pointer;font-size: 18px;" id="<%= lang.id %>" onclick="deleteItem(id)"></span></td>
                                   </tr>
                                 <% end %>
                               </tbody>

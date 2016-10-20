@@ -26,48 +26,47 @@ class MadeinKsaController < ApplicationController
     end
 end
 
-  def view
-   
-lan= I18n.locale
+def view
+    lan= I18n.locale
+    var=request.query_parameters
+    @id=var[:cat_id]
+    @data=Classification.where("cat_id = ? ",@id)
+    @data1=TechnicalSpecification.select("property","value","Seq","propertyRef","Class","source","name","datecreated").order(:Seq).where("cat_id = ? ",@id)
+    @data2=RxmlReference.select("property","value","Seq","value2").where("cat_id = ?",@id)
+    @data3=RxmlReference.select("cat_id,property","value","Seq","value2","datadeleted").where("cat_id = ? AND property = ?",@id,'SUPPLIER REFERENCE')
+    @data4=RxmlReference.where("cat_id = ? AND property = ?",@id,'SUPPLIER REFERENCE').count("Seq")
+    # @image = Image.where("cat_id = ?",@id).find_by_id("file_content")
+    #@image=Image.find_by_id(params[:cat_id])
+    @image=Image.where("cat_id = ?",@id)
+    # @image=Image.find_by_id(params[:cat_id])
 
-var=request.query_parameters
-@id=var[:cat_id]
-@data=Classification.where("cat_id = ? ",@id)
-@data1=TechnicalSpecification.select("property","value","Seq","propertyRef","Class","source","name","datecreated").order(:Seq).where("cat_id = ? ",@id)
-@data2=RxmlReference.select("property","value","Seq","value2").where("cat_id = ?",@id)
-@data3=RxmlReference.select("cat_id,property","value","Seq","value2","datadeleted").where("cat_id = ? AND property = ?",@id,'SUPPLIER REFERENCE')
-@data4=RxmlReference.where("cat_id = ? AND property = ?",@id,'SUPPLIER REFERENCE').count("Seq")
-# @image = Image.where("cat_id = ?",@id).find_by_id("file_content")
-#@image=Image.find_by_id(params[:cat_id])
-@image=Image.where("cat_id = ?",@id)
-# @image=Image.find_by_id(params[:cat_id])
-
-#     if(@image.nil?)
-#       @img='noimage'
-#     else
-#       @img='image'
-#     end
-@len=Setting.where("organization_ID=123")
-@a=(Classification.maximum("cmm_material_no"))+1
-@class_sel=CorpIgname.select("Class_Name","igref","Class_id")
-@vendor=MmFactory.where(["`Last Status` = ? AND  Language = ?",'OPERATIONAL',lan])
-@id=params[:cat_id]
-@class=params[:class]
-@class_name=params[:txt_class]
-@cmm=params[:cmm]
-@id1=params[:pictureInput]
-if @id1 
-  # @pictureInput=params[:pictureInput].read
-  # if @pictureInput.size
-  # @sql=Image.where("cat_id = ?",@id).update_all(file_content: @pictureInput)
-  # end
-  @name=@id1.original_filename.gsub("-","_")
-  n1=@id+"_"+@name
-  n2=@id+"_"+params[:pictureInput].original_filename.gsub("-","_").to_s
-   @sql=Image.where("cat_id = ?",@id).update_all(image_name: n1)
-  tmp=params[:pictureInput].tempfile
-  destiny_file = File.join('app','assets','ksa_image',n2)
-  FileUtils.move tmp.path, destiny_file
+    #     if(@image.nil?)
+    #       @img='noimage'
+    #     else
+    #       @img='image'
+    #     end
+    @len=Setting.where("organization_ID=123")
+    @a=(Classification.maximum("cmm_material_no"))+1
+    # @class_sel=CorpIgname.select("Class_Name","igref","Class_id")
+    @class_sel=CorpIgname.find_by_sql(["SELECT * FROM corp_ignames"])
+    @vendor=MmFactory.where(["`Last Status` = ? AND  Language = ?",'OPERATIONAL',lan])
+    @id=params[:cat_id]
+    @class=params[:class]
+    @class_name=params[:txt_class]
+    @cmm=params[:cmm]
+    @id1=params[:pictureInput]
+    if @id1 
+    # @pictureInput=params[:pictureInput].read
+    # if @pictureInput.size
+    # @sql=Image.where("cat_id = ?",@id).update_all(file_content: @pictureInput)
+    # end
+    @name=@id1.original_filename.gsub("-","_")
+    n1=@id+"_"+@name
+    n2=@id+"_"+params[:pictureInput].original_filename.gsub("-","_").to_s
+    @sql=Image.where("cat_id = ?",@id).update_all(image_name: n1)
+    tmp=params[:pictureInput].tempfile
+    destiny_file = File.join('app','assets','ksa_image',n2)
+    FileUtils.move tmp.path, destiny_file
 end
 
 if @class_name || @class
@@ -785,7 +784,8 @@ def settings
       @case_LD=params[:lg_case]
       @case_val=params[:Val_case]
       @settings=Setting.where("organization_ID=123")
-      @lang_settings=LanguageSetting.order('language_ID ASC')
+      # @lang_settings=LanguageSetting.all
+      @lang_settings=LanguageSetting.find_by_sql(["SELECT * FROM `language_settings`"])       
       @all_lang=LanguageEotd.order('language_ID ASC')
       if @length_ld
       @settings=Setting.where("organization_ID=123").update_all({length_SD: @length_sd,length_LD: @length_ld,
@@ -978,54 +978,52 @@ end
   #   #   @xxx=dis["class_id"]
   #   # end
   # end ALTER TABLE `language_setti ngs`  ADD `aaaa` INT NOT NULL  AFTER `language_description`,  ADD `bbbbbbb` INT NOT NULL  AFTER `aaaa`;
-  def language
+def language
     #vars = request.query_parameters
-     @lan_code = params[:languages]
-     @trans = params[:translate]
-     @con=params["query"]
-     #@con=vars['concept_ID']
+    @lan_code = params[:languages]
+    @trans = params[:translate]
+    @con=params["query"]
+    #@con=vars['concept_ID']
     #@term=vars['term']
-     @term=params["term"]
-     #@def=vars['def']
-     @def=params["def"]
-     @lid=params["lid"]
+    @term=params["term"]
+    #@def=vars['def']
+    @def=params["def"]
+    @lid=params["lid"]
 
-     @term_col_name='term_content_ar'
-      @def_col_name='definition_content_ar'
+    @term_col_name='term_content_ar'
+    @def_col_name='definition_content_ar'
 
-     if @lan_code && @trans
-        @col=@lan_code
-        @term_col_name='term_content_'+@lan_code
-         @def_col_name='definition_content_'+@lan_code
+    if @lan_code && @trans
+      @col=@lan_code
+      @term_col_name='term_content_'+@lan_code
+      @def_col_name='definition_content_'+@lan_code
         if @trans=="N"
-           @language=TransLang.find_by_sql(["SELECT * FROM `trans_lang` where #{@term_col_name}='' OR #{@def_col_name}=''"])
-         # @language=TransLang.where(['#{@term_col_name} = ? OR #{@def_col_name} = ?','',''])
-       else 
+          @language=TransLang.find_by_sql(["SELECT * FROM `trans_lang` where #{@term_col_name}='' OR #{@def_col_name}=''"])
+          # @language=TransLang.where(['#{@term_col_name} = ? OR #{@def_col_name} = ?','',''])
+        else 
           @language=TransLang.find_by_sql(["SELECT * FROM `trans_lang` where #{@term_col_name}!='' OR #{@def_col_name}!=''"])
         end
-        @lan_setting=LanguageSetting.where('language_code = ?',@lan_code)
+      @lan_setting=LanguageSetting.where('language_code = ?',@lan_code)
+    else
+      #  @term_col_name='Term_ar'
+      # @def_col_name='Definition_ar'
+      @col='ar'
+      @language=TransLang.order('concept_ID ASC')
+      @lan_setting=LanguageSetting.where('language_code = ?','ar')
+    end 
 
-      else
-        #  @term_col_name='Term_ar'
-        # @def_col_name='Definition_ar'
-        @col='ar'
-       @language=TransLang.order('concept_ID ASC')
-       @lan_setting=LanguageSetting.where('language_code = ?','ar')
-
-      end 
-
-     if @con 
+    if @con 
       @col_name1='term_content_'+@lid
       @col_name2='definition_content_'+@lid
       update_sql="UPDATE made_in_ksa.`trans_lang` SET `#{@col_name1}`='#{@term}',`#{@col_name2}`='#{@def}' WHERE ID='#{@con}'"
-       records_array = ActiveRecord::Base.connection.execute(update_sql)
+      records_array = ActiveRecord::Base.connection.execute(update_sql)
       #      # records_array = ActiveRecord::Base.connection.execute(alter_sql)
       #   #@update1=Classification.where('concept_ID = ?',@con).update_all({term_content_ar: @term,definition_content_ar: @def}) 
-        #redirect_to settings_path, :notice => "Your post has been deleted successfully"
+      #redirect_to settings_path, :notice => "Your post has been deleted successfully"
     end
-     #@lan_setting=LanguageSetting.where('language_code = ?','ar')
-     @lan_set=LanguageSetting.order('language_name ASC')
-  end
+    #@lan_setting=LanguageSetting.where('language_code = ?','ar')
+    @lan_set=LanguageSetting.order('language_name ASC')
+end
   def delete
     var=request.query_parameters
      @lan_id = params["id"]
