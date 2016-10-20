@@ -33,7 +33,7 @@ def view
     @data=Classification.where("cat_id = ? ",@id)
     @data1=TechnicalSpecification.select("property","value","Seq","propertyRef","Class","source","name","datecreated").order(:Seq).where("cat_id = ? ",@id)
     @data2=RxmlReference.select("property","value","Seq","value2").where("cat_id = ?",@id)
-    @data3=RxmlReference.select("cat_id,property","value","Seq","value2","datadeleted").where("cat_id = ? AND property = ?",@id,'SUPPLIER REFERENCE')
+    @data3=RxmlReference.select("cat_id,property","value","Seq","value2","datedeleted").where("cat_id = ? AND property = ?",@id,'SUPPLIER REFERENCE')
     @data4=RxmlReference.where("cat_id = ? AND property = ?",@id,'SUPPLIER REFERENCE').count("Seq")
     # @image = Image.where("cat_id = ?",@id).find_by_id("file_content")
     #@image=Image.find_by_id(params[:cat_id])
